@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.text-input {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #005ea2;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #005ea2;
+  background-color: #f4f4f4;
+  border: 2px solid #005ea2;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  /* &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 94, 162, 0.25);
+    border-color: #005ea2;
+  } */
+}

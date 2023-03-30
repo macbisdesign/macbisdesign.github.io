@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+Run:
+
 ### npm install
 
 ### StencilJS: npm start

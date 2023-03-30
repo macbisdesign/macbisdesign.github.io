@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.success {
+  border-width: 0.25rem;
+  border-color: #00a91c;
+  border-style: solid;
+  padding-top: calc(0.5rem - 0.25rem);
+  padding-bottom: calc(0.5rem - 0.25rem);
+}
+
+.success:focus {
+  outline: none;
+  border-color: #00a91c;
+  box-shadow: 0 0 0 0.2rem rgba(36, 145, 255, 1);
+}

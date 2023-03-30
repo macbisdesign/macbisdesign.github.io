@@ -6,40 +6,58 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface InputComponent {
-        "inputId": string;
-        "label": string;
-        "type": string;
-        "value": string;
+    interface TextInputComponent {
+    }
+    interface TextInputErrorComponent {
+    }
+    interface TextInputSuccessComponent {
     }
 }
 declare global {
-    interface HTMLInputComponentElement extends Components.InputComponent, HTMLStencilElement {
+    interface HTMLTextInputComponentElement extends Components.TextInputComponent, HTMLStencilElement {
     }
-    var HTMLInputComponentElement: {
-        prototype: HTMLInputComponentElement;
-        new (): HTMLInputComponentElement;
+    var HTMLTextInputComponentElement: {
+        prototype: HTMLTextInputComponentElement;
+        new (): HTMLTextInputComponentElement;
+    };
+    interface HTMLTextInputErrorComponentElement extends Components.TextInputErrorComponent, HTMLStencilElement {
+    }
+    var HTMLTextInputErrorComponentElement: {
+        prototype: HTMLTextInputErrorComponentElement;
+        new (): HTMLTextInputErrorComponentElement;
+    };
+    interface HTMLTextInputSuccessComponentElement extends Components.TextInputSuccessComponent, HTMLStencilElement {
+    }
+    var HTMLTextInputSuccessComponentElement: {
+        prototype: HTMLTextInputSuccessComponentElement;
+        new (): HTMLTextInputSuccessComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "input-component": HTMLInputComponentElement;
+        "text-input-component": HTMLTextInputComponentElement;
+        "text-input-error-component": HTMLTextInputErrorComponentElement;
+        "text-input-success-component": HTMLTextInputSuccessComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface InputComponent {
-        "inputId"?: string;
-        "label"?: string;
-        "type"?: string;
-        "value"?: string;
+    interface TextInputComponent {
+    }
+    interface TextInputErrorComponent {
+    }
+    interface TextInputSuccessComponent {
     }
     interface IntrinsicElements {
-        "input-component": InputComponent;
+        "text-input-component": TextInputComponent;
+        "text-input-error-component": TextInputErrorComponent;
+        "text-input-success-component": TextInputSuccessComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "input-component": LocalJSX.InputComponent & JSXBase.HTMLAttributes<HTMLInputComponentElement>;
+            "text-input-component": LocalJSX.TextInputComponent & JSXBase.HTMLAttributes<HTMLTextInputComponentElement>;
+            "text-input-error-component": LocalJSX.TextInputErrorComponent & JSXBase.HTMLAttributes<HTMLTextInputErrorComponentElement>;
+            "text-input-success-component": LocalJSX.TextInputSuccessComponent & JSXBase.HTMLAttributes<HTMLTextInputSuccessComponentElement>;
         }
     }
 }

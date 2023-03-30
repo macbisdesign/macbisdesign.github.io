@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.error {
+  border-width: 0.25rem;
+  border-color: #b50909;
+  border-style: solid;
+  padding-top: calc(0.5rem - 0.25rem);
+  padding-bottom: calc(0.5rem - 0.25rem);
+}
+
+.error:focus {
+  outline: none;
+  border-color: #b50909;
+  box-shadow: 0 0 0 0.2rem rgba(36, 145, 255, 1);
+}
+
+.error-message{
+  border-left-width: 0.25rem;
+  border-left-style: solid;
+    border-left-style: solid;
+    padding-left: 1rem;
+    position: relative;
+    border-left-color: green;
+
+  /* border-left-color: #b50909; */
+  box-sizing: inherit;
+}

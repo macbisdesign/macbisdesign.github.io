@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+### npm install
+
 ### StencilJS: npm start
 
 ### Storybook: npm run storybook

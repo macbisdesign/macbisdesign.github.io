@@ -1,5 +1,5 @@
-import { defineCustomElements } from '../loader';
-defineCustomElements();
+// import { defineCustomElements } from '../loader';
+// defineCustomElements();
 
 export const parameters = {
   options: {

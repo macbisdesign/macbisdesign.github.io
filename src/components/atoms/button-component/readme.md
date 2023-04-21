@@ -1,0 +1,19 @@
+# button-component
+
+
+
+<!-- Auto Generated Below -->
+
+
+## Properties
+
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `label`  | `label`   |             | `string` | `undefined` |
+| `size`   | `size`    |             | `string` | `'medium'`  |
+| `type`   | `type`    |             | `string` | `undefined` |
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

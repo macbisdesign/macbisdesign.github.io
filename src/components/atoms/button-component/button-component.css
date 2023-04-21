@@ -1,0 +1,172 @@
+:host{
+    --default-background-color: #005ea2;
+    --default-hover-background: #1a4480;
+    --default-active-background: #162e51;
+    --default-focus-outline-color: #2491ff;
+    --default-font-color: #fff;
+    
+    --secondary-background-color: #d83933;
+    --secondary-hover-background: #b50909;
+    --secondary-active-background: #8b0a03;
+    --secondary-focus-outline-color: #2491ff;
+    --secondary-font-color: #fff;
+
+    --unstyled-font-color: #005ea2;
+    --unstyled-background-color: transparent;
+
+    --disabled-color: #c9c9c9;
+    --font-family: Source Sans Pro Web,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    --font-size: 1.06rem;
+    --font-weight: 700;
+    --button-padding: 0.75rem 1.25rem;
+
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --base-color: rgb(50, 50, 51);
+    --inverse-color: lightgrey;
+
+    display: block;
+}
+
+.default{
+   padding: var(--button-padding); 
+   border-radius: 0.25rem;
+   background: var(--default-background-color);
+   color: var(--default-font-color);
+   font-family: var(--font-family);
+   font-size: var(--font-size);
+   font-weight: var(--font-weight);
+   border: 1px solid var(--default-background-color);
+   cursor: pointer;
+}
+
+.default:hover{
+    background: var(--default-hover-background);
+    border-color: var(--default-hover-background);
+}
+
+.default:active{
+    background: var(--default-active-background);
+    border-color: var(--default-active-background);
+}
+
+.default:focus{
+    outline: 0.25rem solid var(--default-focus-outline-color);
+    outline-offset: 0.25rem;
+}
+
+.secondary{
+    padding: var(--button-padding); 
+    border-radius: 0.25rem;
+    background: var(--secondary-background-color);
+    color: var(--secondary-font-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    border: 1px solid var(--secondary-background-color);
+    cursor: pointer;
+ }
+ 
+ .secondary:hover{
+     background: var(--secondary-hover-background);
+     border-color: var(--secondary-hover-background);
+ }
+ 
+ .secondary:active{
+     background: var(--secondary-active-background);
+     border-color: var(--secondary-active-background);
+ }
+ 
+ .secondary:focus{
+     outline: 0.25rem solid var(--secondary-focus-outline-color);
+     outline-offset: 0.25rem;
+ }
+ 
+ .button-component:disabled{
+    background: var(--disabled-color);
+    border-color: var(--disabled-color);
+    cursor: auto;
+ }
+
+ .button-component.unstyled{
+    color: var(--unstyled-font-color);
+    background-color: var(--unstyled-background-color);
+    text-decoration: underline;
+    text-align: left;
+    border: 0;
+    border-radius: 0;
+ }
+
+ .storybook-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+  }
+  .storybook-button--primary {
+    color: white;
+    background-color: #1ea7fd;
+  }
+  .storybook-button--secondary {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  }
+  
+  .storybook-button--success {
+    color: #ffffff;
+    background-color: var(--success-color);
+    border: var(--success-color);
+  }
+  
+  .storybook-button--error {
+    color: #ffffff;
+    background-color: var(--error-color);
+    border: var(--error-color);
+  }
+  
+  .storybook-button--base {
+    color: #ffffff;
+    background-color: var(--base-color);
+    border: var(--base-color);
+  }
+  
+  .storybook-button--inverse {
+    color: #000000;
+    background-color: var(--inverse-color);
+    border: var(--inverse-color);
+  }
+  
+  .storybook-button--link {
+    color: #ffffff;
+    text-decoration: underline;
+    background-color: #000000;
+    border: #000000;
+  }
+  
+  .storybook-button--outline {
+    color: blue;
+    background-color: transparent;
+    border: 1px solid blue;
+  }
+  
+  .storybook-button--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  .storybook-button--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  .storybook-button--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+  .storybook-button--extralarge {
+    font-size: 16px;
+    padding: 20px 32px;
+  }
+  

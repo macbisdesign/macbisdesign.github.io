@@ -65,13 +65,7 @@ const button7 = {
   type: 'base',
 };
 
-const button8 = {
-    size: 'extralarge',
-    label: 'Testing',
-    type: 'error',
-  };
-
 export const Buttons = Template.bind({});
 Buttons.args = {
-    buttons: [button1, button2, button3, button4, button5, button6, button7, button8]
+    buttons: [button1, button2, button3, button4, button5, button6, button7]
 };

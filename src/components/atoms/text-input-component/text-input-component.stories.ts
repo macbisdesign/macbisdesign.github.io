@@ -111,7 +111,7 @@ const input8 = {
 const input9 = {
     type: "text",
     kind: "success",
-    label: 'Text input label',
+    label: 'Success',
     required: false
 };
 
@@ -119,14 +119,14 @@ const input10 = {
     type: "text",
     kind: "success",
     placeholder: 'Value',
-    label: 'Text input label',
+    label: 'Success',
     required: false
 };
 
 const input11 = {
     type: "text",
     kind: "error",
-    label: 'Text input label',
+    label: 'Error',
     required: false
 };
 
@@ -134,21 +134,21 @@ const input12 = {
     type: "text",
     kind: "error",
     placeholder: 'Value',
-    label: 'Text input label',
+    label: 'Error',
     required: false
 };
 
 const input13 = {
     type: "text",
     kind: "error",
-    label: 'Text input label',
+    label: 'Error',
     required: true
 };
 
 const input14 = {
     type: "text",
     kind: "error",
-    label: 'Text input label',
+    label: 'Error',
     placeholder: 'Value',
     required: true
 };

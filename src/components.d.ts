@@ -13,8 +13,15 @@ export namespace Components {
         "bannerTitle": string;
     }
     interface ButtonComponent {
+<<<<<<< HEAD
         "label": string;
         "size": string;
+=======
+        "iconPosition": string;
+        "label": string;
+        "size": string;
+        "state": string;
+>>>>>>> master
         "type": string;
     }
     interface TextInputComponent {
@@ -59,8 +66,15 @@ declare namespace LocalJSX {
         "bannerTitle"?: string;
     }
     interface ButtonComponent {
+<<<<<<< HEAD
         "label"?: string;
         "size"?: string;
+=======
+        "iconPosition"?: string;
+        "label"?: string;
+        "size"?: string;
+        "state"?: string;
+>>>>>>> master
         "type"?: string;
     }
     interface TextInputComponent {

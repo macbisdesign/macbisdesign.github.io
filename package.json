@@ -1,0 +1,63 @@
+{
+  "name": "macbisdesign",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/macbisdesign/macbisdesign.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "builddev": "stencil build --watch",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.18.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.15",
+    "@stencil/core": "^3.0.0",
+    "@types/react": ">=17.0.0 <18.0.0 || >=18.0.0 <19.0.0",
+    "react": "^18.2.0",
+    "react-dom": ">=17.0.0",
+    "typescript": ">=4.7.4",
+    "webpack": "^5.82.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack4": "^6.5.16",
+    "@storybook/html": "^6.5.16",
+    "@storybook/manager-webpack4": "^6.5.16",
+    "@storybook/testing-library": "0.0.13",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "babel-loader": "^8.3.0",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "puppeteer": "^19.5.2"
+  },
+  "license": "MIT"
+}

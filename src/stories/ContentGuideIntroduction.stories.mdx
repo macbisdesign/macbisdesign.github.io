@@ -1,0 +1,172 @@
+import { Meta } from '@storybook/addon-docs';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+
+<Meta title="Content/Introduction" />
+
+<style>
+  {`
+    .subheading {
+      --mediumdark: '#999999';
+      font-weight: 900;
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 6px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      margin-top: 40px;
+    }
+
+    .link-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 10px;
+    }
+
+    @media (min-width: 620px) {
+      .link-list {
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media all and (-ms-high-contrast:none) {
+    .link-list {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
+      }
+    }
+
+    .link-item {
+      display: block;
+      padding: 20px 30px 20px 15px;
+      border: 1px solid #00000010;
+      border-radius: 5px;
+      transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+      color: #333333;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .link-item:hover {
+      border-color: #1EA7FD50;
+      transform: translate3d(0, -3px, 0);
+      box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+    }
+
+    .link-item:active {
+      border-color: #1EA7FD;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .link-item strong {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .link-item img {
+      height: 40px;
+      width: 40px;
+      margin-right: 15px;
+      flex: none;
+    }
+
+    .link-item span {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .tip {
+      display: inline-block;
+      border-radius: 1em;
+      font-size: 11px;
+      line-height: 12px;
+      font-weight: 700;
+      background: #E7FDD8;
+      color: #66BF3C;
+      padding: 4px 12px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .tip-wrapper {
+      font-size: 13px;
+      line-height: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .tip-wrapper code {
+      font-size: 12px;
+      display: inline-block;
+    }
+  `}
+</style>
+
+<h1>Introduction</h1>
+<p style={{borderRadius: '4px', boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.1)', padding: '3rem', border: '1px solid hsla(203, 50%, 30%, 0.15)'}}>
+
+<h2>Purpose</h2>
+
+
+This is the house content style guide for OneMAC. It will guide  creators in writing clear, consistent content throughout the product ecosystem. This guide is the source of truth for content. 
+
+<h2>Scope</h2>
+<p>This guide applies to any written content within the OneMAC product. It covers content structure, best practices for component content, and content-specific accessibility considerations.</p>
+
+<h2>How to use</h2>
+<p>
+
+Refer to this guide whenever creating content. Here are a few ways you might use this guide:
+
+<ul>
+<li>Before drafting new content: review voice and tone and grammar and style guidelines.</li>
+<li>While creating content: refer to guidance on content structure, accessibility, and word choice.</li>
+<li>When it’s almost ready for review: look over grammar and punctuation guidance.</li>
+</ul>
+
+</p>
+
+<h2>Plan for expansion</h2>
+
+
+<p>
+
+Treat this style guide as a living document. Watch this section for updates on what we're working on. 
+
+<ul>
+<li>Currently: grammar and punctuation sections, introduction</li>
+<li>Up next: Voice and tone</li>
+<li>Soon: best practices for component content and time-of-need messaging (error states, helper text).</li> 
+</ul>
+
+</p>
+
+<h2>Guiding resources</h2>
+
+<p>
+This guide relies on input from business owners, designers, subject matter experts, and end users. It also takes into account content design best practices. We encourage you to <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-mjBv4EkPk5lhOE_w0kVYfVG5W5K4mqCm1fS2sgwM4ifpYA/viewform">submit feedback and questions</a>.
+
+Some key resources that inform the guide:
+
+<ul>
+<li><a href="https://www.plainlanguage.gov/guidelines/">Federal plain language guidelines</a></li>
+<li><a href="https://designsystem.digital.gov/">The U.S. Web Design System</a></li>
+<li><a href="http://content-guide.18f.gov">18F Content Guide</a></li>
+<li><a href="https://design.va.gov/content-style-guide/">VA.gov content style guide</a></li>
+</ul>
+
+</p>
+
+</p>

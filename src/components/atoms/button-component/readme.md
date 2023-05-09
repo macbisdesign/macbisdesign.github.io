@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type                     | Default     |
-| -------------- | --------------- | ----------- | ------------------------ | ----------- |
-| `bannerAction` | `banner-action` |             | `string`                 | `undefined` |
-| `bannerDomain` | `banner-domain` |             | `"gov" \| "mil"`         | `undefined` |
-| `bannerLang`   | `banner-lang`   |             | `"english" \| "spanish"` | `undefined` |
-| `bannerTitle`  | `banner-title`  |             | `string`                 | `undefined` |
+| Property       | Attribute       | Description | Type     | Default     |
+| -------------- | --------------- | ----------- | -------- | ----------- |
+| `iconPosition` | `icon-position` |             | `string` | `undefined` |
+| `label`        | `label`         |             | `string` | `undefined` |
+| `size`         | `size`          |             | `string` | `'medium'`  |
+| `state`        | `state`         |             | `string` | `undefined` |
+| `type`         | `type`          |             | `string` | `undefined` |
 
 
 ----------------------------------------------

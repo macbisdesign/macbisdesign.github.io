@@ -56,7 +56,7 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "babel-loader": "^8.3.0",
-    "chromatic": "^6.17.3",
+    "chromatic": "^6.17.4",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
     "puppeteer": "^19.5.2"

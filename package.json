@@ -34,11 +34,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.15",
-<<<<<<< HEAD
-    "@stencil/core": "^3.0.0",
-=======
     "@stencil/core": "^3.2.2",
->>>>>>> master
     "@types/react": ">=17.0.0 <18.0.0 || >=18.0.0 <19.0.0",
     "react": "^18.2.0",
     "react-dom": ">=17.0.0",

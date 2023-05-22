@@ -158,5 +158,3 @@ const BannerComponent = class {
 BannerComponent.style = bannerComponentCss;
 
 export { BannerComponent as banner_component };
-
-//# sourceMappingURL=banner-component.entry.js.map

@@ -19,6 +19,30 @@ export namespace Components {
         "state": string;
         "type": string;
     }
+    interface DropdownButton {
+        "buttonLabel": string;
+        "theme": 'blue' | 'dark-blue';
+    }
+    interface HeaderComponent {
+        "accountLabel": string;
+        "accountStyle": 'detailed' | 'simplified-icon' | 'simplified-no-icon' | 'simplified-no-label';
+        "accountTheme": 'blue' | 'dark';
+        "headerLogo": string;
+        "headerLogoTheme": 'white' | 'blue' | 'dark';
+        "navInlinePosition": 'right' | 'left';
+        "navLocation": 'below' | 'inline' | 'none';
+        "navTheme": 'white' | 'blue' | 'dark';
+        "searchTextTheme": 'white' | 'blue' | 'dark';
+        "searchTheme": 'white' | 'blue' | 'dark';
+        "seperatorSize": 'small' | 'large' | 'none';
+        "seperatorTheme": 'white' | 'blue';
+        "showSearch": boolean;
+        "size": 'slim' | 'normal';
+        "theme": 'white' | 'blue' | 'dark';
+    }
+    interface SectionComponent {
+        "sectionButtonLabel": string;
+    }
     interface TextInputComponent {
         "hint": string;
         "kind": 'default' | 'error' | 'success';
@@ -41,6 +65,24 @@ declare global {
         prototype: HTMLButtonComponentElement;
         new (): HTMLButtonComponentElement;
     };
+    interface HTMLDropdownButtonElement extends Components.DropdownButton, HTMLStencilElement {
+    }
+    var HTMLDropdownButtonElement: {
+        prototype: HTMLDropdownButtonElement;
+        new (): HTMLDropdownButtonElement;
+    };
+    interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
+    }
+    var HTMLHeaderComponentElement: {
+        prototype: HTMLHeaderComponentElement;
+        new (): HTMLHeaderComponentElement;
+    };
+    interface HTMLSectionComponentElement extends Components.SectionComponent, HTMLStencilElement {
+    }
+    var HTMLSectionComponentElement: {
+        prototype: HTMLSectionComponentElement;
+        new (): HTMLSectionComponentElement;
+    };
     interface HTMLTextInputComponentElement extends Components.TextInputComponent, HTMLStencilElement {
     }
     var HTMLTextInputComponentElement: {
@@ -50,6 +92,10 @@ declare global {
     interface HTMLElementTagNameMap {
         "banner-component": HTMLBannerComponentElement;
         "button-component": HTMLButtonComponentElement;
+
+        "dropdown-button": HTMLDropdownButtonElement;
+        "header-component": HTMLHeaderComponentElement;
+        "section-component": HTMLSectionComponentElement;
         "text-input-component": HTMLTextInputComponentElement;
     }
 }
@@ -67,6 +113,30 @@ declare namespace LocalJSX {
         "state"?: string;
         "type"?: string;
     }
+    interface DropdownButton {
+        "buttonLabel"?: string;
+        "theme"?: 'blue' | 'dark-blue';
+    }
+    interface HeaderComponent {
+        "accountLabel"?: string;
+        "accountStyle"?: 'detailed' | 'simplified-icon' | 'simplified-no-icon' | 'simplified-no-label';
+        "accountTheme"?: 'blue' | 'dark';
+        "headerLogo"?: string;
+        "headerLogoTheme"?: 'white' | 'blue' | 'dark';
+        "navInlinePosition"?: 'right' | 'left';
+        "navLocation"?: 'below' | 'inline' | 'none';
+        "navTheme"?: 'white' | 'blue' | 'dark';
+        "searchTextTheme"?: 'white' | 'blue' | 'dark';
+        "searchTheme"?: 'white' | 'blue' | 'dark';
+        "seperatorSize"?: 'small' | 'large' | 'none';
+        "seperatorTheme"?: 'white' | 'blue';
+        "showSearch"?: boolean;
+        "size"?: 'slim' | 'normal';
+        "theme"?: 'white' | 'blue' | 'dark';
+    }
+    interface SectionComponent {
+        "sectionButtonLabel"?: string;
+    }
     interface TextInputComponent {
         "hint"?: string;
         "kind"?: 'default' | 'error' | 'success';
@@ -78,6 +148,9 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "banner-component": BannerComponent;
         "button-component": ButtonComponent;
+        "dropdown-button": DropdownButton;
+        "header-component": HeaderComponent;
+        "section-component": SectionComponent;
         "text-input-component": TextInputComponent;
     }
 }
@@ -87,6 +160,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "banner-component": LocalJSX.BannerComponent & JSXBase.HTMLAttributes<HTMLBannerComponentElement>;
             "button-component": LocalJSX.ButtonComponent & JSXBase.HTMLAttributes<HTMLButtonComponentElement>;
+            "dropdown-button": LocalJSX.DropdownButton & JSXBase.HTMLAttributes<HTMLDropdownButtonElement>;
+            "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "section-component": LocalJSX.SectionComponent & JSXBase.HTMLAttributes<HTMLSectionComponentElement>;
             "text-input-component": LocalJSX.TextInputComponent & JSXBase.HTMLAttributes<HTMLTextInputComponentElement>;
         }
     }

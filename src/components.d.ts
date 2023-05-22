@@ -92,7 +92,6 @@ declare global {
     interface HTMLElementTagNameMap {
         "banner-component": HTMLBannerComponentElement;
         "button-component": HTMLButtonComponentElement;
-
         "dropdown-button": HTMLDropdownButtonElement;
         "header-component": HTMLHeaderComponentElement;
         "section-component": HTMLSectionComponentElement;

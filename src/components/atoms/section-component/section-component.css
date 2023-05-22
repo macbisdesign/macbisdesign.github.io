@@ -1,0 +1,11 @@
+.section-button{
+    color: blue;
+}
+
+.section-content{
+    display: none;
+}
+
+.section-content--show{
+    display: flex;
+}

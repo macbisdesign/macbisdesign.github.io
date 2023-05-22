@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/macbisdesign.esm.js"></script>
+    <script nomodule src="/build/macbisdesign.js"></script>
+
+    <style>
+      h2{
+        font-family: Public Sans Web,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+        text-decoration: underline;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h2>Headers</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+        <header-component 
+        theme="blue" 
+        size="normal" 
+        show-search="true"
+        search-theme="blue"
+        search-text-theme="white"
+        header-logo="1"
+        header-logo-theme="blue"
+        account-theme="dark"
+        account-label="My Account"
+        account-style="simplified-no-label"
+        nav-location="below"
+        nav-theme="blue"
+        >
+        <div slot="nav-slot" style="display: flex; ">
+            <button-component size="large" label="Button" type="primary" state="hover"></button-component>
+            <button-component size="large" label="Button" type="primary" state="hover"></button-component>
+            <button-component size="large" label="Button" type="primary" state="hover"></button-component>
+            <button-component size="large" label="Button" type="primary" state="hover"></button-component>
+            <button-component size="large" label="Button" type="primary" state="hover"></button-component>
+        </div>
+        </header-component>
+
+        <header-component 
+        theme="blue" 
+        size="slim" 
+        show-search="true"
+        search-theme="blue"
+        search-text-theme="white"
+        header-logo="1"
+        header-logo-theme="blue"
+        account-theme="dark"
+        account-label="My Account"
+        account-style="simplified-no-label"
+        >
+        </header-component>
+
+        <header-component 
+        theme="blue" 
+        size="slim" 
+        show-search="false"
+        search-theme="blue"
+        search-text-theme="white"
+        header-logo="1"
+        header-logo-theme="blue"
+        account-theme="dark"
+        account-label="My Account"
+        account-style="simplified-no-label"
+        nav-location="inline"
+        nav-inline-position="left"
+        >
+        <div slot="nav-slot" style="display: flex; ">
+            <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+            <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+            <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+        </div>
+        </header-component>
+
+        <header-component 
+        theme="white" 
+        size="slim" 
+        show-search="true"
+        search-theme="white"
+        search-text-theme="dark"
+        header-logo="2"
+        header-logo-theme="white"
+        account-theme="dark"
+        account-label="My Account"
+        account-style="simplified-no-label"
+        >
+        </header-component>
+
+        <header-component 
+        theme="blue" 
+        size="slim" 
+        show-search="true"
+        search-theme="blue"
+        search-text-theme="white"
+        header-logo="4"
+        header-logo-theme="blue"
+        account-theme="dark"
+        account-label="My Account"
+        account-style="detailed"
+        >
+        </header-component>
+
+        <header-component 
+        theme="white" 
+        size="slim" 
+        show-search="true"
+        search-theme="white"
+        search-text-theme="blue"
+        header-logo="6"
+        header-logo-theme="white"
+        account-theme="blue"
+        account-label="My Account"
+        account-style="detailed"
+        >
+        </header-component>
+
+        <header-component 
+        theme="blue" 
+        size="slim" 
+        show-search="true"
+        search-theme="blue"
+        search-text-theme="white"
+        header-logo="4"
+        header-logo-theme="blue"
+        account-theme="dark"
+        account-label="My Account"
+        account-style="simplified-no-label"
+        nav-location="inline"
+        nav-inline-position="right"
+        >
+        <div slot="nav-slot" style="display: flex; ">
+            <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+            <dropdown-button button-label="Button"></dropdown-button>
+        </div>
+        </header-component>
+
+        <header-component 
+        theme="dark" 
+        size="slim" 
+        show-search="true"
+        search-theme="dark"
+        search-text-theme="white"
+        header-logo="5"
+        header-logo-theme="blue"
+        account-theme="blue"
+        account-label="My Account"
+        account-style="detailed"
+        >
+        </header-component>
+    </div>
+
+
+    <h2>Section Buttons</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+        <section-component></section-component>
+    </div>
+
+    <h2>Text Inputs</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+      <text-input-component kind="default" label="Text input label" placeholder="undefined" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="default" label="Text input label" placeholder="Value" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="default" label="Text input label" placeholder="undefined" type="text" hint="undefined" required="true"></text-input-component>
+      <hr />
+      <text-input-component kind="default" label="Text input label" placeholder="Value" type="text" hint="undefined" required="true"></text-input-component>
+      <hr />
+      <text-input-component kind="default" label="Text input label" placeholder="undefined" type="text" hint="Helpful text" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="default" label="Text input label" placeholder="Value" type="text" hint="Helpful text" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="primary" label="Text input label" placeholder="undefined" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="primary" label="Text input label" placeholder="Value" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="success" label="Text input label" placeholder="undefined" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="success" label="Text input label" placeholder="Value" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="error" label="Text input label" placeholder="undefined" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="error" label="Text input label" placeholder="Value" type="text" hint="undefined" required="false"></text-input-component>
+      <hr />
+      <text-input-component kind="error" label="Text input label" placeholder="undefined" type="text" hint="undefined" required="true"></text-input-component>
+      <hr />
+      <text-input-component kind="error" label="Text input label" placeholder="Value" type="text" hint="undefined" required="true"></text-input-component>
+      <hr />
+    </div>
+
+    <hr>
+
+    <h2>Buttons</h2>
+    <div style="display: flex; gap: 4rem;">
+        <div style="display: flex; gap: 2rem;">
+            <div>
+                <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+                <button-component size="large" label="Button" type="primary" state="hover"></button-component>
+                <button-component size="large" label="Button" type="primary" state="active"></button-component>
+                <button-component size="large" label="Button" type="primary" state="focus"></button-component> 
+                <button-component size="large" label="Button" type="primary" state="default"></button-component>   
+            </div>
+            <div>
+                <button-component size="large" label="Button" type="secondary" state="filled"></button-component>
+                <button-component size="large" label="Button" type="secondary" state="hover"></button-component>
+                <button-component size="large" label="Button" type="secondary" state="active"></button-component>  
+                <button-component size="large" label="Button" type="secondary" state="focus"></button-component>  
+                <button-component size="large" label="Button" type="secondary" state="default"></button-component>        
+            </div>
+            <div>
+                <button-component size="large" label="Button" type="success" state="filled"></button-component>    
+                <button-component size="large" label="Button" type="success" state="hover"></button-component>     
+                <button-component size="large" label="Button" type="success" state="active"></button-component>  
+                <button-component size="large" label="Button" type="success" state="focus"></button-component>     
+                <button-component size="large" label="Button" type="success" state="default"></button-component>  
+            </div>
+            <div>
+                <button-component size="large" label="Button" type="warning" state="filled"></button-component>  
+                <button-component size="large" label="Button" type="warning" state="hover"></button-component>
+                <button-component size="large" label="Button" type="warning" state="active"></button-component>      
+                <button-component size="large" label="Button" type="warning" state="focus"></button-component>  
+                <button-component size="large" label="Button" type="warning" state="default"></button-component>
+            </div>
+            <div>
+                <button-component size="large" label="Button" type="danger" state="filled"></button-component>              
+                <button-component size="large" label="Button" type="danger" state="hover"></button-component>              
+                <button-component size="large" label="Button" type="danger" state="active"></button-component>              
+                <button-component size="large" label="Button" type="danger" state="focus"></button-component>              
+                <button-component size="large" label="Button" type="danger" state="default"></button-component>
+            </div>
+        </div>
+        <div style="display: flex; gap: 2rem;">
+            <div>      
+                <button-component size="large" label="Button" type="primary" state="filled-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="primary" state="hover-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="primary" state="active-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="primary" state="focus-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="primary" state="default-outlined"></button-component>                    
+            </div>
+            <div>                
+                <button-component size="large" label="Button" type="secondary" state="filled-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="secondary" state="hover-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="secondary" state="active-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="secondary" state="focus-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="secondary" state="default-outlined"></button-component>         
+            </div>
+            <div>                
+                <button-component size="large" label="Button" type="success" state="filled-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="success" state="hover-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="success" state="active-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="success" state="focus-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="success" state="default-outlined"></button-component>                    
+            </div>
+            <div>                
+                <button-component size="large" label="Button" type="warning" state="filled-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="warning" state="hover-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="warning" state="active-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="warning" state="focus-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="warning" state="default-outlined"></button-component>                    
+            </div>
+            <div>                
+                <button-component size="large" label="Button" type="danger" state="filled-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="danger" state="hover-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="danger" state="active-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="danger" state="focus-outlined"></button-component>                    
+                <button-component size="large" label="Button" type="danger" state="default-outlined"></button-component>                    
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div style="display: flex; gap: 4rem;">
+        <div style="display: flex; gap: 2rem;">
+            <div>        
+                <button-component size="large" label="Button" type="primary" state="filled-link"></button-component>                
+                <button-component size="large" label="Button" type="primary" state="hover-link"></button-component>                
+                <button-component size="large" label="Button" type="primary" state="active-link"></button-component>                
+                <button-component size="large" label="Button" type="primary" state="focus-link"></button-component>                
+                <button-component size="large" label="Button" type="primary" state="default-link"></button-component>                
+            </div>
+            <div>            
+                <button-component size="large" label="Button" type="secondary" state="filled-link"></button-component>                
+                <button-component size="large" label="Button" type="secondary" state="hover-link"></button-component>                
+                <button-component size="large" label="Button" type="secondary" state="active-link"></button-component>                
+                <button-component size="large" label="Button" type="secondary" state="focus-link"></button-component>                
+                <button-component size="large" label="Button" type="secondary" state="default-link"></button-component>                
+            </div>
+            <div>            
+                <button-component size="large" label="Button" type="success" state="filled-link"></button-component>                
+                <button-component size="large" label="Button" type="success" state="hover-link"></button-component>                
+                <button-component size="large" label="Button" type="success" state="active-link"></button-component>                
+                <button-component size="large" label="Button" type="success" state="focus-link"></button-component>                
+                <button-component size="large" label="Button" type="success" state="default-link"></button-component>                
+            </div>
+            <div>            
+                <button-component size="large" label="Button" type="warning" state="filled-link"></button-component>                
+                <button-component size="large" label="Button" type="warning" state="hover-link"></button-component>                
+                <button-component size="large" label="Button" type="warning" state="active-link"></button-component>                
+                <button-component size="large" label="Button" type="warning" state="focus-link"></button-component>                
+                <button-component size="large" label="Button" type="warning" state="default-link"></button-component>                
+            </div>
+            <div>            
+                <button-component size="large" label="Button" type="danger" state="filled-link"></button-component>                
+                <button-component size="large" label="Button" type="danger" state="hover-link"></button-component>                
+                <button-component size="large" label="Button" type="danger" state="active-link"></button-component>                
+                <button-component size="large" label="Button" type="danger" state="focus-link"></button-component>                
+                <button-component size="large" label="Button" type="danger" state="default-link"></button-component>                
+            </div>
+        </div>
+        <div style="display: flex; gap: 2rem;">
+            <div>
+                <button-component size="large" label="Button" type="primary" state="filled" icon-position="right"></button-component>
+            </div>
+            <div>
+                <button-component size="large" label="Button" type="primary" state="filled-outlined" icon-position="left"></button-component>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Banners</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+      <banner-component 
+      banner-title="An official website of the United States government"
+      banner-action="Here's how you know"
+      banner-domain="gov"
+      banner-lang="english"
+      >
+      </banner-component>
+  
+      <banner-component 
+      banner-title="An official website of the United States government"
+      banner-action="Here's how you know"
+      banner-domain="mil"
+      banner-lang="english"
+      >
+      </banner-component>
+  
+      <banner-component 
+      banner-title="Un sitio oficial del Gobierno de Estados Unidos"
+      banner-action="Así es como usted puede verificarlo"
+      banner-domain="gov"
+      banner-lang="spanish"
+      >
+      </banner-component>
+  
+      <banner-component 
+      banner-title="Un sitio oficial del Gobierno de Estados Unidos"
+      banner-action="Así es como usted puede verificarlo"
+      banner-domain="mil"
+      banner-lang="spanish"
+      >
+      </banner-component>
+    </div>
+  </body>
+</html>

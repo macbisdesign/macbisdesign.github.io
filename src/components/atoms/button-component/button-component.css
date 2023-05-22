@@ -1,0 +1,450 @@
+:host{
+    --default-background-color: #005ea2;
+    --default-hover-background: #1a4480;
+    --default-active-background: #162e51;
+    --default-focus-outline-color: #2491ff;
+    --default-font-color: #fff;
+    
+    --secondary-background-color: #d83933;
+    --secondary-hover-background: #b50909;
+    --secondary-active-background: #8b0a03;
+    --secondary-focus-outline-color: #2491ff;
+    --secondary-font-color: #fff;
+
+    --unstyled-font-color: #005ea2;
+    --unstyled-background-color: transparent;
+
+    --disabled-color: #c9c9c9;
+    --font-family: Source Sans Pro Web,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    --font-size: 1.06rem;
+    --font-weight: 700;
+    --button-padding: 0.75rem 1.25rem;
+
+    --primary-color: #0071BC;
+    --secondary-color: #02BFE7;
+    --danger-color: #E51C3E;
+    --success-color: #2E8540;
+    --warning-color: #FDB81E;
+    --base-color: rgb(50, 50, 51);
+    --inverse-color: lightgrey;
+    --default-color: #E3E3E3;
+
+    --primary-color-hover: #205493;
+    --secondary-color-hover: #00A6D2;
+    --success-color-hover: #266E35;
+    --warning-color-hover: #C05600;
+    --danger-color-hover: #B31E22;
+
+    --primary-color-active: #112E51;
+    --secondary-color-active: #046B99;
+    --success-color-active: #174320;
+    --warning-color-active: #775540;
+    --danger-color-active: #981B1F;
+
+    --box-shadow-color: #3D94D0;
+
+    display: block;
+}
+
+.svg-right {
+    margin-left: 10px;
+}
+.svg-left {
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 10%;
+}
+
+.storybook-button {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+}
+
+.storybook-button--small {
+    font-size: 12px;
+    padding: 10px 16px;
+}
+.storybook-button--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+}
+.storybook-button--large {
+    font-size: 16px;
+    padding: 12px 24px;
+}
+.storybook-button--extralarge {
+    font-size: 16px;
+    padding: 20px 32px;
+}
+
+/* Button primary design */
+.storybook-button--primary-filled {
+    color: white;
+    background-color: var(--primary-color);
+}
+.storybook-button--primary-hover {
+    color: white;
+    background-color: var(--primary-color-hover);
+}
+.storybook-button--primary-active {
+    color: white;
+    background-color: var(--primary-color-active);
+}
+.storybook-button--primary-focus {
+    color: white;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    background-color: var(--primary-color);
+}
+.storybook-button--primary-default {
+    color: #4F4F4F;
+    background-color: var(--default-color);
+}
+.storybook-button--primary-filled-outlined {
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
+}
+.storybook-button--primary-hover-outlined {
+    color: var(--primary-color-hover);
+    background: transparent;
+    border: 2px solid var(--primary-color-hover);
+}
+.storybook-button--primary-active-outlined {
+    color: var(--primary-color-active);
+    background: transparent;
+    border: 2px solid var(--primary-color-active);
+}
+.storybook-button--primary-focus-outlined {
+    color: var(--primary-color);
+    background: transparent;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    border: 2px solid var(--success-color);
+}
+.storybook-button--primary-default-outlined {
+    color: #4F4F4F;
+    background: transparent;
+    border: 2px solid var(--default-color);
+}
+.storybook-button--primary-filled-link {
+    color: var(--primary-color);
+    background: transparent;
+}
+.storybook-button--primary-hover-link {
+    color: var(--primary-color-hover);
+    background: transparent;
+}
+.storybook-button--primary-active-link {
+    color: var(--primary-color-active);
+    background: transparent;
+}
+.storybook-button--primary-focus-link {
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid #3D94D0;
+}
+.storybook-button--primary-default-link {
+    color: #4F4F4F;
+    background: transparent;
+}
+/* End of Button primary design */
+
+/* Button secondary design */
+.storybook-button--secondary-filled {
+    color: #000000;
+    background-color: var(--secondary-color);
+}
+.storybook-button--secondary-hover {
+    color: #000000;
+    background-color: var(--secondary-color-hover);
+}
+.storybook-button--secondary-active {
+    color: #ffffff;
+    background-color: var(--secondary-color-active);
+}
+.storybook-button--secondary-focus {
+    color: #ffffff;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    background-color: var(--secondary-color);
+}
+.storybook-button--secondary-default  {
+    color: #4F4F4F;
+    background-color: var(--default-color);
+}
+.storybook-button--secondary-filled-outlined  {
+    color: #046B99;
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+}
+.storybook-button--secondary-hover-outlined  {
+    color: #046B99;
+    background: transparent;
+    border: 2px solid var(--secondary-color-hover);
+}
+.storybook-button--secondary-active-outlined  {
+    color: #046B99;
+    background: transparent;
+    border: 2px solid var(--secondary-color-active);
+}
+.storybook-button--secondary-focus-outlined  {
+    color: #046B99;
+    background: transparent;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    border: 2px solid var(--success-color);
+}
+.storybook-button--secondary-default-outlined  {
+    color: #4F4F4F;
+    background: transparent;
+    border: 2px solid var(--default-color);
+}
+.storybook-button--secondary-filled-link  {
+    color: #046B99;
+    background: transparent;
+}
+.storybook-button--secondary-hover-link  {
+    color: #046B99;
+    background: transparent;
+}
+.storybook-button--secondary-active-link  {
+    color: #046B99;
+    background: transparent;
+}
+.storybook-button--secondary-focus-link  {
+    color: #046B99;
+    background: transparent;
+    border: 2px solid #3D94D0;
+}
+.storybook-button--secondary-default-link  {
+    color: #4F4F4F;
+    background: transparent;
+}
+/* End of Button secondary design */
+
+/* Button success design */
+.storybook-button--success-filled {
+    color: #ffffff;
+    background-color: var(--success-color);
+}
+.storybook-button--success-hover {
+    color: #ffffff;
+    background-color: var(--success-color-hover);
+}
+.storybook-button--success-active {
+    color: #ffffff;
+    background-color: var(--success-color-active);
+}
+.storybook-button--success-focus {
+    color: #ffffff;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    background-color: var(--success-color);
+}
+.storybook-button--success-default {
+    color: #4F4F4F;
+    background: transparent;
+    border: 2px solid var(--default-color);
+}
+.storybook-button--success-filled-outlined {
+    color: #2E8540;
+    background: transparent;
+    border: 2px solid var(--success-color);
+}
+.storybook-button--success-hover-outlined {
+    color: #2E8540;
+    background: transparent;
+    border: 2px solid var(--success-color-hover);
+}
+.storybook-button--success-active-outlined {
+    color: #174320;
+    background: transparent;
+    border: 2px solid var(--success-color-active);
+}
+.storybook-button--success-focus-outlined {
+    color: #2E8540;
+    background: transparent;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    border: 2px solid var(--success-color);
+}
+.storybook-button--success-default-outlined {
+    color: #4F4F4F;
+    background: transparent;
+    border: 2px solid var(--default-color);
+}
+.storybook-button--success-filled-link {
+    color: #2E8540;
+    background: transparent;
+}
+.storybook-button--success-hover-link {
+    color: #2E8540;
+    background: transparent;
+}
+.storybook-button--success-active-link {
+    color: #174320;
+    background: transparent;
+}
+.storybook-button--success-focus-link {
+    color: #2E8540;
+    background: transparent;
+    border: 2px solid #3D94D0;
+}
+.storybook-button--success-default-link {
+    color: #4F4F4F;
+    background: transparent;
+}
+/* End of Button success design */
+
+/* Button warning design */
+.storybook-button--warning-filled {
+    color: #171717;
+    background-color: var(--warning-color);
+}
+.storybook-button--warning-hover {
+    color: #ffffff;
+    background-color: var(--warning-color-hover);
+}
+.storybook-button--warning-active {
+    color: #ffffff;
+    background-color: var(--warning-color-active);
+}
+.storybook-button--warning-focus {
+    color: #ffffff;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    background-color: var(--warning-color);
+}
+.storybook-button--warning-default {
+    color: #4F4F4F;
+    background-color: var(--default-color);
+}
+.storybook-button--warning-filled-outlined {
+    color: #171717;
+    background: transparent;
+    border: 2px solid var(--warning-color);
+}
+.storybook-button--warning-hover-outlined {
+    color: #171717;
+    background: transparent;
+    border: 2px solid var(--warning-color-hover);
+}
+.storybook-button--warning-active-outlined {
+    color: #171717;
+    background: transparent;
+    border: 2px solid var(--warning-color-active);
+}
+.storybook-button--warning-focus-outlined {
+    color: #171717;
+    background: transparent;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    border: 2px solid var(--success-color);
+}
+.storybook-button--warning-default-outlined {
+    color: #4F4F4F;
+    background: transparent;
+    border: 2px solid var(--default-color);
+}
+.storybook-button--warning-filled-link {
+    color: #171717;
+    background: transparent;
+}
+.storybook-button--warning-hover-link {
+    color: #171717;
+    background: transparent;
+}
+.storybook-button--warning-active-link {
+    color: #171717;
+    background: transparent;
+}
+.storybook-button--warning-focus-link {
+    color: #171717;
+    background: transparent;
+    border: 2px solid #3D94D0;
+}
+.storybook-button--warning-default-link {
+    color: #4F4F4F;
+    background: transparent;
+}
+/* End of Button warning design */
+
+/* Button danger design */
+.storybook-button--danger-filled {
+    color: #ffffff;
+    background-color: var(--danger-color);
+}
+.storybook-button--danger-hover {
+    color: #ffffff;
+    background-color: var(--danger-color-hover);
+}
+.storybook-button--danger-active {
+    color: #ffffff;
+    background-color: var(--danger-color-active);
+}
+.storybook-button--danger-focus {
+    color: #ffffff;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    background-color: var(--danger-color);
+}
+.storybook-button--danger-default {
+    color: #4F4F4F;
+    background-color: var(--default-color);
+}
+.storybook-button--danger-filled-outlined {
+    color: #E51C3E;
+    background: transparent;
+    border: 2px solid var(--danger-color);
+}
+.storybook-button--danger-hover-outlined {
+    color: #B31E22;
+    background: transparent;
+    border: 2px solid var(--danger-color-hover);
+}
+.storybook-button--danger-active-outlined {
+    color: #981B1F;
+    background: transparent;
+    border: 2px solid var(--danger-color-active);
+}
+.storybook-button--danger-focus-outlined {
+    color: #E51C3E;
+    background: transparent;
+    outline: 2px solid var(--box-shadow-color);
+    outline-offset: .25em;
+    border: 2px solid var(--success-color);
+}
+.storybook-button--danger-default-outlined {
+    color: #4F4F4F;
+    background: transparent;
+    border: 2px solid var(--default-color);
+}
+.storybook-button--danger-filled-link {
+    color: #E51C3E;
+    background: transparent;
+}
+.storybook-button--danger-hover-link {
+    color: #B31E22;
+    background: transparent;
+}
+.storybook-button--danger-active-link {
+    color: #981B1F;
+    background: transparent;
+}
+.storybook-button--danger-focus-link {
+    color: #E51C3E;
+    background: transparent;
+    border: 2px solid #3D94D0;
+}
+.storybook-button--danger-default-link {
+    color: #4F4F4F;
+    background: transparent;
+}

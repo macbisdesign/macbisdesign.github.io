@@ -1,7 +1,5 @@
 # section-component
 
-
-
 <!-- Auto Generated Below -->
 
 

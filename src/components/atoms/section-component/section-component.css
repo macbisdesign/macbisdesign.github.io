@@ -1,11 +1,11 @@
-.section-button{
-    color: blue;
+.section-button {
+  color: blue;
 }
 
-.section-content{
-    display: none;
+.section-content {
+  display: none;
 }
 
-.section-content--show{
-    display: flex;
+.section-content--show {
+  display: flex;
 }

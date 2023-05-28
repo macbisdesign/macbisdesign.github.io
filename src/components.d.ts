@@ -19,9 +19,26 @@ export namespace Components {
         "state": string;
         "type": string;
     }
+    interface CheckboxComponent {
+        "checked": boolean;
+        "disabled": boolean;
+    }
     interface DropdownButton {
         "buttonLabel": string;
         "theme": 'blue' | 'dark-blue';
+    }
+    interface DropdownComponent {
+    }
+    interface DropdownLink {
+        "col": number;
+        "panelSize": 'full' | 'contain';
+        "panelTheme": 'white' | 'blue';
+        "text": string;
+        "theme": 'blue' | 'white';
+    }
+    interface DropdownPanelLink {
+    }
+    interface DropdownPanelSection {
     }
     interface HeaderComponent {
         "accountLabel": string;
@@ -31,6 +48,7 @@ export namespace Components {
         "headerLogoTheme": 'white' | 'blue' | 'dark';
         "navInlinePosition": 'right' | 'left';
         "navLocation": 'below' | 'inline' | 'none';
+        "navSeparator": boolean;
         "navTheme": 'white' | 'blue' | 'dark';
         "searchTextTheme": 'white' | 'blue' | 'dark';
         "searchTheme": 'white' | 'blue' | 'dark';
@@ -39,6 +57,10 @@ export namespace Components {
         "showSearch": boolean;
         "size": 'slim' | 'normal';
         "theme": 'white' | 'blue' | 'dark';
+    }
+    interface RadioButton {
+        "checked": boolean;
+        "disabled": boolean;
     }
     interface SectionComponent {
         "sectionButtonLabel": string;
@@ -65,17 +87,53 @@ declare global {
         prototype: HTMLButtonComponentElement;
         new (): HTMLButtonComponentElement;
     };
+    interface HTMLCheckboxComponentElement extends Components.CheckboxComponent, HTMLStencilElement {
+    }
+    var HTMLCheckboxComponentElement: {
+        prototype: HTMLCheckboxComponentElement;
+        new (): HTMLCheckboxComponentElement;
+    };
     interface HTMLDropdownButtonElement extends Components.DropdownButton, HTMLStencilElement {
     }
     var HTMLDropdownButtonElement: {
         prototype: HTMLDropdownButtonElement;
         new (): HTMLDropdownButtonElement;
     };
+    interface HTMLDropdownComponentElement extends Components.DropdownComponent, HTMLStencilElement {
+    }
+    var HTMLDropdownComponentElement: {
+        prototype: HTMLDropdownComponentElement;
+        new (): HTMLDropdownComponentElement;
+    };
+    interface HTMLDropdownLinkElement extends Components.DropdownLink, HTMLStencilElement {
+    }
+    var HTMLDropdownLinkElement: {
+        prototype: HTMLDropdownLinkElement;
+        new (): HTMLDropdownLinkElement;
+    };
+    interface HTMLDropdownPanelLinkElement extends Components.DropdownPanelLink, HTMLStencilElement {
+    }
+    var HTMLDropdownPanelLinkElement: {
+        prototype: HTMLDropdownPanelLinkElement;
+        new (): HTMLDropdownPanelLinkElement;
+    };
+    interface HTMLDropdownPanelSectionElement extends Components.DropdownPanelSection, HTMLStencilElement {
+    }
+    var HTMLDropdownPanelSectionElement: {
+        prototype: HTMLDropdownPanelSectionElement;
+        new (): HTMLDropdownPanelSectionElement;
+    };
     interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
     }
     var HTMLHeaderComponentElement: {
         prototype: HTMLHeaderComponentElement;
         new (): HTMLHeaderComponentElement;
+    };
+    interface HTMLRadioButtonElement extends Components.RadioButton, HTMLStencilElement {
+    }
+    var HTMLRadioButtonElement: {
+        prototype: HTMLRadioButtonElement;
+        new (): HTMLRadioButtonElement;
     };
     interface HTMLSectionComponentElement extends Components.SectionComponent, HTMLStencilElement {
     }
@@ -92,8 +150,14 @@ declare global {
     interface HTMLElementTagNameMap {
         "banner-component": HTMLBannerComponentElement;
         "button-component": HTMLButtonComponentElement;
+        "checkbox-component": HTMLCheckboxComponentElement;
         "dropdown-button": HTMLDropdownButtonElement;
+        "dropdown-component": HTMLDropdownComponentElement;
+        "dropdown-link": HTMLDropdownLinkElement;
+        "dropdown-panel-link": HTMLDropdownPanelLinkElement;
+        "dropdown-panel-section": HTMLDropdownPanelSectionElement;
         "header-component": HTMLHeaderComponentElement;
+        "radio-button": HTMLRadioButtonElement;
         "section-component": HTMLSectionComponentElement;
         "text-input-component": HTMLTextInputComponentElement;
     }
@@ -112,9 +176,26 @@ declare namespace LocalJSX {
         "state"?: string;
         "type"?: string;
     }
+    interface CheckboxComponent {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+    }
     interface DropdownButton {
         "buttonLabel"?: string;
         "theme"?: 'blue' | 'dark-blue';
+    }
+    interface DropdownComponent {
+    }
+    interface DropdownLink {
+        "col"?: number;
+        "panelSize"?: 'full' | 'contain';
+        "panelTheme"?: 'white' | 'blue';
+        "text"?: string;
+        "theme"?: 'blue' | 'white';
+    }
+    interface DropdownPanelLink {
+    }
+    interface DropdownPanelSection {
     }
     interface HeaderComponent {
         "accountLabel"?: string;
@@ -124,6 +205,7 @@ declare namespace LocalJSX {
         "headerLogoTheme"?: 'white' | 'blue' | 'dark';
         "navInlinePosition"?: 'right' | 'left';
         "navLocation"?: 'below' | 'inline' | 'none';
+        "navSeparator"?: boolean;
         "navTheme"?: 'white' | 'blue' | 'dark';
         "searchTextTheme"?: 'white' | 'blue' | 'dark';
         "searchTheme"?: 'white' | 'blue' | 'dark';
@@ -132,6 +214,10 @@ declare namespace LocalJSX {
         "showSearch"?: boolean;
         "size"?: 'slim' | 'normal';
         "theme"?: 'white' | 'blue' | 'dark';
+    }
+    interface RadioButton {
+        "checked"?: boolean;
+        "disabled"?: boolean;
     }
     interface SectionComponent {
         "sectionButtonLabel"?: string;
@@ -147,8 +233,14 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "banner-component": BannerComponent;
         "button-component": ButtonComponent;
+        "checkbox-component": CheckboxComponent;
         "dropdown-button": DropdownButton;
+        "dropdown-component": DropdownComponent;
+        "dropdown-link": DropdownLink;
+        "dropdown-panel-link": DropdownPanelLink;
+        "dropdown-panel-section": DropdownPanelSection;
         "header-component": HeaderComponent;
+        "radio-button": RadioButton;
         "section-component": SectionComponent;
         "text-input-component": TextInputComponent;
     }
@@ -159,8 +251,14 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "banner-component": LocalJSX.BannerComponent & JSXBase.HTMLAttributes<HTMLBannerComponentElement>;
             "button-component": LocalJSX.ButtonComponent & JSXBase.HTMLAttributes<HTMLButtonComponentElement>;
+            "checkbox-component": LocalJSX.CheckboxComponent & JSXBase.HTMLAttributes<HTMLCheckboxComponentElement>;
             "dropdown-button": LocalJSX.DropdownButton & JSXBase.HTMLAttributes<HTMLDropdownButtonElement>;
+            "dropdown-component": LocalJSX.DropdownComponent & JSXBase.HTMLAttributes<HTMLDropdownComponentElement>;
+            "dropdown-link": LocalJSX.DropdownLink & JSXBase.HTMLAttributes<HTMLDropdownLinkElement>;
+            "dropdown-panel-link": LocalJSX.DropdownPanelLink & JSXBase.HTMLAttributes<HTMLDropdownPanelLinkElement>;
+            "dropdown-panel-section": LocalJSX.DropdownPanelSection & JSXBase.HTMLAttributes<HTMLDropdownPanelSectionElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "radio-button": LocalJSX.RadioButton & JSXBase.HTMLAttributes<HTMLRadioButtonElement>;
             "section-component": LocalJSX.SectionComponent & JSXBase.HTMLAttributes<HTMLSectionComponentElement>;
             "text-input-component": LocalJSX.TextInputComponent & JSXBase.HTMLAttributes<HTMLTextInputComponentElement>;
         }

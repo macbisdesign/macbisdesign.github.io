@@ -81,8 +81,9 @@ ${args.headers
     search-theme=${header.searchTheme}
     search-text-theme=${header.searchTextTheme}
     seperator-size=${header.seperatorSize}
-    seperator-theme=${header.seperatorTheme}>
-    ${header.children}
+    seperator-theme=${header.seperatorTheme}
+    nav-separator=${header.navSeparator}>
+     ${header.children}
     </header-component>
     <hr />
     `;
@@ -103,7 +104,8 @@ const header1 = {
   accountStyle: 'simplified-no-label',
   navLocation: 'below',
   navTheme: 'blue',
-  children: `<div slot="nav-slot" style="display: flex">
+  navSeparator: 'false',
+  children: `<div style="display: flex">
    <button-component size="large" label="Button" type="primary" state="hover"></button-component>
   <button-component size="large" label="Button" type="primary" state="hover"></button-component>
   <button-component size="large" label="Button" type="primary" state="hover"></button-component>
@@ -124,6 +126,7 @@ const header2 = {
   accountTheme: 'dark',
   accountLabel: 'My Account',
   accountStyle: 'simplified-no-label',
+  navSeparator: 'false',
 };
 
 const header3 = {
@@ -139,6 +142,7 @@ const header3 = {
   accountStyle: 'simplified-no-label',
   navLocation: 'inline',
   navInlinePosition: 'left',
+  navSeparator: 'false',
   children: `<div slot="nav-slot" style="display: flex">
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
@@ -157,6 +161,7 @@ const header4 = {
   accountTheme: 'dark',
   accountLabel: 'My Account',
   accountStyle: 'simplified-no-label',
+  navSeparator: 'false',
 };
 
 const header5 = {
@@ -170,6 +175,7 @@ const header5 = {
   accountTheme: 'dark',
   accountLabel: 'My Account',
   accountStyle: 'detailed',
+  navSeparator: 'false',
 };
 
 const header6 = {
@@ -183,6 +189,7 @@ const header6 = {
   accountTheme: 'blue',
   accountLabel: 'My Account',
   accountStyle: 'detailed',
+  navSeparator: 'false',
 };
 
 const header7 = {
@@ -198,6 +205,7 @@ const header7 = {
   accountStyle: 'simplified-no-label',
   navLocation: 'inline',
   navInlinePosition: 'right',
+  navSeparator: 'false',
   children: `<div slot="nav-slot" style="display: flex">
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <dropdown-button button-label="Button"></dropdown-button>
@@ -215,6 +223,70 @@ const header8 = {
   accountTheme: 'blue',
   accountLabel: 'My Account',
   accountStyle: 'detailed',
+  navSeparator: 'false',
+};
+
+const header9 = {
+  theme: 'blue',
+  size: 'normal',
+  showSearch: 'false',
+  searchTheme: 'blue',
+  searchTextTheme: 'white',
+  headerLogo: '1',
+  headerLogoTheme: 'blue',
+  accountTheme: 'dark',
+  accountLabel: 'My Account',
+  accountStyle: 'simplified-no-label',
+  navLocation: 'below',
+  navTheme: 'blue',
+  navSeparated: 'true',
+  children: `<dropdown-component>
+  <dropdown-component>
+    <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+    <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+  </dropdown-component>
+`,
+};
+
+const header10 = {
+  theme: 'blue',
+  size: 'normal',
+  showSearch: 'true',
+  searchTheme: 'blue',
+  searchTextTheme: 'white',
+  headerLogo: '1',
+  headerLogoTheme: 'blue',
+  accountTheme: 'dark',
+  accountLabel: 'My Account',
+  accountStyle: 'simplified-no-label',
+  navLocation: 'below',
+  navTheme: 'white',
+  navSeparator: 'false',
+  children: `<dropdown-component>
+  <dropdown-link text="Section" col="1">
+    <dropdown-panel-section>
+      <dropdown-panel-link> For developers </dropdown-panel-link>
+      <dropdown-panel-link> For developers </dropdown-panel-link>
+    </dropdown-panel-section>
+  </dropdown-link>
+  <dropdown-link text="Section" col="1">
+  <dropdown-panel-section>
+    <dropdown-panel-link> For developers </dropdown-panel-link>
+    <dropdown-panel-link> For developers </dropdown-panel-link>
+  </dropdown-panel-section>
+</dropdown-link>
+</dropdown-component>
+`,
 };
 
 export const FirstHeader = Template.bind({});
@@ -255,4 +327,14 @@ SeventhHeader.args = {
 export const EighthHeader = Template.bind({});
 EighthHeader.args = {
   headers: [header8],
+};
+
+export const NinthHeader = Template.bind({});
+NinthHeader.args = {
+  headers: [header9],
+};
+
+export const TenthHeader = Template.bind({});
+TenthHeader.args = {
+  headers: [header10],
 };

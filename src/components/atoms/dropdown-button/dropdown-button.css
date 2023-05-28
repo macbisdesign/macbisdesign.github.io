@@ -1,7 +1,7 @@
-.button-contents{
-    display: none;
+.button-contents {
+  display: none;
 }
 
-.button-contents--open{
-    display: flex;
+.button-contents--open {
+  display: flex;
 }

@@ -1,7 +1,5 @@
 # header-component
 
-
-
 <!-- Auto Generated Below -->
 
 
@@ -16,6 +14,7 @@
 | `headerLogoTheme`   | `header-logo-theme`   |             | `"blue" \| "dark" \| "white"`                                                      | `undefined` |
 | `navInlinePosition` | `nav-inline-position` |             | `"left" \| "right"`                                                                | `undefined` |
 | `navLocation`       | `nav-location`        |             | `"below" \| "inline" \| "none"`                                                    | `undefined` |
+| `navSeparator`      | `nav-separator`       |             | `boolean`                                                                          | `false`     |
 | `navTheme`          | `nav-theme`           |             | `"blue" \| "dark" \| "white"`                                                      | `undefined` |
 | `searchTextTheme`   | `search-text-theme`   |             | `"blue" \| "dark" \| "white"`                                                      | `undefined` |
 | `searchTheme`       | `search-theme`        |             | `"blue" \| "dark" \| "white"`                                                      | `undefined` |

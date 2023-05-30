@@ -82,7 +82,8 @@ ${args.headers
     search-text-theme=${header.searchTextTheme}
     seperator-size=${header.seperatorSize}
     seperator-theme=${header.seperatorTheme}
-    nav-separator=${header.navSeparator}>
+    nav-separator=${header.navSeparator}
+    header-logo-dash=${header.headerLogoDash}>
      ${header.children}
     </header-component>
     <hr />
@@ -105,6 +106,7 @@ const header1 = {
   navLocation: 'below',
   navTheme: 'blue',
   navSeparator: 'false',
+  headerLogoDash: 'true',
   children: `<div style="display: flex">
    <button-component size="large" label="Button" type="primary" state="hover"></button-component>
   <button-component size="large" label="Button" type="primary" state="hover"></button-component>
@@ -127,6 +129,7 @@ const header2 = {
   accountLabel: 'My Account',
   accountStyle: 'simplified-no-label',
   navSeparator: 'false',
+  headerLogoDash: 'true',
 };
 
 const header3 = {
@@ -143,6 +146,8 @@ const header3 = {
   navLocation: 'inline',
   navInlinePosition: 'left',
   navSeparator: 'false',
+  headerLogoDash: 'true',
+
   children: `<div slot="nav-slot" style="display: flex">
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
@@ -162,6 +167,7 @@ const header4 = {
   accountLabel: 'My Account',
   accountStyle: 'simplified-no-label',
   navSeparator: 'false',
+  headerLogoDash: 'true',
 };
 
 const header5 = {
@@ -176,6 +182,7 @@ const header5 = {
   accountLabel: 'My Account',
   accountStyle: 'detailed',
   navSeparator: 'false',
+  headerLogoDash: 'true',
 };
 
 const header6 = {
@@ -190,6 +197,7 @@ const header6 = {
   accountLabel: 'My Account',
   accountStyle: 'detailed',
   navSeparator: 'false',
+  headerLogoDash: 'true',
 };
 
 const header7 = {
@@ -206,6 +214,7 @@ const header7 = {
   navLocation: 'inline',
   navInlinePosition: 'right',
   navSeparator: 'false',
+  headerLogoDash: 'true',
   children: `<div slot="nav-slot" style="display: flex">
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <dropdown-button button-label="Button"></dropdown-button>
@@ -224,6 +233,7 @@ const header8 = {
   accountLabel: 'My Account',
   accountStyle: 'detailed',
   navSeparator: 'false',
+  headerLogoDash: 'false',
 };
 
 const header9 = {
@@ -240,6 +250,7 @@ const header9 = {
   navLocation: 'below',
   navTheme: 'blue',
   navSeparated: 'true',
+  headerLogoDash: 'true',
   children: `<dropdown-component>
   <dropdown-component>
     <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
@@ -272,6 +283,7 @@ const header10 = {
   navLocation: 'below',
   navTheme: 'white',
   navSeparator: 'false',
+  headerLogoDash: 'false',
   children: `<dropdown-component>
   <dropdown-link text="Section" col="1">
     <dropdown-panel-section>

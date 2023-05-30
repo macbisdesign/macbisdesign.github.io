@@ -45,6 +45,7 @@ export namespace Components {
         "accountStyle": 'detailed' | 'simplified-icon' | 'simplified-no-icon' | 'simplified-no-label';
         "accountTheme": 'blue' | 'dark';
         "headerLogo": string;
+        "headerLogoDash": boolean;
         "headerLogoTheme": 'white' | 'blue' | 'dark';
         "navInlinePosition": 'right' | 'left';
         "navLocation": 'below' | 'inline' | 'none';
@@ -202,6 +203,7 @@ declare namespace LocalJSX {
         "accountStyle"?: 'detailed' | 'simplified-icon' | 'simplified-no-icon' | 'simplified-no-label';
         "accountTheme"?: 'blue' | 'dark';
         "headerLogo"?: string;
+        "headerLogoDash"?: boolean;
         "headerLogoTheme"?: 'white' | 'blue' | 'dark';
         "navInlinePosition"?: 'right' | 'left';
         "navLocation"?: 'below' | 'inline' | 'none';

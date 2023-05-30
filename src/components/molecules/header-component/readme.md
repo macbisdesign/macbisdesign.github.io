@@ -11,6 +11,7 @@
 | `accountStyle`      | `account-style`       |             | `"detailed" \| "simplified-icon" \| "simplified-no-icon" \| "simplified-no-label"` | `undefined` |
 | `accountTheme`      | `account-theme`       |             | `"blue" \| "dark"`                                                                 | `'dark'`    |
 | `headerLogo`        | `header-logo`         |             | `string`                                                                           | `undefined` |
+| `headerLogoDash`    | `header-logo-dash`    |             | `boolean`                                                                          | `false`     |
 | `headerLogoTheme`   | `header-logo-theme`   |             | `"blue" \| "dark" \| "white"`                                                      | `undefined` |
 | `navInlinePosition` | `nav-inline-position` |             | `"left" \| "right"`                                                                | `undefined` |
 | `navLocation`       | `nav-location`        |             | `"below" \| "inline" \| "none"`                                                    | `undefined` |

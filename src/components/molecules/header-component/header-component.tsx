@@ -26,6 +26,7 @@ export class HeaderComponent {
   @Prop() seperatorSize: 'small' | 'large' | 'none';
   @Prop() seperatorTheme: 'white' | 'blue';
   @Prop() navSeparator: boolean = false;
+  @Prop() headerLogoDash: boolean = false;
 
   componentDidLoad() {
     this.chooseLogo(parseInt(this.headerLogo));
@@ -40,7 +41,9 @@ export class HeaderComponent {
     return (
       <Host>
         <header class={`header-component header-component--${this.size} header-component--${this.theme}`}>
-          <div class={`header-logo ${this.navSeparator ? 'header-logo--left-dash' : ''} header-logo--${this.headerLogoTheme} header-logo-seperator--${this.headerLogoTheme}`}></div>
+          <div
+            class={`header-logo ${this.headerLogoDash ? 'header-logo--left-dash' : ''} header-logo--${this.headerLogoTheme} header-logo-seperator--${this.headerLogoTheme}`}
+          ></div>
 
           <div class={`header-content`}>
             <div class={`content-left`}>

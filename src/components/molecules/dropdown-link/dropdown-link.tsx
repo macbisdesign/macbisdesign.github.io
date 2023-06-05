@@ -16,13 +16,13 @@ export class DropdownLink {
   @State() isOpen: boolean = false;
 
   // handlers
-  @Listen('click', { capture: true })
-  handleClick() {
+  @Listen('mouseover', { capture: true })
+  handleMouseOver() {
     this.isOpen = !this.isOpen;
   }
 
-  @Listen('blur', { capture: true })
-  handleBlur() {
+  @Listen('mouseout', { capture: true })
+  handleMouseOut() {
     if (this.isOpen) {
       this.isOpen = false;
     }
@@ -32,7 +32,7 @@ export class DropdownLink {
     return (
       <Host>
         <li class={`${this.isOpen ? 'dropdown-link--open' : 'dropdown-link--closed'}`}>
-          <button onClick={this.handleClick} onBlur={this.handleBlur} class={`dropdown-link-button dropdown-link-button-theme--${this.theme}`}>
+          <button onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut} class={`dropdown-link-button dropdown-link-button-theme--${this.theme}`}>
             <span class="dropdown-link-button-text">{this.text}</span>
             {this.isOpen ? (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dropdown-link-button-icon">

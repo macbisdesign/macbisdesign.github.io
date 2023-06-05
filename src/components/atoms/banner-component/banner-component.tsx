@@ -1,10 +1,10 @@
-import { Component, Element, State, Host, h, Prop } from '@stencil/core';
+import { Component, Element, State, Host, h, Prop, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'banner-component',
   styleUrl: 'banner-component.css',
   shadow: true,
-  assetsDirs: ['./'],
+  assetsDirs: ['assets'],
 })
 export class BannerComponent {
   @Element() el: HTMLElement;
@@ -15,6 +15,7 @@ export class BannerComponent {
   @Prop() bannerAction: string;
   @Prop() bannerDomain: 'gov' | 'mil';
   @Prop() bannerLang: 'english' | 'spanish';
+  @Prop() image = 'us_flag_small.png';
 
   //The content for each type of banner order is as follows english/gov, english/mil, spanish/gov, spanish/mil
   bannerContent = [
@@ -202,11 +203,13 @@ export class BannerComponent {
   }
 
   render() {
+    const imageSrc = getAssetPath(`./assets/${this.image}`);
+
     return (
       <Host>
         <div class="banner-container">
           <header class="banner-header">
-            <img src={'/flags/us_flag_small.png'} alt="United States Flag Icon" />
+            <img src={imageSrc} alt="United States Flag Icon" />
             <div class="banner-texts">
               <p>{this.bannerTitle}</p>
               <button onClick={this.toggleBanner}>

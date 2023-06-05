@@ -22,7 +22,7 @@ export class FooterComponent {
   render() {
     return (
       <Host>
-        <footer class={`${this.showAbovePart ? 'pt-8' : ''} font-sans`}>
+        <footer class={`font-sans`}>
           {this.showAbovePart && (
             <div
               class={`${this.hasBorders ? 'border-b border-t border-gray-300' : ''} ${

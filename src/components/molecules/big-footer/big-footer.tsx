@@ -18,7 +18,7 @@ export class BigFooter {
   render() {
     return (
       <Host>
-        <footer class="pt-8 font-sans">
+        <footer class="font-sans">
           <div
             class={`${
               this.topBg === 'blue' ? 'bg-blue-700' : this.topBg === 'gray' ? 'bg-gray-600' : this.topBg === 'black' ? 'bg-black' : this.topBg === 'light-gray' ? 'bg-gray-100' : ''

@@ -11,6 +11,7 @@ export namespace Components {
         "bannerDomain": 'gov' | 'mil';
         "bannerLang": 'english' | 'spanish';
         "bannerTitle": string;
+        "image": string;
     }
     interface BigFooter {
         "bottomBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
@@ -208,6 +209,7 @@ declare namespace LocalJSX {
         "bannerDomain"?: 'gov' | 'mil';
         "bannerLang"?: 'english' | 'spanish';
         "bannerTitle"?: string;
+        "image"?: string;
     }
     interface BigFooter {
         "bottomBg"?: 'blue' | 'gray' | 'light-gray' | 'black';

@@ -1,10 +1,10 @@
 :host {
-  --font-family: Source Sans Pro Web,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+  --font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
 
   --input-border-color: #5c5c5c;
-  --input-focus-color: #2491FF;
+  --input-focus-color: #2491ff;
   --error-color: #b50909;
-  --primary-color: #2491FF;
+  --primary-color: #2491ff;
   --success-color: #00a91c;
 
   display: block;
@@ -15,14 +15,14 @@ div {
   margin-bottom: 2%;
 }
 
-div.error-type{
+div.error-type {
   border-left-width: 0.15rem;
   border-left-color: var(--error-color);
   border-left-style: solid;
   padding-left: 1rem;
 }
 
-div label{
+div label {
   display: block;
   font-size: 1.06rem;
   font-weight: 700;
@@ -32,7 +32,7 @@ div label{
   margin-bottom: 1%;
 }
 
-div label span{
+div label span {
   margin-left: 1%;
   color: red;
 }
@@ -53,7 +53,7 @@ div label span{
   border-radius: 5px;
 }
 
-.text-area{
+.text-area {
   border: 1px solid var(--input-border-color);
   height: 10rem;
   max-width: 30rem;
@@ -74,7 +74,7 @@ div label span{
   padding: calc(0.5rem - 0.25rem);
 }
 
-.error-msg{
+.error-msg {
   display: block;
   padding: 0.25rem 0rem;
   color: var(--error-color);
@@ -85,7 +85,7 @@ div label span{
 
 @media screen and (min-width: 768px) {
   .text-input {
-      max-width: 30rem;
-      width: 30rem;
+    max-width: 30rem;
+    width: 30rem;
   }
 }

@@ -12,6 +12,16 @@ export namespace Components {
         "bannerLang": 'english' | 'spanish';
         "bannerTitle": string;
     }
+    interface BigFooter {
+        "bottomBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
+        "bottomColor"?: 'white';
+        "hasBorders": boolean;
+        "showInspect": boolean;
+        "sitemap": boolean;
+        "topBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
+        "topLeftColor"?: 'blue' | 'white';
+        "topRightColor"?: 'white';
+    }
     interface ButtonComponent {
         "iconPosition": string;
         "label": string;
@@ -34,27 +44,42 @@ export namespace Components {
         "panelSize": 'full' | 'contain';
         "panelTheme": 'white' | 'blue';
         "text": string;
-        "theme": 'blue' | 'white';
+        "theme": 'blue' | 'white' | 'dark-blue';
     }
     interface DropdownPanelLink {
     }
     interface DropdownPanelSection {
     }
+    interface FooterComponent {
+        "bottomBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
+        "bottomColor"?: 'white';
+        "filled": boolean;
+        "flexCol": boolean;
+        "hasBorder": boolean;
+        "hasBorders": boolean;
+        "showAbovePart": boolean;
+        "showAddress": boolean;
+        "showInspect": boolean;
+        "topBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
+        "topLeftColor": 'blue' | 'white';
+        "topRightColor"?: 'white';
+    }
     interface HeaderComponent {
+        "accountContainer": boolean;
+        "accountContainerTheme": 'white' | 'blue' | 'dark';
         "accountLabel": string;
-        "accountStyle": 'detailed' | 'simplified-icon' | 'simplified-no-icon' | 'simplified-no-label';
-        "accountTheme": 'blue' | 'dark';
         "headerLogo": string;
         "headerLogoDash": boolean;
+        "headerLogoDashTheme": 'blue' | 'white';
+        "headerLogoStretched": boolean;
         "headerLogoTheme": 'white' | 'blue' | 'dark';
         "navInlinePosition": 'right' | 'left';
         "navLocation": 'below' | 'inline' | 'none';
         "navSeparator": boolean;
+        "navSeparatorTheme": 'blue' | 'white';
         "navTheme": 'white' | 'blue' | 'dark';
         "searchTextTheme": 'white' | 'blue' | 'dark';
         "searchTheme": 'white' | 'blue' | 'dark';
-        "seperatorSize": 'small' | 'large' | 'none';
-        "seperatorTheme": 'white' | 'blue';
         "showSearch": boolean;
         "size": 'slim' | 'normal';
         "theme": 'white' | 'blue' | 'dark';
@@ -81,6 +106,12 @@ declare global {
     var HTMLBannerComponentElement: {
         prototype: HTMLBannerComponentElement;
         new (): HTMLBannerComponentElement;
+    };
+    interface HTMLBigFooterElement extends Components.BigFooter, HTMLStencilElement {
+    }
+    var HTMLBigFooterElement: {
+        prototype: HTMLBigFooterElement;
+        new (): HTMLBigFooterElement;
     };
     interface HTMLButtonComponentElement extends Components.ButtonComponent, HTMLStencilElement {
     }
@@ -124,6 +155,12 @@ declare global {
         prototype: HTMLDropdownPanelSectionElement;
         new (): HTMLDropdownPanelSectionElement;
     };
+    interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
+    }
+    var HTMLFooterComponentElement: {
+        prototype: HTMLFooterComponentElement;
+        new (): HTMLFooterComponentElement;
+    };
     interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
     }
     var HTMLHeaderComponentElement: {
@@ -150,6 +187,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "banner-component": HTMLBannerComponentElement;
+        "big-footer": HTMLBigFooterElement;
         "button-component": HTMLButtonComponentElement;
         "checkbox-component": HTMLCheckboxComponentElement;
         "dropdown-button": HTMLDropdownButtonElement;
@@ -157,6 +195,7 @@ declare global {
         "dropdown-link": HTMLDropdownLinkElement;
         "dropdown-panel-link": HTMLDropdownPanelLinkElement;
         "dropdown-panel-section": HTMLDropdownPanelSectionElement;
+        "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
         "radio-button": HTMLRadioButtonElement;
         "section-component": HTMLSectionComponentElement;
@@ -169,6 +208,16 @@ declare namespace LocalJSX {
         "bannerDomain"?: 'gov' | 'mil';
         "bannerLang"?: 'english' | 'spanish';
         "bannerTitle"?: string;
+    }
+    interface BigFooter {
+        "bottomBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
+        "bottomColor"?: 'white';
+        "hasBorders"?: boolean;
+        "showInspect"?: boolean;
+        "sitemap"?: boolean;
+        "topBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
+        "topLeftColor"?: 'blue' | 'white';
+        "topRightColor"?: 'white';
     }
     interface ButtonComponent {
         "iconPosition"?: string;
@@ -192,27 +241,42 @@ declare namespace LocalJSX {
         "panelSize"?: 'full' | 'contain';
         "panelTheme"?: 'white' | 'blue';
         "text"?: string;
-        "theme"?: 'blue' | 'white';
+        "theme"?: 'blue' | 'white' | 'dark-blue';
     }
     interface DropdownPanelLink {
     }
     interface DropdownPanelSection {
     }
+    interface FooterComponent {
+        "bottomBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
+        "bottomColor"?: 'white';
+        "filled"?: boolean;
+        "flexCol"?: boolean;
+        "hasBorder"?: boolean;
+        "hasBorders"?: boolean;
+        "showAbovePart"?: boolean;
+        "showAddress"?: boolean;
+        "showInspect"?: boolean;
+        "topBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
+        "topLeftColor"?: 'blue' | 'white';
+        "topRightColor"?: 'white';
+    }
     interface HeaderComponent {
+        "accountContainer"?: boolean;
+        "accountContainerTheme"?: 'white' | 'blue' | 'dark';
         "accountLabel"?: string;
-        "accountStyle"?: 'detailed' | 'simplified-icon' | 'simplified-no-icon' | 'simplified-no-label';
-        "accountTheme"?: 'blue' | 'dark';
         "headerLogo"?: string;
         "headerLogoDash"?: boolean;
+        "headerLogoDashTheme"?: 'blue' | 'white';
+        "headerLogoStretched"?: boolean;
         "headerLogoTheme"?: 'white' | 'blue' | 'dark';
         "navInlinePosition"?: 'right' | 'left';
         "navLocation"?: 'below' | 'inline' | 'none';
         "navSeparator"?: boolean;
+        "navSeparatorTheme"?: 'blue' | 'white';
         "navTheme"?: 'white' | 'blue' | 'dark';
         "searchTextTheme"?: 'white' | 'blue' | 'dark';
         "searchTheme"?: 'white' | 'blue' | 'dark';
-        "seperatorSize"?: 'small' | 'large' | 'none';
-        "seperatorTheme"?: 'white' | 'blue';
         "showSearch"?: boolean;
         "size"?: 'slim' | 'normal';
         "theme"?: 'white' | 'blue' | 'dark';
@@ -234,6 +298,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "banner-component": BannerComponent;
+        "big-footer": BigFooter;
         "button-component": ButtonComponent;
         "checkbox-component": CheckboxComponent;
         "dropdown-button": DropdownButton;
@@ -241,6 +306,7 @@ declare namespace LocalJSX {
         "dropdown-link": DropdownLink;
         "dropdown-panel-link": DropdownPanelLink;
         "dropdown-panel-section": DropdownPanelSection;
+        "footer-component": FooterComponent;
         "header-component": HeaderComponent;
         "radio-button": RadioButton;
         "section-component": SectionComponent;
@@ -252,6 +318,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "banner-component": LocalJSX.BannerComponent & JSXBase.HTMLAttributes<HTMLBannerComponentElement>;
+            "big-footer": LocalJSX.BigFooter & JSXBase.HTMLAttributes<HTMLBigFooterElement>;
             "button-component": LocalJSX.ButtonComponent & JSXBase.HTMLAttributes<HTMLButtonComponentElement>;
             "checkbox-component": LocalJSX.CheckboxComponent & JSXBase.HTMLAttributes<HTMLCheckboxComponentElement>;
             "dropdown-button": LocalJSX.DropdownButton & JSXBase.HTMLAttributes<HTMLDropdownButtonElement>;
@@ -259,6 +326,7 @@ declare module "@stencil/core" {
             "dropdown-link": LocalJSX.DropdownLink & JSXBase.HTMLAttributes<HTMLDropdownLinkElement>;
             "dropdown-panel-link": LocalJSX.DropdownPanelLink & JSXBase.HTMLAttributes<HTMLDropdownPanelLinkElement>;
             "dropdown-panel-section": LocalJSX.DropdownPanelSection & JSXBase.HTMLAttributes<HTMLDropdownPanelSectionElement>;
+            "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "radio-button": LocalJSX.RadioButton & JSXBase.HTMLAttributes<HTMLRadioButtonElement>;
             "section-component": LocalJSX.SectionComponent & JSXBase.HTMLAttributes<HTMLSectionComponentElement>;

@@ -7,7 +7,7 @@ import { Component, Host, Listen, Prop, State, h } from '@stencil/core';
 })
 export class DropdownLink {
   @Prop() text: string;
-  @Prop() theme: 'blue' | 'white' = 'blue';
+  @Prop() theme: 'blue' | 'white' | 'dark-blue' = 'blue';
   @Prop() col: number;
   @Prop() panelSize: 'full' | 'contain' = 'full';
   @Prop() panelTheme: 'white' | 'blue' = 'blue';

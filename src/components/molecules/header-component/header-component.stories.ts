@@ -28,14 +28,6 @@ export default {
       control: { type: 'text' },
       options: ['right', 'left'],
     },
-    accountTheme: {
-      control: { type: 'text' },
-      options: ['blue', 'dark'],
-    },
-    accountStyle: {
-      control: { type: 'text' },
-      options: ['detailed', 'simplified-icon', 'simplified-no-icon', 'simplified-no-label'],
-    },
     accountLabel: {
       control: { type: 'text' },
     },
@@ -51,13 +43,29 @@ export default {
       control: { type: 'text' },
       options: ['white', 'blue', 'dark'],
     },
-    seperatorSize: {
-      control: { type: 'text' },
-      options: ['small', 'large', 'none'],
+    navSeparator: {
+      control: { type: 'boolean' },
     },
-    seperatorTheme: {
+    headerLogoDash: {
+      control: { type: 'boolean' },
+    },
+    headerLogoStretched: {
+      control: { type: 'boolean' },
+    },
+    accountContainerTheme: {
       control: { type: 'text' },
-      options: ['white', 'blue'],
+      options: ['white', 'blue', 'dark'],
+    },
+    headerLogoDashTheme: {
+      control: { type: 'text' },
+      options: ['blue', 'white'],
+    },
+    navSeparatorTheme: {
+      control: { type: 'text' },
+      options: ['blue', 'white'],
+    },
+    accountContainer: {
+      control: { type: 'boolean' },
     },
   },
 };
@@ -67,23 +75,25 @@ ${args.headers
   .map(header => {
     return `
     <header-component 
-    theme="${header.theme}" 
-    size="${header.size}" 
-    header-logo-theme="${header.headerLogoTheme}" 
-    header-logo="${header.headerLogo}" 
-    nav-theme="${header.navTheme}"
+    theme=${header.theme}
+    size=${header.size}
+    header-logo-theme=${header.headerLogoTheme}
+    header-logo=${header.headerLogo}
+    nav-theme=${header.navTheme}
     nav-location=${header.navLocation}
     nav-inline-position=${header.navInlinePosition}
-    account-theme=${header.accountTheme}
-    account-style=${header.accountStyle}
     account-label=${header.accountLabel}
     show-search=${header.showSearch}
     search-theme=${header.searchTheme}
     search-text-theme=${header.searchTextTheme}
-    seperator-size=${header.seperatorSize}
-    seperator-theme=${header.seperatorTheme}
     nav-separator=${header.navSeparator}
-    header-logo-dash=${header.headerLogoDash}>
+    header-logo-dash=${header.headerLogoDash}
+    header-logo-stretched=${header.headerLogoStretched}
+    account-container-theme=${header.accountContainerTheme}
+    header-logo-dash-theme=${header.headerLogoDashTheme}
+    nav-separator-theme=${header.navSeparatorTheme}
+    account-container=${header.accountContainer}
+    >
      ${header.children}
     </header-component>
     <hr />
@@ -93,173 +103,28 @@ ${args.headers
 `;
 
 const header1 = {
-  theme: 'blue',
-  size: 'normal',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '1',
-  headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
-  navLocation: 'below',
-  navTheme: 'blue',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-  children: `<div style="display: flex">
-   <button-component size="large" label="Button" type="primary" state="hover"></button-component>
-  <button-component size="large" label="Button" type="primary" state="hover"></button-component>
-  <button-component size="large" label="Button" type="primary" state="hover"></button-component>
-  <button-component size="large" label="Button" type="primary" state="hover"></button-component>
-  <button-component size="large" label="Button" type="primary" state="hover"></button-component>
-</div>
-`,
-};
-
-const header2 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '1',
-  headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-};
-
-const header3 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '1',
-  headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
-  navLocation: 'inline',
-  navInlinePosition: 'left',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-
-  children: `<div slot="nav-slot" style="display: flex">
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-</div>`,
-};
-
-const header4 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'dark',
-  headerLogo: '2',
-  headerLogoTheme: 'white',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-};
-
-const header5 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '4',
-  headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'detailed',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-};
-
-const header6 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'blue',
-  headerLogo: '6',
-  headerLogoTheme: 'white',
-  accountTheme: 'blue',
-  accountLabel: 'My Account',
-  accountStyle: 'detailed',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-};
-
-const header7 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '4',
-  headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
-  navLocation: 'inline',
-  navInlinePosition: 'right',
-  navSeparator: 'false',
-  headerLogoDash: 'true',
-  children: `<div slot="nav-slot" style="display: flex">
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  <dropdown-button button-label="Button"></dropdown-button>
-</div>`,
-};
-
-const header8 = {
   theme: 'dark',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'dark',
-  searchTextTheme: 'white',
-  headerLogo: '5',
-  headerLogoTheme: 'blue',
-  accountTheme: 'blue',
-  accountLabel: 'My Account',
-  accountStyle: 'detailed',
-  navSeparator: 'false',
-  headerLogoDash: 'false',
-};
-
-const header9 = {
-  theme: 'blue',
   size: 'normal',
   showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '1',
-  headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
+  headerLogo: '3',
+  headerLogoTheme: 'dark',
+  accountLabel: '"My Account"',
   navLocation: 'below',
-  navTheme: 'blue',
-  navSeparated: 'true',
+  navTheme: 'dark',
+  navSeparator: 'true',
   headerLogoDash: 'true',
-  children: `<dropdown-component>
+  navSeparatorTheme: 'white',
+  accountContainerTheme: 'white',
+  headerLogoStretched: 'false',
+  children: `
   <dropdown-component>
-    <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
+    <dropdown-link theme="dark" panel-theme="dark" text="Section" col="3">
       <dropdown-panel-section>
         <dropdown-panel-link> For developers </dropdown-panel-link>
         <dropdown-panel-link> For developers </dropdown-panel-link>
       </dropdown-panel-section>
     </dropdown-link>
-    <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
+    <dropdown-link theme="dark" panel-theme="dark" text="Section" col="3">
       <dropdown-panel-section>
         <dropdown-panel-link> For developers </dropdown-panel-link>
         <dropdown-panel-link> For developers </dropdown-panel-link>
@@ -269,36 +134,152 @@ const header9 = {
 `,
 };
 
-const header10 = {
+const header2 = {
   theme: 'blue',
   size: 'normal',
-  showSearch: 'true',
+  showSearch: 'false',
+  headerLogo: '3',
+  headerLogoTheme: 'blue',
+  accountLabel: '"My Account"',
+  navLocation: 'below',
+  navTheme: 'blue',
+  navSeparator: 'true',
+  headerLogoDash: 'true',
+  navSeparatorTheme: 'white',
+  accountContainerTheme: 'white',
+  headerLogoStretched: 'false',
+  children: `
+  <dropdown-component>
+    <dropdown-link theme="white" panel-theme="white" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+    <dropdown-link theme="white" panel-theme="white" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+  </dropdown-component>
+  `,
+};
+
+const header3 = {
+  theme: 'blue',
+  size: 'normal',
+  showSearch: 'false',
+  headerLogo: '3',
+  headerLogoTheme: 'blue',
+  accountLabel: '"My Account"',
+  navLocation: 'below',
+  navTheme: 'blue',
+  navSeparator: 'true',
+  headerLogoDash: 'true',
+  navSeparatorTheme: 'white',
+  accountContainerTheme: 'white',
+  headerLogoStretched: 'false',
+  children: `
+  <dropdown-component>
+    <dropdown-link theme="dark-blue" panel-theme="dark-blue" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+    <dropdown-link theme="dark-blue" panel-theme="dark-blue" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+  </dropdown-component>
+  `,
+};
+
+const header4 = {
+  theme: 'blue',
+  size: 'normal',
+  showSearch: 'false',
   searchTheme: 'blue',
   searchTextTheme: 'white',
-  headerLogo: '1',
+  headerLogo: '3',
   headerLogoTheme: 'blue',
-  accountTheme: 'dark',
-  accountLabel: 'My Account',
-  accountStyle: 'simplified-no-label',
+  accountLabel: '"My Account"',
   navLocation: 'below',
-  navTheme: 'white',
-  navSeparator: 'false',
-  headerLogoDash: 'false',
-  children: `<dropdown-component>
-  <dropdown-link text="Section" col="1">
-    <dropdown-panel-section>
-      <dropdown-panel-link> For developers </dropdown-panel-link>
-      <dropdown-panel-link> For developers </dropdown-panel-link>
-    </dropdown-panel-section>
-  </dropdown-link>
-  <dropdown-link text="Section" col="1">
-  <dropdown-panel-section>
-    <dropdown-panel-link> For developers </dropdown-panel-link>
-    <dropdown-panel-link> For developers </dropdown-panel-link>
-  </dropdown-panel-section>
-</dropdown-link>
-</dropdown-component>
-`,
+  navTheme: 'blue',
+  navSeparator: 'true',
+  headerLogoDash: 'true',
+  navSeparatorTheme: 'white',
+  accountContainerTheme: 'white',
+  headerLogoStretched: 'false',
+  children: `
+  <dropdown-component>
+    <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+  </dropdown-component>
+  `,
+};
+
+const header5 = {
+  theme: 'blue',
+  size: 'normal',
+  showSearch: 'false',
+  searchTheme: 'blue',
+  searchTextTheme: 'white',
+  headerLogo: '3',
+  headerLogoTheme: 'blue',
+  accountLabel: '"My Account"',
+  navLocation: 'below',
+  navTheme: 'blue',
+  navSeparator: 'true',
+  headerLogoDash: 'true',
+  navSeparatorTheme: 'white',
+  accountContainerTheme: 'white',
+  headerLogoStretched: 'false',
+  children: `
+  <dropdown-component>
+    <dropdown-link theme="dark-blue" panel-theme="dark-blue" panel-size="contain" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+  </dropdown-component>
+  `,
+};
+
+const header6 = {
+  theme: 'dark',
+  size: 'normal',
+  showSearch: 'false',
+  searchTheme: 'blue',
+  searchTextTheme: 'white',
+  headerLogo: '3',
+  headerLogoTheme: 'dark',
+  accountLabel: '"My Account"',
+  navLocation: 'below',
+  navTheme: 'dark',
+  navSeparator: 'true',
+  headerLogoDash: 'true',
+  navSeparatorTheme: 'white',
+  accountContainerTheme: 'white',
+  headerLogoStretched: 'false',
+  children: `
+  <dropdown-component>
+    <dropdown-link theme="dark" panel-theme="dark" panel-size="contain" text="Section" col="3">
+      <dropdown-panel-section>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+        <dropdown-panel-link> For developers </dropdown-panel-link>
+      </dropdown-panel-section>
+    </dropdown-link>
+  </dropdown-component>
+  `,
 };
 
 export const FirstHeader = Template.bind({});
@@ -329,24 +310,4 @@ FifthHeader.args = {
 export const SixthHeader = Template.bind({});
 SixthHeader.args = {
   headers: [header6],
-};
-
-export const SeventhHeader = Template.bind({});
-SeventhHeader.args = {
-  headers: [header7],
-};
-
-export const EighthHeader = Template.bind({});
-EighthHeader.args = {
-  headers: [header8],
-};
-
-export const NinthHeader = Template.bind({});
-NinthHeader.args = {
-  headers: [header9],
-};
-
-export const TenthHeader = Template.bind({});
-TenthHeader.args = {
-  headers: [header10],
 };

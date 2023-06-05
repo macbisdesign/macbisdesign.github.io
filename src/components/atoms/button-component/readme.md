@@ -1,7 +1,5 @@
 # banner-component
 
-
-
 <!-- Auto Generated Below -->
 
 

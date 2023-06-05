@@ -5,15 +5,13 @@ import { Component, Host, h, Prop } from '@stencil/core';
   styleUrl: 'text-input-component.css',
   shadow: true,
 })
-
 export class TextInputComponent {
-
   @Prop() kind: 'default' | 'error' | 'success' = 'default';
-  @Prop() label: string
-  @Prop() placeholder: string
-  @Prop() type: string
-  @Prop() hint: string
-  @Prop() required: boolean
+  @Prop() label: string;
+  @Prop() placeholder: string;
+  @Prop() type: string;
+  @Prop() hint: string;
+  @Prop() required: boolean;
 
   inputID: string = crypto.randomUUID();
 
@@ -23,17 +21,14 @@ export class TextInputComponent {
     return (
       <Host>
         <div class={`${this.kind}-type`}>
-          <label htmlFor={this.getInputID()}>{this.label}<span>{this.required ? '*' : ''}</span></label>
-          <span class="hint">{this.hint === 'undefined' ? '' : this.hint}</span >
-          <input
-          type={this.type}
-          class={`text-input ${this.kind}`}
-          id={this.getInputID()}
-          placeholder={this.placeholder === 'undefined' ? '' : this.placeholder}
-          />
+          <label htmlFor={this.getInputID()}>
+            {this.label}
+            <span>{this.required ? '*' : ''}</span>
+          </label>
+          <span class="hint">{this.hint === 'undefined' ? '' : this.hint}</span>
+          <input type={this.type} class={`text-input ${this.kind}`} id={this.getInputID()} placeholder={this.placeholder === 'undefined' ? '' : this.placeholder} />
         </div>
       </Host>
     );
   }
-
 }

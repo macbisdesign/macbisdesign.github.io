@@ -1,7 +1,5 @@
 # text-input-component
 
-
-
 <!-- Auto Generated Below -->
 
 

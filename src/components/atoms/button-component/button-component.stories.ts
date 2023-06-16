@@ -9,6 +9,14 @@ import outlinedSmallButtons from './utils/outlinedSmallButtons';
 import linkSmallButtons from './utils/linkSmallButtons';
 import iconButtons from './utils/iconButtons';
 
+interface Button {
+  size: 'small' | 'medium' | 'large';
+  label: string;
+  type: 'success' | 'error' | 'inverse' | 'base';
+  state: 'filled' | 'hover' | 'active' | 'focus' | 'default';
+  iconPosition?: 'left' | 'right';
+  }
+
 export default {
   title: 'Components/Button',
   argTypes: {

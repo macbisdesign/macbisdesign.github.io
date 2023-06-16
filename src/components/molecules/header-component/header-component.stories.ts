@@ -568,70 +568,70 @@ const header24 = {
   headerLogoStretched: 'false',
 };
 
-export const FirstHeader = Template.bind({});
-FirstHeader.args = {
+export const MegamenuBlack = Template.bind({});
+MegamenuBlack.args = {
   headers: [header1],
 };
 
-export const SecondHeader = Template.bind({});
-SecondHeader.args = {
+export const MegaMenuBlueAndWhite = Template.bind({});
+MegaMenuBlueAndWhite.args = {
   headers: [header2],
 };
 
-export const ThirdHeader = Template.bind({});
-ThirdHeader.args = {
+export const MegaMenuBlue = Template.bind({});
+MegaMenuBlue.args = {
   headers: [header3],
 };
 
-export const FourthHeader = Template.bind({});
-FourthHeader.args = {
+export const DropdownMenuWhite = Template.bind({});
+DropdownMenuWhite.args = {
   headers: [header4],
 };
 
-export const FifthHeader = Template.bind({});
-FifthHeader.args = {
+export const DropdownMenuBlue = Template.bind({});
+DropdownMenuBlue.args = {
   headers: [header5],
 };
 
-export const SixthHeader = Template.bind({});
-SixthHeader.args = {
+export const DropdownMenuBlack = Template.bind({});
+DropdownMenuBlack.args = {
   headers: [header6],
 };
 
-export const SeventhHeader = Template.bind({});
-SeventhHeader.args = {
+export const SearchHeaderBlue = Template.bind({});
+SearchHeaderBlue.args = {
   headers: [header7],
 };
 
-export const EightHeader = Template.bind({});
-EightHeader.args = {
+export const BasicMenuBlue = Template.bind({});
+BasicMenuBlue.args = {
   headers: [header8],
 };
 
-export const NinthHeader = Template.bind({});
-NinthHeader.args = {
-  headers: [header9],
-};
+// export const NinthHeader = Template.bind({});
+// NinthHeader.args = {
+//   headers: [header9],
+// };
 
-export const TenthHeader = Template.bind({});
-TenthHeader.args = {
+export const BasicMenuButtons = Template.bind({});
+BasicMenuButtons.args = {
   headers: [header10],
 };
 
-export const EleventhHeader = Template.bind({});
+export const SearchMenuButtonsRight = Template.bind({});
 
-EleventhHeader.args = {
+SearchMenuButtonsRight.args = {
   headers: [header11],
 };
 
-export const TwelfthHeader = Template.bind({});
+export const SearchMenuDividerBlue = Template.bind({});
 
-TwelfthHeader.args = {
+SearchMenuDividerBlue.args = {
   headers: [header12],
 };
 
-export const ThirteenthHeader = Template.bind({});
-ThirteenthHeader.args = {
+export const SearchMenuDividerButtons = Template.bind({});
+SearchMenuDividerButtons.args = {
   headers: [header13],
 };
 

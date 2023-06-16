@@ -630,18 +630,18 @@ SearchMenuDividerBlue.args = {
   headers: [header12],
 };
 
-export const SearchMenuDividerButtons = Template.bind({});
-SearchMenuDividerButtons.args = {
+export const SearchMenuDividerButton = Template.bind({});
+SearchMenuDividerButton.args = {
   headers: [header13],
 };
 
-export const FourteenthHeader = Template.bind({});
-FourteenthHeader.args = {
+export const SearchMenuDividerButtons = Template.bind({});
+SearchMenuDividerButtons.args = {
   headers: [header14],
 };
 
-export const FifteenthHeader = Template.bind({});
-FifteenthHeader.args = {
+export const SearchMenuWhite = Template.bind({});
+SearchMenuWhite.args = {
   headers: [header15],
 };
 

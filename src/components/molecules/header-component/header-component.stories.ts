@@ -1,122 +1,118 @@
 export default {
-  title: 'Components/Header',
+  title: "Components/Header",
+  tags: ["autodocs"],
+  render(args) {
+    return `
+    <header-component 
+    theme="${args.theme}"
+    size="${args.size}"
+    header-logo-theme="${args.headerLogoTheme}"
+    header-logo="${args.headerLogo}"
+    nav-theme="${args.navTheme}"
+    nav-location="${args.navLocation}"
+    nav-inline-position="${args.navInlinePosition}"
+    account-label="${args.accountLabel}"
+    show-search="${args.showSearch}"
+    search-theme="${args.searchTheme}"
+    search-text-theme="${args.searchTextTheme}"
+    nav-separator="${args.navSeparator}"
+    header-logo-dash="${args.headerLogoDash}"
+    header-logo-stretched="${args.headerLogoStretched}"
+    account-container-theme="${args.accountContainerTheme}"
+    header-logo-dash-theme="${args.headerLogoDashTheme}"
+    nav-separator-theme="${args.navSeparatorTheme}"
+    account-container="${args.accountContainer}"
+    >
+     ${args.children}
+    </header-component>
+    `;
+  },
   argTypes: {
     theme: {
-      control: 'text',
-      options: ['white', 'blue', 'dark'],
+      control: "text",
+      options: ["white", "blue", "dark"],
     },
     size: {
-      control: 'text',
-      options: ['slim', 'normal'],
+      control: "text",
+      options: ["slim", "normal"],
     },
     headerLogoTheme: {
-      control: { type: 'text' },
-      options: ['white', 'blue', 'dark'],
+      control: { type: "text" },
+      options: ["white", "blue", "dark"],
     },
     headerLogo: {
-      control: { type: 'text' },
+      control: { type: "text" },
     },
     navTheme: {
-      control: { type: 'text' },
-      options: ['white', 'blue', 'dark'],
+      control: { type: "text" },
+      options: ["white", "blue", "dark"],
     },
     navLocation: {
-      control: { type: 'text' },
-      options: ['below', 'inline', 'none'],
+      control: { type: "text" },
+      options: ["below", "inline", "none"],
     },
     navInlinePosition: {
-      control: { type: 'text' },
-      options: ['right', 'left'],
+      control: { type: "text" },
+      options: ["right", "left"],
     },
     accountLabel: {
-      control: { type: 'text' },
+      control: { type: "text" },
     },
     showSearch: {
-      control: { type: 'boolean' },
-      options: ['true', 'false'],
+      control: { type: "boolean" },
+      options: ["true", "false"],
     },
     searchTheme: {
-      control: { type: 'text' },
-      options: ['white', 'blue', 'dark'],
+      control: { type: "text" },
+      options: ["white", "blue", "dark"],
     },
     searchTextTheme: {
-      control: { type: 'text' },
-      options: ['white', 'blue', 'dark'],
+      control: { type: "text" },
+      options: ["white", "blue", "dark"],
     },
     navSeparator: {
-      control: { type: 'boolean' },
+      control: { type: "boolean" },
     },
     headerLogoDash: {
-      control: { type: 'boolean' },
+      control: { type: "boolean" },
     },
     headerLogoStretched: {
-      control: { type: 'boolean' },
+      control: { type: "boolean" },
     },
     accountContainerTheme: {
-      control: { type: 'text' },
-      options: ['white', 'blue', 'dark'],
+      control: { type: "text" },
+      options: ["white", "blue", "dark"],
     },
     headerLogoDashTheme: {
-      control: { type: 'text' },
-      options: ['blue', 'white'],
+      control: { type: "text" },
+      options: ["blue", "white"],
     },
     navSeparatorTheme: {
-      control: { type: 'text' },
-      options: ['blue', 'white'],
+      control: { type: "text" },
+      options: ["blue", "white"],
     },
     accountContainer: {
-      control: { type: 'boolean' },
+      control: { type: "boolean" },
     },
   },
 };
 
-const Template = ({ ...args }) => `
-${args.headers
-  .map(header => {
-    return `
-    <header-component 
-    theme=${header.theme}
-    size=${header.size}
-    header-logo-theme=${header.headerLogoTheme}
-    header-logo=${header.headerLogo}
-    nav-theme=${header.navTheme}
-    nav-location=${header.navLocation}
-    nav-inline-position=${header.navInlinePosition}
-    account-label=${header.accountLabel}
-    show-search=${header.showSearch}
-    search-theme=${header.searchTheme}
-    search-text-theme=${header.searchTextTheme}
-    nav-separator=${header.navSeparator}
-    header-logo-dash=${header.headerLogoDash}
-    header-logo-stretched=${header.headerLogoStretched}
-    account-container-theme=${header.accountContainerTheme}
-    header-logo-dash-theme=${header.headerLogoDashTheme}
-    nav-separator-theme=${header.navSeparatorTheme}
-    account-container=${header.accountContainer}
-    >
-     ${header.children}
-    </header-component>
-    <hr />
-    `;
-  })
-  .join('')}
-`;
-
-const header1 = {
-  theme: 'dark',
-  size: 'normal',
-  showSearch: 'false',
-  headerLogo: '3',
-  headerLogoTheme: 'dark',
-  accountLabel: '"My Account"',
-  navLocation: 'below',
-  navTheme: 'dark',
-  navSeparator: 'true',
-  headerLogoDash: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header1 = {
+  args: {
+    theme: "dark",
+    size: "normal",
+    showSearch: "false",
+    headerLogo: "3",
+    headerLogoTheme: "dark",
+    accountLabel: '"My Account"',
+    navLocation: "below",
+    navTheme: "dark",
+    navSeparator: "true",
+    headerLogoDash: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <dropdown-component>
     <dropdown-link theme="dark" panel-theme="dark" text="Section" col="3">
       <dropdown-panel-section>
@@ -132,23 +128,25 @@ const header1 = {
     </dropdown-link>
   </dropdown-component>
 `,
+  },
 };
 
-const header2 = {
-  theme: 'blue',
-  size: 'normal',
-  showSearch: 'false',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  navLocation: 'below',
-  navTheme: 'blue',
-  navSeparator: 'true',
-  headerLogoDash: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header2 = {
+  args: {
+    theme: "blue",
+    size: "normal",
+    showSearch: "false",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "below",
+    navTheme: "blue",
+    navSeparator: "true",
+    headerLogoDash: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <dropdown-component>
     <dropdown-link theme="white" panel-theme="white" text="Section" col="3">
       <dropdown-panel-section>
@@ -164,23 +162,25 @@ const header2 = {
     </dropdown-link>
   </dropdown-component>
   `,
+  },
 };
 
-const header3 = {
-  theme: 'blue',
-  size: 'normal',
-  showSearch: 'false',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  navLocation: 'below',
-  navTheme: 'blue',
-  navSeparator: 'true',
-  headerLogoDash: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header3 = {
+  args: {
+    theme: "blue",
+    size: "normal",
+    showSearch: "false",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "below",
+    navTheme: "blue",
+    navSeparator: "true",
+    headerLogoDash: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <dropdown-component>
     <dropdown-link theme="dark-blue" panel-theme="dark-blue" text="Section" col="3">
       <dropdown-panel-section>
@@ -196,25 +196,27 @@ const header3 = {
     </dropdown-link>
   </dropdown-component>
   `,
+  },
 };
 
-const header4 = {
-  theme: 'blue',
-  size: 'normal',
-  showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  navLocation: 'below',
-  navTheme: 'blue',
-  navSeparator: 'true',
-  headerLogoDash: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header4 = {
+  args: {
+    theme: "blue",
+    size: "normal",
+    showSearch: "false",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "below",
+    navTheme: "blue",
+    navSeparator: "true",
+    headerLogoDash: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <dropdown-component>
     <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
       <dropdown-panel-section>
@@ -224,25 +226,27 @@ const header4 = {
     </dropdown-link>
   </dropdown-component>
   `,
+  },
 };
 
-const header5 = {
-  theme: 'blue',
-  size: 'normal',
-  showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  navLocation: 'below',
-  navTheme: 'blue',
-  navSeparator: 'true',
-  headerLogoDash: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header5 = {
+  args: {
+    theme: "blue",
+    size: "normal",
+    showSearch: "false",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "below",
+    navTheme: "blue",
+    navSeparator: "true",
+    headerLogoDash: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <dropdown-component>
     <dropdown-link theme="dark-blue" panel-theme="dark-blue" panel-size="contain" text="Section" col="3">
       <dropdown-panel-section>
@@ -252,25 +256,27 @@ const header5 = {
     </dropdown-link>
   </dropdown-component>
   `,
+  },
 };
 
-const header6 = {
-  theme: 'dark',
-  size: 'normal',
-  showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'dark',
-  accountLabel: '"My Account"',
-  navLocation: 'below',
-  navTheme: 'dark',
-  navSeparator: 'true',
-  headerLogoDash: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header6 = {
+  args: {
+    theme: "dark",
+    size: "normal",
+    showSearch: "false",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "dark",
+    accountLabel: '"My Account"',
+    navLocation: "below",
+    navTheme: "dark",
+    navSeparator: "true",
+    headerLogoDash: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <dropdown-component>
     <dropdown-link theme="dark" panel-theme="dark" panel-size="contain" text="Section" col="3">
       <dropdown-panel-section>
@@ -280,412 +286,327 @@ const header6 = {
     </dropdown-link>
   </dropdown-component>
   `,
+  },
 };
 
-const header7 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
+export const header7 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+  },
 };
 
-const header8 = {
-  theme: 'blue',
-  navSeparator: 'true',
-  navSeparatorTheme: 'white',
-  size: 'slim',
-  showSearch: 'false',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  accountContainerTheme: 'white',
-  headerLogoDash: 'true',
-  headerLogoStretched: 'false',
+export const header8 = {
+  args: {
+    theme: "blue",
+    navSeparator: "true",
+    navSeparatorTheme: "white",
+    size: "slim",
+    showSearch: "false",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    accountContainerTheme: "white",
+    headerLogoDash: "true",
+    headerLogoStretched: "false",
+  },
 };
 
-const header9 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'false',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountContainer: 'false',
-  navLocation: 'inline',
-  headerLogoDash: 'false',
-  navSeparator: 'false',
+export const header9 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "false",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountContainer: "false",
+    navLocation: "inline",
+    headerLogoDash: "false",
+    navSeparator: "false",
+  },
 };
 
-const header10 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  navLocation: 'inline',
-  navInlinePosition: 'left',
-  headerLogoDash: 'true',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header10 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "false",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "inline",
+    navInlinePosition: "left",
+    headerLogoDash: "true",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   `,
+  },
 };
 
-const header11 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'false',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  navLocation: 'inline',
-  navInlinePosition: 'right',
-  headerLogoDash: 'true',
-  navSeparator: 'true',
-  navSeparatorTheme: 'white',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
-  children: `
+export const header11 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "false",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "inline",
+    navInlinePosition: "right",
+    headerLogoDash: "true",
+    navSeparator: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   `,
+  },
 };
 
-const header12 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '4',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  headerLogoStretched: 'true',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
+export const header12 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "4",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    headerLogoStretched: "true",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+  },
 };
 
-const header13 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '4',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  headerLogoStretched: 'true',
-  navLocation: 'inline',
-  navInlinePosition: 'right',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
-  children: `
+export const header13 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "4",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    headerLogoStretched: "true",
+    navLocation: "inline",
+    navInlinePosition: "right",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    children: `
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   `,
+  },
 };
 
-const header14 = {
-  theme: 'blue',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'blue',
-  searchTextTheme: 'white',
-  headerLogo: '4',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  headerLogoStretched: 'true',
-  navLocation: 'inline',
-  navInlinePosition: 'right',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
-  children: `
+export const header14 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "4",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    headerLogoStretched: "true",
+    navLocation: "inline",
+    navInlinePosition: "right",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    children: `
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   <button-component size="large" label="Button" type="primary" state="filled"></button-component>
   `,
+  },
 };
 
-const header15 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'dark',
-  headerLogo: '2',
-  headerLogoTheme: 'white',
-  accountLabel: '"My Account"',
-  accountContainerTheme: 'dark',
-  navSeparator: 'false',
+export const header15 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "white",
+    searchTextTheme: "dark",
+    headerLogo: "2",
+    headerLogoTheme: "white",
+    accountLabel: '"My Account"',
+    accountContainerTheme: "dark",
+    navSeparator: "false",
+  },
 };
 
-const header16 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'blue',
-  headerLogo: '0',
-  headerLogoTheme: 'white',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  accountContainerTheme: 'blue',
-  navSeparator: 'false',
+export const header16 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "white",
+    searchTextTheme: "blue",
+    headerLogo: "0",
+    headerLogoTheme: "white",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    accountContainerTheme: "blue",
+    navSeparator: "false",
+  },
 };
 
-const header17 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'blue',
-  headerLogo: '6',
-  headerLogoTheme: 'white',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  headerLogoDashTheme: 'blue',
-  headerLogoStretched: 'true',
-  accountContainerTheme: 'blue',
-  navSeparator: 'false',
+export const header17 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "white",
+    searchTextTheme: "blue",
+    headerLogo: "6",
+    headerLogoTheme: "white",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    headerLogoDashTheme: "blue",
+    headerLogoStretched: "true",
+    accountContainerTheme: "blue",
+    navSeparator: "false",
+  },
 };
 
-const header18 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'blue',
-  headerLogo: '1',
-  headerLogoTheme: 'blue',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  accountContainerTheme: 'blue',
-  headerLogoStretched: 'true',
-  navSeparator: 'false',
+export const header18 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "white",
+    searchTextTheme: "blue",
+    headerLogo: "1",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    accountContainerTheme: "blue",
+    headerLogoStretched: "true",
+    navSeparator: "false",
+  },
 };
 
-const header19 = {
-  theme: 'dark',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'dark',
-  searchTextTheme: 'white',
-  headerLogo: '3',
-  headerLogoTheme: 'dark',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
-  headerLogoStretched: 'false',
+export const header19 = {
+  args: {
+    theme: "dark",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "dark",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "dark",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+  },
 };
 
-const header20 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'white',
-  searchTextTheme: 'dark',
-  headerLogo: '2',
-  headerLogoTheme: 'white',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  accountContainerTheme: 'dark',
-  navSeparator: 'false',
+export const header20 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "white",
+    searchTextTheme: "dark",
+    headerLogo: "2",
+    headerLogoTheme: "white",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    accountContainerTheme: "dark",
+    navSeparator: "false",
+  },
 };
 
-const header21 = {
-  theme: 'dark',
-  size: 'slim',
-  showSearch: 'true',
-  searchTheme: 'dark',
-  searchTextTheme: 'white',
-  headerLogo: '5',
-  headerLogoTheme: 'blue',
-  accountTheme: 'blue',
-  accountLabel: '"My Account"',
-  accountStyle: 'detailed',
-  headerLogoStretched: 'true',
-  navSeparator: 'false',
-  accountContainerTheme: 'white',
-  headerLogoDash: 'false',
+export const header21 = {
+  args: {
+    theme: "dark",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "dark",
+    searchTextTheme: "white",
+    headerLogo: "5",
+    headerLogoTheme: "blue",
+    accountTheme: "blue",
+    accountLabel: '"My Account"',
+    accountStyle: "detailed",
+    headerLogoStretched: "true",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    headerLogoDash: "false",
+  },
 };
 
-const header22 = {
-  theme: 'dark',
-  size: 'slim',
-  showSearch: 'false',
-  headerLogo: '7',
-  headerLogoTheme: 'dark',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  accountContainerTheme: 'white',
-  navSeparator: 'false',
-  headerLogoStretched: 'false',
+export const header22 = {
+  args: {
+    theme: "dark",
+    size: "slim",
+    showSearch: "false",
+    headerLogo: "7",
+    headerLogoTheme: "dark",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    accountContainerTheme: "white",
+    navSeparator: "false",
+    headerLogoStretched: "false",
+  },
 };
 
-const header23 = {
-  theme: 'dark',
-  size: 'slim',
-  showSearch: 'false',
-  headerLogo: '7',
-  headerLogoTheme: 'dark',
-  accountLabel: '"My Account"',
-  accountContainerTheme: 'white',
-  navSeparator: 'false',
-  headerLogoDash: 'false',
+export const header23 = {
+  args: {
+    theme: "dark",
+    size: "slim",
+    showSearch: "false",
+    headerLogo: "7",
+    headerLogoTheme: "dark",
+    accountLabel: '"My Account"',
+    accountContainerTheme: "white",
+    navSeparator: "false",
+    headerLogoDash: "false",
+  },
 };
 
-const header24 = {
-  theme: 'white',
-  size: 'slim',
-  showSearch: 'false',
-  navSeparator: 'true',
-  headerLogo: '0',
-  headerLogoTheme: 'white',
-  accountLabel: '"My Account"',
-  headerLogoDash: 'true',
-  accountContainerTheme: 'blue',
-  navSeparatorTheme: 'blue',
-  headerLogoDashTheme: 'blue',
-  headerLogoStretched: 'false',
-};
-
-export const MegamenuBlack = Template.bind({});
-MegamenuBlack.args = {
-  headers: [header1],
-};
-
-export const MegaMenuBlueAndWhite = Template.bind({});
-MegaMenuBlueAndWhite.args = {
-  headers: [header2],
-};
-
-export const MegaMenuBlue = Template.bind({});
-MegaMenuBlue.args = {
-  headers: [header3],
-};
-
-export const DropdownMenuWhite = Template.bind({});
-DropdownMenuWhite.args = {
-  headers: [header4],
-};
-
-export const DropdownMenuBlue = Template.bind({});
-DropdownMenuBlue.args = {
-  headers: [header5],
-};
-
-export const DropdownMenuBlack = Template.bind({});
-DropdownMenuBlack.args = {
-  headers: [header6],
-};
-
-export const SearchHeaderBlue = Template.bind({});
-SearchHeaderBlue.args = {
-  headers: [header7],
-};
-
-export const BasicMenuBlue = Template.bind({});
-BasicMenuBlue.args = {
-  headers: [header8],
-};
-
-// export const NinthHeader = Template.bind({});
-// NinthHeader.args = {
-//   headers: [header9],
-// };
-
-export const BasicMenuButtons = Template.bind({});
-BasicMenuButtons.args = {
-  headers: [header10],
-};
-
-export const SearchMenuButtonsRight = Template.bind({});
-
-SearchMenuButtonsRight.args = {
-  headers: [header11],
-};
-
-export const SearchMenuDividerBlue = Template.bind({});
-
-SearchMenuDividerBlue.args = {
-  headers: [header12],
-};
-
-export const SearchMenuDividerButton = Template.bind({});
-SearchMenuDividerButton.args = {
-  headers: [header13],
-};
-
-export const SearchMenuDividerButtons = Template.bind({});
-SearchMenuDividerButtons.args = {
-  headers: [header14],
-};
-
-export const SearchMenuWhite = Template.bind({});
-SearchMenuWhite.args = {
-  headers: [header15],
-};
-
-export const SixteenthHeader = Template.bind({});
-SixteenthHeader.args = {
-  headers: [header16],
-};
-
-export const SeventeenthHeader = Template.bind({});
-SeventeenthHeader.args = {
-  headers: [header17],
-};
-
-export const EighteenthHeader = Template.bind({});
-EighteenthHeader.args = {
-  headers: [header18],
-};
-
-export const NineteenthHeader = Template.bind({});
-NineteenthHeader.args = {
-  headers: [header19],
-};
-
-export const TwentiethHeader = Template.bind({});
-TwentiethHeader.args = {
-  headers: [header20],
-};
-
-export const TwentyFirstHeader = Template.bind({});
-TwentyFirstHeader.args = {
-  headers: [header21],
-};
-
-export const TwentySecondHeader = Template.bind({});
-TwentySecondHeader.args = {
-  headers: [header22],
-};
-
-export const TwentyThirdHeader = Template.bind({});
-TwentyThirdHeader.args = {
-  headers: [header23],
-};
-
-export const TwentyFourHeader = Template.bind({});
-TwentyFourHeader.args = {
-  headers: [header24],
+export const header24 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "false",
+    navSeparator: "true",
+    headerLogo: "0",
+    headerLogoTheme: "white",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    accountContainerTheme: "blue",
+    navSeparatorTheme: "blue",
+    headerLogoDashTheme: "blue",
+    headerLogoStretched: "false",
+  },
 };

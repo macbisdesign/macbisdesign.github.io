@@ -7,7 +7,7 @@
 
 | Property             | Attribute              | Description | Type     | Default     |
 | -------------------- | ---------------------- | ----------- | -------- | ----------- |
-| `sectionButtonLabel` | `section-button-label` |             | `string` | `'Section'` |
+| `sectionButtonLabel` | `section-button-label` |             | `string` | `"Section"` |
 
 
 ----------------------------------------------

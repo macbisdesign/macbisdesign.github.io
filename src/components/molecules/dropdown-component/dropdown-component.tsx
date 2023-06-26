@@ -1,8 +1,8 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h } from "@stencil/core";
 
 @Component({
-  tag: 'dropdown-component',
-  styleUrl: 'dropdown-component.css',
+  tag: "dropdown-component",
+  styleUrl: "dropdown-component.css",
   shadow: true,
 })
 export class DropdownComponent {

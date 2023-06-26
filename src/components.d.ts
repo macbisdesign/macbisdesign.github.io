@@ -7,53 +7,54 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BannerComponent {
-        "bannerAction": string;
-        "bannerDomain": 'gov' | 'mil';
-        "bannerLang": 'english' | 'spanish';
-        "bannerTitle": string;
-        "image": string;
+        "action": string;
+        "headline": string;
+        "img": string;
     }
     interface BigFooter {
-        "bottomBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
-        "bottomColor"?: 'white';
+        "bottomBg"?: "blue" | "gray" | "light-gray" | "black";
+        "bottomColor"?: "white";
         "hasBorders": boolean;
         "showInspect": boolean;
         "sitemap": boolean;
-        "topBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
-        "topLeftColor"?: 'blue' | 'white';
-        "topRightColor"?: 'white';
+        "topBg"?: "blue" | "gray" | "light-gray" | "black";
+        "topLeftColor"?: "blue" | "white";
+        "topRightColor"?: "white";
     }
     interface ButtonComponent {
-        "iconPosition": string;
-        "label": string;
-        "size": string;
-        "state": string;
-        "type": string;
+        "colorScheme": "yellow" | "red" | "green" | "sky" | "blue";
+        "disabled": boolean;
+        "leftIcon": boolean;
+        "rightIcon": boolean;
+        "size": "sm" | "base" | "md";
+        "type": "reset" | "submit" | "button";
+        "variant": "solid" | "ghost" | "outline";
     }
     interface CheckboxComponent {
         "checked": boolean;
         "disabled": boolean;
+        "label"?: string;
     }
     interface DropdownButton {
         "buttonLabel": string;
-        "theme": 'blue' | 'dark-blue';
+        "theme": "blue" | "dark-blue";
     }
     interface DropdownComponent {
     }
     interface DropdownLink {
         "col": number;
-        "panelSize": 'full' | 'contain';
-        "panelTheme": 'white' | 'blue';
+        "panelSize": "full" | "contain";
+        "panelTheme": "white" | "blue";
         "text": string;
-        "theme": 'blue' | 'white' | 'dark-blue';
+        "theme": "blue" | "white" | "dark-blue";
     }
     interface DropdownPanelLink {
     }
     interface DropdownPanelSection {
     }
     interface FooterComponent {
-        "bottomBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
-        "bottomColor"?: 'white';
+        "bottomBg"?: "blue" | "gray" | "black" | "light-gray";
+        "bottomColor"?: "white";
         "filled": boolean;
         "flexCol": boolean;
         "hasBorder": boolean;
@@ -61,44 +62,58 @@ export namespace Components {
         "showAbovePart": boolean;
         "showAddress": boolean;
         "showInspect": boolean;
-        "topBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
-        "topLeftColor": 'blue' | 'white';
-        "topRightColor"?: 'white';
+        "topBg"?: "blue" | "gray" | "black" | "light-gray";
+        "topLeftColor": "blue" | "white";
+        "topRightColor"?: "white";
     }
     interface HeaderComponent {
         "accountContainer": boolean;
-        "accountContainerTheme": 'white' | 'blue' | 'dark';
+        "accountContainerTheme": "white" | "blue" | "dark";
         "accountLabel": string;
         "headerLogo": string;
         "headerLogoDash": boolean;
-        "headerLogoDashTheme": 'blue' | 'white';
+        "headerLogoDashTheme": "blue" | "white";
         "headerLogoStretched": boolean;
-        "headerLogoTheme": 'white' | 'blue' | 'dark';
-        "navInlinePosition": 'right' | 'left';
-        "navLocation": 'below' | 'inline' | 'none';
+        "headerLogoTheme": "white" | "blue" | "dark";
+        "navInlinePosition": "right" | "left";
+        "navLocation": "below" | "inline" | "none";
         "navSeparator": boolean;
-        "navSeparatorTheme": 'blue' | 'white';
-        "navTheme": 'white' | 'blue' | 'dark';
-        "searchTextTheme": 'white' | 'blue' | 'dark';
-        "searchTheme": 'white' | 'blue' | 'dark';
+        "navSeparatorTheme": "blue" | "white";
+        "navTheme": "white" | "blue" | "dark";
+        "searchTextTheme": "white" | "blue" | "dark";
+        "searchTheme": "white" | "blue" | "dark";
         "showSearch": boolean;
-        "size": 'slim' | 'normal';
-        "theme": 'white' | 'blue' | 'dark';
+        "size": "slim" | "normal";
+        "theme": "white" | "blue" | "dark";
+    }
+    interface InputComponent {
+        "disabled": boolean;
+        "label": string;
+        "placeholder": string;
+        "state": "error" | "success" | "default";
+        "type": string;
     }
     interface RadioButton {
         "checked": boolean;
         "disabled": boolean;
+        "label"?: string;
     }
     interface SectionComponent {
         "sectionButtonLabel": string;
     }
-    interface TextInputComponent {
-        "hint": string;
-        "kind": 'default' | 'error' | 'success';
-        "label": string;
-        "placeholder": string;
-        "required": boolean;
-        "type": string;
+    interface SelectComponent {
+        "disabled": boolean;
+        "label"?: string;
+        "options": string[];
+        "state": "error" | "success" | "default";
+    }
+    interface TextareaComponent {
+        "cols"?: number;
+        "disabled": boolean;
+        "label"?: string;
+        "placeholder"?: string;
+        "rows"?: number;
+        "state": "error" | "success" | "default";
     }
 }
 declare global {
@@ -168,6 +183,12 @@ declare global {
         prototype: HTMLHeaderComponentElement;
         new (): HTMLHeaderComponentElement;
     };
+    interface HTMLInputComponentElement extends Components.InputComponent, HTMLStencilElement {
+    }
+    var HTMLInputComponentElement: {
+        prototype: HTMLInputComponentElement;
+        new (): HTMLInputComponentElement;
+    };
     interface HTMLRadioButtonElement extends Components.RadioButton, HTMLStencilElement {
     }
     var HTMLRadioButtonElement: {
@@ -180,11 +201,17 @@ declare global {
         prototype: HTMLSectionComponentElement;
         new (): HTMLSectionComponentElement;
     };
-    interface HTMLTextInputComponentElement extends Components.TextInputComponent, HTMLStencilElement {
+    interface HTMLSelectComponentElement extends Components.SelectComponent, HTMLStencilElement {
     }
-    var HTMLTextInputComponentElement: {
-        prototype: HTMLTextInputComponentElement;
-        new (): HTMLTextInputComponentElement;
+    var HTMLSelectComponentElement: {
+        prototype: HTMLSelectComponentElement;
+        new (): HTMLSelectComponentElement;
+    };
+    interface HTMLTextareaComponentElement extends Components.TextareaComponent, HTMLStencilElement {
+    }
+    var HTMLTextareaComponentElement: {
+        prototype: HTMLTextareaComponentElement;
+        new (): HTMLTextareaComponentElement;
     };
     interface HTMLElementTagNameMap {
         "banner-component": HTMLBannerComponentElement;
@@ -198,60 +225,63 @@ declare global {
         "dropdown-panel-section": HTMLDropdownPanelSectionElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
+        "input-component": HTMLInputComponentElement;
         "radio-button": HTMLRadioButtonElement;
         "section-component": HTMLSectionComponentElement;
-        "text-input-component": HTMLTextInputComponentElement;
+        "select-component": HTMLSelectComponentElement;
+        "textarea-component": HTMLTextareaComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface BannerComponent {
-        "bannerAction"?: string;
-        "bannerDomain"?: 'gov' | 'mil';
-        "bannerLang"?: 'english' | 'spanish';
-        "bannerTitle"?: string;
-        "image"?: string;
+        "action"?: string;
+        "headline"?: string;
+        "img"?: string;
     }
     interface BigFooter {
-        "bottomBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
-        "bottomColor"?: 'white';
+        "bottomBg"?: "blue" | "gray" | "light-gray" | "black";
+        "bottomColor"?: "white";
         "hasBorders"?: boolean;
         "showInspect"?: boolean;
         "sitemap"?: boolean;
-        "topBg"?: 'blue' | 'gray' | 'light-gray' | 'black';
-        "topLeftColor"?: 'blue' | 'white';
-        "topRightColor"?: 'white';
+        "topBg"?: "blue" | "gray" | "light-gray" | "black";
+        "topLeftColor"?: "blue" | "white";
+        "topRightColor"?: "white";
     }
     interface ButtonComponent {
-        "iconPosition"?: string;
-        "label"?: string;
-        "size"?: string;
-        "state"?: string;
-        "type"?: string;
+        "colorScheme"?: "yellow" | "red" | "green" | "sky" | "blue";
+        "disabled"?: boolean;
+        "leftIcon"?: boolean;
+        "rightIcon"?: boolean;
+        "size"?: "sm" | "base" | "md";
+        "type"?: "reset" | "submit" | "button";
+        "variant"?: "solid" | "ghost" | "outline";
     }
     interface CheckboxComponent {
         "checked"?: boolean;
         "disabled"?: boolean;
+        "label"?: string;
     }
     interface DropdownButton {
         "buttonLabel"?: string;
-        "theme"?: 'blue' | 'dark-blue';
+        "theme"?: "blue" | "dark-blue";
     }
     interface DropdownComponent {
     }
     interface DropdownLink {
         "col"?: number;
-        "panelSize"?: 'full' | 'contain';
-        "panelTheme"?: 'white' | 'blue';
+        "panelSize"?: "full" | "contain";
+        "panelTheme"?: "white" | "blue";
         "text"?: string;
-        "theme"?: 'blue' | 'white' | 'dark-blue';
+        "theme"?: "blue" | "white" | "dark-blue";
     }
     interface DropdownPanelLink {
     }
     interface DropdownPanelSection {
     }
     interface FooterComponent {
-        "bottomBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
-        "bottomColor"?: 'white';
+        "bottomBg"?: "blue" | "gray" | "black" | "light-gray";
+        "bottomColor"?: "white";
         "filled"?: boolean;
         "flexCol"?: boolean;
         "hasBorder"?: boolean;
@@ -259,44 +289,58 @@ declare namespace LocalJSX {
         "showAbovePart"?: boolean;
         "showAddress"?: boolean;
         "showInspect"?: boolean;
-        "topBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
-        "topLeftColor"?: 'blue' | 'white';
-        "topRightColor"?: 'white';
+        "topBg"?: "blue" | "gray" | "black" | "light-gray";
+        "topLeftColor"?: "blue" | "white";
+        "topRightColor"?: "white";
     }
     interface HeaderComponent {
         "accountContainer"?: boolean;
-        "accountContainerTheme"?: 'white' | 'blue' | 'dark';
+        "accountContainerTheme"?: "white" | "blue" | "dark";
         "accountLabel"?: string;
         "headerLogo"?: string;
         "headerLogoDash"?: boolean;
-        "headerLogoDashTheme"?: 'blue' | 'white';
+        "headerLogoDashTheme"?: "blue" | "white";
         "headerLogoStretched"?: boolean;
-        "headerLogoTheme"?: 'white' | 'blue' | 'dark';
-        "navInlinePosition"?: 'right' | 'left';
-        "navLocation"?: 'below' | 'inline' | 'none';
+        "headerLogoTheme"?: "white" | "blue" | "dark";
+        "navInlinePosition"?: "right" | "left";
+        "navLocation"?: "below" | "inline" | "none";
         "navSeparator"?: boolean;
-        "navSeparatorTheme"?: 'blue' | 'white';
-        "navTheme"?: 'white' | 'blue' | 'dark';
-        "searchTextTheme"?: 'white' | 'blue' | 'dark';
-        "searchTheme"?: 'white' | 'blue' | 'dark';
+        "navSeparatorTheme"?: "blue" | "white";
+        "navTheme"?: "white" | "blue" | "dark";
+        "searchTextTheme"?: "white" | "blue" | "dark";
+        "searchTheme"?: "white" | "blue" | "dark";
         "showSearch"?: boolean;
-        "size"?: 'slim' | 'normal';
-        "theme"?: 'white' | 'blue' | 'dark';
+        "size"?: "slim" | "normal";
+        "theme"?: "white" | "blue" | "dark";
+    }
+    interface InputComponent {
+        "disabled"?: boolean;
+        "label"?: string;
+        "placeholder"?: string;
+        "state"?: "error" | "success" | "default";
+        "type"?: string;
     }
     interface RadioButton {
         "checked"?: boolean;
         "disabled"?: boolean;
+        "label"?: string;
     }
     interface SectionComponent {
         "sectionButtonLabel"?: string;
     }
-    interface TextInputComponent {
-        "hint"?: string;
-        "kind"?: 'default' | 'error' | 'success';
+    interface SelectComponent {
+        "disabled"?: boolean;
+        "label"?: string;
+        "options"?: string[];
+        "state"?: "error" | "success" | "default";
+    }
+    interface TextareaComponent {
+        "cols"?: number;
+        "disabled"?: boolean;
         "label"?: string;
         "placeholder"?: string;
-        "required"?: boolean;
-        "type"?: string;
+        "rows"?: number;
+        "state"?: "error" | "success" | "default";
     }
     interface IntrinsicElements {
         "banner-component": BannerComponent;
@@ -310,9 +354,11 @@ declare namespace LocalJSX {
         "dropdown-panel-section": DropdownPanelSection;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
+        "input-component": InputComponent;
         "radio-button": RadioButton;
         "section-component": SectionComponent;
-        "text-input-component": TextInputComponent;
+        "select-component": SelectComponent;
+        "textarea-component": TextareaComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -330,9 +376,11 @@ declare module "@stencil/core" {
             "dropdown-panel-section": LocalJSX.DropdownPanelSection & JSXBase.HTMLAttributes<HTMLDropdownPanelSectionElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "input-component": LocalJSX.InputComponent & JSXBase.HTMLAttributes<HTMLInputComponentElement>;
             "radio-button": LocalJSX.RadioButton & JSXBase.HTMLAttributes<HTMLRadioButtonElement>;
             "section-component": LocalJSX.SectionComponent & JSXBase.HTMLAttributes<HTMLSectionComponentElement>;
-            "text-input-component": LocalJSX.TextInputComponent & JSXBase.HTMLAttributes<HTMLTextInputComponentElement>;
+            "select-component": LocalJSX.SelectComponent & JSXBase.HTMLAttributes<HTMLSelectComponentElement>;
+            "textarea-component": LocalJSX.TextareaComponent & JSXBase.HTMLAttributes<HTMLTextareaComponentElement>;
         }
     }
 }

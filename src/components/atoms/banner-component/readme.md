@@ -5,13 +5,11 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type                     | Default               |
-| -------------- | --------------- | ----------- | ------------------------ | --------------------- |
-| `bannerAction` | `banner-action` |             | `string`                 | `undefined`           |
-| `bannerDomain` | `banner-domain` |             | `"gov" \| "mil"`         | `undefined`           |
-| `bannerLang`   | `banner-lang`   |             | `"english" \| "spanish"` | `undefined`           |
-| `bannerTitle`  | `banner-title`  |             | `string`                 | `undefined`           |
-| `image`        | `image`         |             | `string`                 | `'us_flag_small.png'` |
+| Property   | Attribute  | Description | Type     | Default      |
+| ---------- | ---------- | ----------- | -------- | ------------ |
+| `action`   | `action`   |             | `string` | `undefined`  |
+| `headline` | `headline` |             | `string` | `undefined`  |
+| `img`      | `img`      |             | `string` | `defaultImg` |
 
 
 ----------------------------------------------

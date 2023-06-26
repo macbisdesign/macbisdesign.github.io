@@ -51,8 +51,9 @@ svg {
 }
 
 .font-sans {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .border-t {
@@ -104,8 +105,8 @@ svg {
 }
 
 .bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  --bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--bg-opacity));
 }
 
 .flex {
@@ -153,8 +154,8 @@ svg {
 }
 
 .border-r-gray-300 {
-  --tw-border-opacity: 1;
-  border-right-color: rgb(209 213 219 / var(--tw-border-opacity));
+  --border-opacity: 1;
+  border-right-color: rgb(209 213 219 / var(--border-opacity));
 }
 
 .p-4 {
@@ -183,6 +184,6 @@ svg {
 }
 
 .text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
+  --text-opacity: 1;
+  color: rgb(59 130 246 / var(--text-opacity));
 }

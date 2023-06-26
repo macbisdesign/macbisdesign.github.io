@@ -1,23 +1,40 @@
 export default {
-  title: 'Components/Checkbox',
+  title: "Components/Checkbox",
+  tags: ["autodocs"],
+  render(args) {
+    return `
+    <checkbox-component
+      checked="${args.checked}"
+      disabled="${args.disabled}"
+      label="${args.label}"
+    />
+    `;
+  },
   argTypes: {
     disabled: {
-      control: 'boolean',
+      control: "boolean",
     },
     checked: {
-      control: 'boolean',
+      control: "boolean",
     },
-    children: {
-      control: 'text',
+    label: {
+      control: "text",
     },
   },
 };
 
-const Template = args => `<checkbox-component checked=${args.checked} disabled=${args.disabled}>${args.children}</checkbox-component>`;
+export const Checked = {
+  args: {
+    disabled: false,
+    checked: true,
+    label: "Agree to private policy",
+  },
+};
 
-export const Primary = Template.bind({});
-Primary.args = {
-  disabled: false,
-  checked: false,
-  children: 'Checkbox',
+export const Unchecked = {
+  args: {
+    disabled: false,
+    checked: false,
+    label: "Agree to private policy",
+  },
 };

@@ -1,15 +1,16 @@
-import { Component, Host, Listen, Prop, h } from '@stencil/core';
+import { Component, Host, Listen, Prop, h } from "@stencil/core";
 
 @Component({
-  tag: 'checkbox-component',
-  styleUrl: 'checkbox-component.css',
+  tag: "checkbox-component",
+  styleUrl: "checkbox-component.css",
   shadow: true,
 })
 export class CheckboxComponent {
-  @Prop() disabled: boolean = false;
-  @Prop() checked: boolean = false;
+  @Prop() label?: string;
+  @Prop() disabled = false;
+  @Prop() checked = false;
 
-  @Listen('click')
+  @Listen("click")
   handleClick() {
     this.checked = !this.checked;
   }
@@ -17,9 +18,14 @@ export class CheckboxComponent {
   render() {
     return (
       <Host>
-        <label onClick={this.handleClick} class={`form-control ${this.disabled ? 'form-control--disabled' : ''}`}>
-          <input class={this.checked ? 'checkbox--checked' : 'checkbox--unchecked'} checked={this.checked} disabled={this.disabled} type="checkbox" name="checkbox" />
-          <slot />
+        <label class="flex items-center gap-x-2.5">
+          <input
+            class="text-blue-600 focus:ring-blue-600"
+            checked={this.checked}
+            disabled={this.disabled}
+            type="checkbox"
+          />
+          {this.label && <span class="inline-block">{this.label}</span>}
         </label>
       </Host>
     );

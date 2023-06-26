@@ -1,4 +1,6 @@
-# text-input-component
+# textarea-component
+
+
 
 <!-- Auto Generated Below -->
 
@@ -7,12 +9,12 @@
 
 | Property      | Attribute     | Description | Type                                | Default     |
 | ------------- | ------------- | ----------- | ----------------------------------- | ----------- |
-| `hint`        | `hint`        |             | `string`                            | `undefined` |
-| `kind`        | `kind`        |             | `"default" \| "error" \| "success"` | `'default'` |
+| `cols`        | `cols`        |             | `number`                            | `undefined` |
+| `disabled`    | `disabled`    |             | `boolean`                           | `false`     |
 | `label`       | `label`       |             | `string`                            | `undefined` |
 | `placeholder` | `placeholder` |             | `string`                            | `undefined` |
-| `required`    | `required`    |             | `boolean`                           | `undefined` |
-| `type`        | `type`        |             | `string`                            | `undefined` |
+| `rows`        | `rows`        |             | `number`                            | `undefined` |
+| `state`       | `state`       |             | `"default" \| "error" \| "success"` | `"default"` |
 
 
 ----------------------------------------------

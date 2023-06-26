@@ -1,23 +1,46 @@
 export default {
-  title: 'Components/Radio Button',
+  title: "Components/Radio Button",
+  tags: ["autodocs"],
+  render: (args) => {
+    return `
+    <radio-button
+      checked="${args.checked}"
+      disabled="${args.disabled}"
+      label="${args.label}"
+    />
+    `;
+  },
   argTypes: {
     disabled: {
-      control: 'boolean',
+      control: {
+        type: "boolean",
+      },
     },
     checked: {
-      control: 'boolean',
+      control: {
+        type: "boolean",
+      },
     },
-    children: {
-      control: 'text',
+    label: {
+      control: {
+        type: "text",
+      },
     },
   },
 };
 
-const Template = args => `<radio-button checked=${args.checked} disabled=${args.disabled}>${args.children}</radio-button>`;
+export const Checked = {
+  args: {
+    disabled: false,
+    checked: true,
+    label: "Checked",
+  },
+};
 
-export const Primary = Template.bind({});
-Primary.args = {
-  disabled: false,
-  checked: false,
-  children: 'Radio button',
+export const Unchecked = {
+  args: {
+    disabled: false,
+    checked: false,
+    label: "Unchecked",
+  },
 };

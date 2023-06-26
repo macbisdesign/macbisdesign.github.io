@@ -19,7 +19,7 @@
 | `showAddress`   | `show-address`    |             | `boolean`                                     | `false`     |
 | `showInspect`   | `show-inspect`    |             | `boolean`                                     | `false`     |
 | `topBg`         | `top-bg`          |             | `"black" \| "blue" \| "gray" \| "light-gray"` | `undefined` |
-| `topLeftColor`  | `top-left-color`  |             | `"blue" \| "white"`                           | `'blue'`    |
+| `topLeftColor`  | `top-left-color`  |             | `"blue" \| "white"`                           | `"blue"`    |
 | `topRightColor` | `top-right-color` |             | `"white"`                                     | `undefined` |
 
 

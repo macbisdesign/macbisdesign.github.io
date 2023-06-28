@@ -1,7 +1,12 @@
-import { create } from '@storybook/theming';
+import { create, ThemeVars } from '@storybook/theming';
 // import logoUrl from './public/images/MACBISimg.png';
 
-export default create({
+// extended ThemeVars interface from Storybook to allow fontSize
+interface DocThemeVars extends ThemeVars {
+  fontSize: number;
+}
+
+const themeConfig: DocThemeVars = {
   base: 'light',
   brandTitle: 'Macbis',
   brandUrl: 'https://macbisdesign.github.io/',
@@ -43,5 +48,10 @@ export default create({
   inputBorder: 'silver',
   inputTextColor: 'black',
   inputBorderRadius: 4,
-});
+};
+
+const theme: DocThemeVars = create( themeConfig );
+
+export default theme;
+
 // .storybook/YourTheme.js

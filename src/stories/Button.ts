@@ -1,5 +1,12 @@
 import './button.css';
 
+interface Button {
+  size: string;
+  type: string;
+  label: string;
+  onClick: () => void;
+}
+
 export const createButton = ({
   size = 'medium',
   type,

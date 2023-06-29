@@ -1,6 +1,6 @@
 import './button.css';
 
-interface Button {
+export interface Button { // export button for use in Header.ts
   size: string;
   type: string;
   label: string;
@@ -12,7 +12,7 @@ export const createButton = ({
   type,
   label,
   onClick,
-}) => {
+}: Button ) => {
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.innerText = label;

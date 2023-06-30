@@ -84,7 +84,7 @@ export const Warning = {
     rightIcon: false,
     disabled: false,
     size: "base",
-    text: "Success",
+    text: "Warning",
   },
 };
 

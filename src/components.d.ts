@@ -7,45 +7,129 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BannerComponent {
+        /**
+          * The action that you would like to perform.
+         */
         "action": string;
+        /**
+          * The headline of the component.
+         */
         "headline": string;
+        /**
+          * The url for the image.
+         */
         "img": string;
     }
     interface BigFooter {
+        /**
+          * The background color of the below part of the component.
+         */
         "bottomBg"?: "blue" | "gray" | "light-gray" | "black";
+        /**
+          * The color of the below part of the component.
+         */
         "bottomColor"?: "white";
-        "hasBorders": boolean;
-        "showInspect": boolean;
-        "sitemap": boolean;
+        /**
+          * If true, the icon will get shown.
+         */
+        "showIcon": boolean;
+        /**
+          * If true, the sitemap will get shown.
+         */
+        "showSitemap": boolean;
+        /**
+          * The background color of the above part of the component.
+         */
         "topBg"?: "blue" | "gray" | "light-gray" | "black";
+        /**
+          * If true, the top and bottom borders of the above part of the component will get shown.
+         */
+        "topBorderY": boolean;
+        /**
+          * The color of the left part of the above part of the component.
+         */
         "topLeftColor"?: "blue" | "white";
+        /**
+          * The color of the right part of the above part of the component.
+         */
         "topRightColor"?: "white";
     }
     interface ButtonComponent {
+        /**
+          * The visual color appearance of the component.
+         */
         "colorScheme": "yellow" | "red" | "green" | "sky" | "blue";
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled": boolean;
+        /**
+          * If true, the default left icon will be shown.
+         */
         "leftIcon": boolean;
+        /**
+          * If true, the default right icon will be shown.
+         */
         "rightIcon": boolean;
+        /**
+          * The size of the component.
+         */
         "size": "sm" | "base" | "md";
+        /**
+          * The type of the component
+         */
         "type": "reset" | "submit" | "button";
+        /**
+          * The variant of the component.
+         */
         "variant": "solid" | "ghost" | "outline";
     }
     interface CheckboxComponent {
+        /**
+          * If true, the component will be checked
+         */
         "checked": boolean;
+        /**
+          * If true, the component will be disabled
+         */
         "disabled": boolean;
+        /**
+          * The label of the component.
+         */
         "label"?: string;
     }
     interface DropdownButton {
+        /**
+          * The label label of the component.
+         */
         "buttonLabel": string;
+        /**
+          * The theme of the the component.
+         */
         "theme": "blue" | "dark-blue";
     }
     interface DropdownComponent {
     }
     interface DropdownLink {
+        /**
+          * The number of the grid columns that the dropdown panel will have.
+         */
         "col": number;
+        /**
+          * The layout of the dropdown panel.
+         */
         "panelSize": "full" | "contain";
+        /**
+          * The visual color appearance of the dropdown panel.
+         */
         "panelTheme": "white" | "blue";
+        /**
+          * The text that will get rendered by the component.
+         */
         "text": string;
+        /**
+          * The visual color appearance of the component.
+         */
         "theme": "blue" | "white" | "dark-blue";
     }
     interface DropdownPanelLink {
@@ -53,66 +137,213 @@ export namespace Components {
     interface DropdownPanelSection {
     }
     interface FooterComponent {
+        /**
+          * The background color of the below part of the component.
+         */
         "bottomBg"?: "blue" | "gray" | "black" | "light-gray";
+        /**
+          * The top border of the the below part of the component.
+         */
+        "bottomBorderT": boolean;
+        /**
+          * The color of the below part of the component.
+         */
         "bottomColor"?: "white";
-        "filled": boolean;
+        /**
+          * If true, the direction of the flexbox which is applied to the right part of the above part of the component will be column.
+         */
         "flexCol": boolean;
-        "hasBorder": boolean;
-        "hasBorders": boolean;
-        "showAbovePart": boolean;
+        /**
+          * If true, the above part of the component will be shown.
+         */
+        "show": boolean;
+        /**
+          * If true, the address will be shown that is in the below part of the component.
+         */
         "showAddress": boolean;
-        "showInspect": boolean;
+        /**
+          * If true, the icon will be shown that is in the above part of the component.
+         */
+        "showIcon": boolean;
+        /**
+          * The background color of the above part of the component.
+         */
         "topBg"?: "blue" | "gray" | "black" | "light-gray";
+        /**
+          * The top and bottom borders of the above part of the component.
+         */
+        "topBorderY": boolean;
+        /**
+          * The color of the left part of the above part of the component.
+         */
         "topLeftColor": "blue" | "white";
+        /**
+          * The color of the right part of the above part of the component.
+         */
         "topRightColor"?: "white";
     }
     interface HeaderComponent {
+        /**
+          * If true, the account container will get shown.
+         */
         "accountContainer": boolean;
+        /**
+          * The color appearance of the account container.
+         */
         "accountContainerTheme": "white" | "blue" | "dark";
+        /**
+          * The account label of the component.
+         */
         "accountLabel": string;
+        /**
+          * The logo of the component.
+         */
         "headerLogo": string;
+        /**
+          * If true, the right border of the logo will get shown.
+         */
         "headerLogoDash": boolean;
+        /**
+          * The color of the right border of the logo.
+         */
         "headerLogoDashTheme": "blue" | "white";
+        /**
+          * If true, the right border of the logo will be equal to the height of the component.
+         */
         "headerLogoStretched": boolean;
+        /**
+          * The theme of the logo of the component.
+         */
         "headerLogoTheme": "white" | "blue" | "dark";
+        /**
+          * The position of the navigation.
+         */
         "navInlinePosition": "right" | "left";
+        /**
+          * The location of the navigation.
+         */
         "navLocation": "below" | "inline" | "none";
+        /**
+          * If true, the component will get separated by an element.
+         */
         "navSeparator": boolean;
+        /**
+          * The color of the separator that separates the component.
+         */
         "navSeparatorTheme": "blue" | "white";
+        /**
+          * The theme of the navigation.
+         */
         "navTheme": "white" | "blue" | "dark";
+        /**
+          * The color of the search box.
+         */
         "searchTextTheme": "white" | "blue" | "dark";
+        /**
+          * The color appearance of the search box.
+         */
         "searchTheme": "white" | "blue" | "dark";
+        /**
+          * If true, the search box will get shown.
+         */
         "showSearch": boolean;
+        /**
+          * The size of the component.
+         */
         "size": "slim" | "normal";
+        /**
+          * The theme of the component.
+         */
         "theme": "white" | "blue" | "dark";
     }
     interface InputComponent {
+        /**
+          * If true, component will be disabled.
+         */
         "disabled": boolean;
+        /**
+          * The label of component.
+         */
         "label": string;
+        /**
+          * The placeholder of component.
+         */
         "placeholder": string;
+        /**
+          * The state of component that it is in.
+         */
         "state": "error" | "success" | "default";
+        /**
+          * The type of component.
+         */
         "type": string;
     }
     interface RadioButton {
+        /**
+          * If true, the component will be checked.
+         */
         "checked": boolean;
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled": boolean;
+        /**
+          * The label of the component.
+         */
         "label"?: string;
     }
     interface SectionComponent {
+        /**
+          * The label of the component.
+         */
         "sectionButtonLabel": string;
     }
     interface SelectComponent {
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled": boolean;
+        /**
+          * The label of the component
+         */
         "label"?: string;
+        /**
+          * The options of the component that may get selected.
+         */
         "options": string[];
+        /**
+          * The state of the component that it is in.
+         */
         "state": "error" | "success" | "default";
     }
     interface TextareaComponent {
+        /**
+          * The number of columns that you would like to have in the component.
+         */
         "cols"?: number;
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled": boolean;
+        /**
+          * The error message when the component in the error state
+         */
+        "error"?: string;
+        /**
+          * The label of the component.
+         */
         "label"?: string;
+        /**
+          * The placeholder of the component.
+         */
         "placeholder"?: string;
+        /**
+          * The number of rows that you want to have in the component.
+         */
         "rows"?: number;
+        /**
+          * The state of the component that it is in.
+         */
         "state": "error" | "success" | "default";
     }
 }
@@ -234,45 +465,129 @@ declare global {
 }
 declare namespace LocalJSX {
     interface BannerComponent {
+        /**
+          * The action that you would like to perform.
+         */
         "action"?: string;
+        /**
+          * The headline of the component.
+         */
         "headline"?: string;
+        /**
+          * The url for the image.
+         */
         "img"?: string;
     }
     interface BigFooter {
+        /**
+          * The background color of the below part of the component.
+         */
         "bottomBg"?: "blue" | "gray" | "light-gray" | "black";
+        /**
+          * The color of the below part of the component.
+         */
         "bottomColor"?: "white";
-        "hasBorders"?: boolean;
-        "showInspect"?: boolean;
-        "sitemap"?: boolean;
+        /**
+          * If true, the icon will get shown.
+         */
+        "showIcon"?: boolean;
+        /**
+          * If true, the sitemap will get shown.
+         */
+        "showSitemap"?: boolean;
+        /**
+          * The background color of the above part of the component.
+         */
         "topBg"?: "blue" | "gray" | "light-gray" | "black";
+        /**
+          * If true, the top and bottom borders of the above part of the component will get shown.
+         */
+        "topBorderY"?: boolean;
+        /**
+          * The color of the left part of the above part of the component.
+         */
         "topLeftColor"?: "blue" | "white";
+        /**
+          * The color of the right part of the above part of the component.
+         */
         "topRightColor"?: "white";
     }
     interface ButtonComponent {
+        /**
+          * The visual color appearance of the component.
+         */
         "colorScheme"?: "yellow" | "red" | "green" | "sky" | "blue";
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled"?: boolean;
+        /**
+          * If true, the default left icon will be shown.
+         */
         "leftIcon"?: boolean;
+        /**
+          * If true, the default right icon will be shown.
+         */
         "rightIcon"?: boolean;
+        /**
+          * The size of the component.
+         */
         "size"?: "sm" | "base" | "md";
+        /**
+          * The type of the component
+         */
         "type"?: "reset" | "submit" | "button";
+        /**
+          * The variant of the component.
+         */
         "variant"?: "solid" | "ghost" | "outline";
     }
     interface CheckboxComponent {
+        /**
+          * If true, the component will be checked
+         */
         "checked"?: boolean;
+        /**
+          * If true, the component will be disabled
+         */
         "disabled"?: boolean;
+        /**
+          * The label of the component.
+         */
         "label"?: string;
     }
     interface DropdownButton {
+        /**
+          * The label label of the component.
+         */
         "buttonLabel"?: string;
+        /**
+          * The theme of the the component.
+         */
         "theme"?: "blue" | "dark-blue";
     }
     interface DropdownComponent {
     }
     interface DropdownLink {
+        /**
+          * The number of the grid columns that the dropdown panel will have.
+         */
         "col"?: number;
+        /**
+          * The layout of the dropdown panel.
+         */
         "panelSize"?: "full" | "contain";
+        /**
+          * The visual color appearance of the dropdown panel.
+         */
         "panelTheme"?: "white" | "blue";
+        /**
+          * The text that will get rendered by the component.
+         */
         "text"?: string;
+        /**
+          * The visual color appearance of the component.
+         */
         "theme"?: "blue" | "white" | "dark-blue";
     }
     interface DropdownPanelLink {
@@ -280,66 +595,213 @@ declare namespace LocalJSX {
     interface DropdownPanelSection {
     }
     interface FooterComponent {
+        /**
+          * The background color of the below part of the component.
+         */
         "bottomBg"?: "blue" | "gray" | "black" | "light-gray";
+        /**
+          * The top border of the the below part of the component.
+         */
+        "bottomBorderT"?: boolean;
+        /**
+          * The color of the below part of the component.
+         */
         "bottomColor"?: "white";
-        "filled"?: boolean;
+        /**
+          * If true, the direction of the flexbox which is applied to the right part of the above part of the component will be column.
+         */
         "flexCol"?: boolean;
-        "hasBorder"?: boolean;
-        "hasBorders"?: boolean;
-        "showAbovePart"?: boolean;
+        /**
+          * If true, the above part of the component will be shown.
+         */
+        "show"?: boolean;
+        /**
+          * If true, the address will be shown that is in the below part of the component.
+         */
         "showAddress"?: boolean;
-        "showInspect"?: boolean;
+        /**
+          * If true, the icon will be shown that is in the above part of the component.
+         */
+        "showIcon"?: boolean;
+        /**
+          * The background color of the above part of the component.
+         */
         "topBg"?: "blue" | "gray" | "black" | "light-gray";
+        /**
+          * The top and bottom borders of the above part of the component.
+         */
+        "topBorderY"?: boolean;
+        /**
+          * The color of the left part of the above part of the component.
+         */
         "topLeftColor"?: "blue" | "white";
+        /**
+          * The color of the right part of the above part of the component.
+         */
         "topRightColor"?: "white";
     }
     interface HeaderComponent {
+        /**
+          * If true, the account container will get shown.
+         */
         "accountContainer"?: boolean;
+        /**
+          * The color appearance of the account container.
+         */
         "accountContainerTheme"?: "white" | "blue" | "dark";
+        /**
+          * The account label of the component.
+         */
         "accountLabel"?: string;
+        /**
+          * The logo of the component.
+         */
         "headerLogo"?: string;
+        /**
+          * If true, the right border of the logo will get shown.
+         */
         "headerLogoDash"?: boolean;
+        /**
+          * The color of the right border of the logo.
+         */
         "headerLogoDashTheme"?: "blue" | "white";
+        /**
+          * If true, the right border of the logo will be equal to the height of the component.
+         */
         "headerLogoStretched"?: boolean;
+        /**
+          * The theme of the logo of the component.
+         */
         "headerLogoTheme"?: "white" | "blue" | "dark";
+        /**
+          * The position of the navigation.
+         */
         "navInlinePosition"?: "right" | "left";
+        /**
+          * The location of the navigation.
+         */
         "navLocation"?: "below" | "inline" | "none";
+        /**
+          * If true, the component will get separated by an element.
+         */
         "navSeparator"?: boolean;
+        /**
+          * The color of the separator that separates the component.
+         */
         "navSeparatorTheme"?: "blue" | "white";
+        /**
+          * The theme of the navigation.
+         */
         "navTheme"?: "white" | "blue" | "dark";
+        /**
+          * The color of the search box.
+         */
         "searchTextTheme"?: "white" | "blue" | "dark";
+        /**
+          * The color appearance of the search box.
+         */
         "searchTheme"?: "white" | "blue" | "dark";
+        /**
+          * If true, the search box will get shown.
+         */
         "showSearch"?: boolean;
+        /**
+          * The size of the component.
+         */
         "size"?: "slim" | "normal";
+        /**
+          * The theme of the component.
+         */
         "theme"?: "white" | "blue" | "dark";
     }
     interface InputComponent {
+        /**
+          * If true, component will be disabled.
+         */
         "disabled"?: boolean;
+        /**
+          * The label of component.
+         */
         "label"?: string;
+        /**
+          * The placeholder of component.
+         */
         "placeholder"?: string;
+        /**
+          * The state of component that it is in.
+         */
         "state"?: "error" | "success" | "default";
+        /**
+          * The type of component.
+         */
         "type"?: string;
     }
     interface RadioButton {
+        /**
+          * If true, the component will be checked.
+         */
         "checked"?: boolean;
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled"?: boolean;
+        /**
+          * The label of the component.
+         */
         "label"?: string;
     }
     interface SectionComponent {
+        /**
+          * The label of the component.
+         */
         "sectionButtonLabel"?: string;
     }
     interface SelectComponent {
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled"?: boolean;
+        /**
+          * The label of the component
+         */
         "label"?: string;
+        /**
+          * The options of the component that may get selected.
+         */
         "options"?: string[];
+        /**
+          * The state of the component that it is in.
+         */
         "state"?: "error" | "success" | "default";
     }
     interface TextareaComponent {
+        /**
+          * The number of columns that you would like to have in the component.
+         */
         "cols"?: number;
+        /**
+          * If true, the component will be disabled.
+         */
         "disabled"?: boolean;
+        /**
+          * The error message when the component in the error state
+         */
+        "error"?: string;
+        /**
+          * The label of the component.
+         */
         "label"?: string;
+        /**
+          * The placeholder of the component.
+         */
         "placeholder"?: string;
+        /**
+          * The number of rows that you want to have in the component.
+         */
         "rows"?: number;
+        /**
+          * The state of the component that it is in.
+         */
         "state"?: "error" | "success" | "default";
     }
     interface IntrinsicElements {

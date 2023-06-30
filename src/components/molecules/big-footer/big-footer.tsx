@@ -7,48 +7,47 @@ import cn from "classnames";
   shadow: true,
 })
 export class BigFooter {
+  /** If true, the icon will get shown. */
+  @Prop() showIcon = false;
+  /** If true, the top and bottom borders of the above part of the component will get shown. */
+  @Prop() topBorderY = false;
+  /** If true, the sitemap will get shown. */
+  @Prop() showSitemap = false;
+  /** The color of the left part of the above part of the component. */
   @Prop() topLeftColor?: "blue" | "white";
+  /** The color of the right part of the above part of the component. */
   @Prop() topRightColor?: "white";
+  /** The color of the below part of the component. */
   @Prop() bottomColor?: "white";
-  @Prop() showInspect = false;
+  /** The background color of the above part of the component. */
   @Prop() topBg?: "blue" | "gray" | "light-gray" | "black";
+  /** The background color of the below part of the component. */
   @Prop() bottomBg?: "blue" | "gray" | "light-gray" | "black";
-  @Prop() hasBorders = false;
-  @Prop() sitemap = false;
 
   render() {
     return (
       <Host>
         <footer class="font-sans">
           <div
-            class={cn(
-              "p-4",
-              this.topBg === "blue"
-                ? "bg-blue-700"
-                : this.topBg === "gray"
-                ? "bg-gray-600"
-                : this.topBg === "black"
-                ? "bg-black"
-                : this.topBg === "light-gray"
-                ? "bg-gray-100"
-                : "",
-              this.hasBorders ? "border-t border-b border-gray-200" : ""
-            )}
+            class={cn("p-4", {
+              "border-t border-b border-gray-200": this.topBorderY,
+              "bg-blue-700": this.topBg === "blue",
+              "bg-gray-600": this.topBg === "gray",
+              "bg-black": this.topBg === "black",
+              "bg-gray-100": this.topBg === "light-gray",
+            })}
           >
-            {this.sitemap && (
+            {this.showSitemap && (
               <div class="max-w-120 border-b pb-4 border-black">
                 <p class="text-lg font-medium">Sitemap</p>
               </div>
             )}
             <div class="flex justify-between items-center">
               <div
-                class={`${
-                  this.topLeftColor === "blue"
-                    ? "text-blue-500"
-                    : this.topLeftColor === "white"
-                    ? "text-white"
-                    : ""
-                } grid grid-cols-3 gap-x-8`}
+                class={cn("grid grid-cols-3 gap-x-8", {
+                  "text-blue-500": this.topLeftColor === "blue",
+                  "text-white": this.topLeftColor === "white",
+                })}
               >
                 <div class="flex flex-col gap-y-4">
                   <a class="flex items-center" href="#">
@@ -164,7 +163,7 @@ export class BigFooter {
               </div>
 
               <div
-                class={cn("flex flex-col gap-y-4", {
+                class={cn("flex flex-col gap-y-4 max-w-sm", {
                   "text-white": this.topRightColor === "white",
                 })}
               >
@@ -343,35 +342,25 @@ export class BigFooter {
                   </svg>
                 </div>
 
-                <div class="max-w-sm">
-                  <p class="text-sm">
-                    A federal government website managed and paid for by the
-                    U.S. Centers for Medicare and Medicaid Services and part of
-                    the MACPro suite.
-                  </p>
-                </div>
+                <p class="text-sm">
+                  A federal government website managed and paid for by the U.S.
+                  Centers for Medicare and Medicaid Services and part of the
+                  MACPro suite.
+                </p>
               </div>
             </div>
           </div>
 
           <div
-            class={cn(
-              "flex justify-between p-4",
-              this.bottomBg === "black"
-                ? "bg-black"
-                : this.bottomBg === "blue"
-                ? "bg-blue-900"
-                : this.bottomBg === "gray"
-                ? "bg-gray-800"
-                : this.bottomBg === "light-gray"
-                ? "bg-gray-100"
-                : "",
-              {
-                "text-white": this.bottomColor === "white",
-              }
-            )}
+            class={cn("flex justify-between p-4", {
+              "text-white": this.bottomColor === "white",
+              "bg-black": this.bottomBg === "black",
+              "bg-blue-900": this.bottomBg === "blue",
+              "bg-gray-800": this.bottomBg === "gray",
+              "bg-gray-100": this.bottomBg === "light-gray",
+            })}
           >
-            {this.showInspect && (
+            {this.showIcon && (
               <svg
                 width="132"
                 height="40"

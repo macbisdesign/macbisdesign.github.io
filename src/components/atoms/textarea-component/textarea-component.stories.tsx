@@ -9,6 +9,7 @@ export default {
      state="${args.state}"
      disabled="${args.disabled}"
      label="${args.label}"
+     error="${args.error}"
     />   
     `;
   },
@@ -69,5 +70,6 @@ export const Error = {
     disabled: false,
     label: "Error",
     state: "error",
+    error: "Helpful error message",
   },
 };

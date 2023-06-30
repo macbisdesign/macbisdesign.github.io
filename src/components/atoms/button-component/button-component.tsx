@@ -7,12 +7,19 @@ import cn from "classnames";
   shadow: true,
 })
 export class ButtonComponent {
+  /** The visual color appearance of the component. */
   @Prop() colorScheme: "yellow" | "red" | "green" | "sky" | "blue" = "blue";
+  /** The size of the component. */
   @Prop() size: "sm" | "base" | "md" = "base";
+  /** The variant of the component. */
   @Prop() variant: "solid" | "ghost" | "outline" = "solid";
+  /** If true, the component will be disabled. */
   @Prop() disabled = false;
+  /** If true, the default left icon will be shown. */
   @Prop() leftIcon = false;
+  /** If true, the default right icon will be shown. */
   @Prop() rightIcon = false;
+  /** The type of the component */
   @Prop() type: "reset" | "submit" | "button" = "button";
 
   render() {

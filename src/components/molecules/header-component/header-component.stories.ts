@@ -97,7 +97,7 @@ export default {
   },
 };
 
-export const header1 = {
+export const BlackWithGrayDropdown = {
   args: {
     theme: "dark",
     size: "normal",
@@ -131,7 +131,7 @@ export const header1 = {
   },
 };
 
-export const header2 = {
+export const BlueWithWhiteDropdown = {
   args: {
     theme: "blue",
     size: "normal",
@@ -165,7 +165,7 @@ export const header2 = {
   },
 };
 
-export const header3 = {
+export const BlueWithBlueDropdown = {
   args: {
     theme: "blue",
     size: "normal",
@@ -199,7 +199,7 @@ export const header3 = {
   },
 };
 
-export const header4 = {
+export const BlueWithContainWhiteDropdown = {
   args: {
     theme: "blue",
     size: "normal",
@@ -229,7 +229,7 @@ export const header4 = {
   },
 };
 
-export const header5 = {
+export const BlueWithContainBlueDropdown = {
   args: {
     theme: "blue",
     size: "normal",
@@ -259,7 +259,7 @@ export const header5 = {
   },
 };
 
-export const header6 = {
+export const BlackWithContainBlackDropdown = {
   args: {
     theme: "dark",
     size: "normal",
@@ -289,7 +289,7 @@ export const header6 = {
   },
 };
 
-export const header7 = {
+export const SmallBlueWithSearchbar = {
   args: {
     theme: "blue",
     size: "slim",
@@ -306,7 +306,7 @@ export const header7 = {
   },
 };
 
-export const header8 = {
+export const SmallBlueWithInspect = {
   args: {
     theme: "blue",
     navSeparator: "true",
@@ -322,7 +322,7 @@ export const header8 = {
   },
 };
 
-export const header9 = {
+export const SmallBlue = {
   args: {
     theme: "blue",
     size: "slim",
@@ -336,7 +336,7 @@ export const header9 = {
   },
 };
 
-export const header10 = {
+export const SmallBlueWithAccountContainer = {
   args: {
     theme: "blue",
     size: "slim",
@@ -360,32 +360,7 @@ export const header10 = {
   },
 };
 
-export const header11 = {
-  args: {
-    theme: "blue",
-    size: "slim",
-    showSearch: "false",
-    searchTheme: "blue",
-    searchTextTheme: "white",
-    headerLogo: "3",
-    headerLogoTheme: "blue",
-    accountLabel: '"My Account"',
-    navLocation: "inline",
-    navInlinePosition: "right",
-    headerLogoDash: "true",
-    navSeparator: "true",
-    navSeparatorTheme: "white",
-    accountContainerTheme: "white",
-    headerLogoStretched: "false",
-    children: `
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  `,
-  },
-};
-
-export const header12 = {
+export const SmallBlueWithBigInspect = {
   args: {
     theme: "blue",
     size: "slim",
@@ -402,52 +377,7 @@ export const header12 = {
   },
 };
 
-export const header13 = {
-  args: {
-    theme: "blue",
-    size: "slim",
-    showSearch: "true",
-    searchTheme: "blue",
-    searchTextTheme: "white",
-    headerLogo: "4",
-    headerLogoTheme: "blue",
-    accountLabel: '"My Account"',
-    headerLogoDash: "true",
-    headerLogoStretched: "true",
-    navLocation: "inline",
-    navInlinePosition: "right",
-    navSeparator: "false",
-    accountContainerTheme: "white",
-    children: `
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  `,
-  },
-};
-
-export const header14 = {
-  args: {
-    theme: "blue",
-    size: "slim",
-    showSearch: "true",
-    searchTheme: "blue",
-    searchTextTheme: "white",
-    headerLogo: "4",
-    headerLogoTheme: "blue",
-    accountLabel: '"My Account"',
-    headerLogoDash: "true",
-    headerLogoStretched: "true",
-    navLocation: "inline",
-    navInlinePosition: "right",
-    navSeparator: "false",
-    accountContainerTheme: "white",
-    children: `
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
-  `,
-  },
-};
-
-export const header15 = {
+export const SmallWithLogo = {
   args: {
     theme: "white",
     size: "slim",
@@ -462,7 +392,7 @@ export const header15 = {
   },
 };
 
-export const header16 = {
+export const SmallBlueWithLogo = {
   args: {
     theme: "white",
     size: "slim",
@@ -478,7 +408,7 @@ export const header16 = {
   },
 };
 
-export const header17 = {
+export const SmallWithBigInspect = {
   args: {
     theme: "white",
     size: "slim",
@@ -496,7 +426,7 @@ export const header17 = {
   },
 };
 
-export const header18 = {
+export const SmallWithBlueLogo = {
   args: {
     theme: "white",
     size: "slim",
@@ -513,7 +443,7 @@ export const header18 = {
   },
 };
 
-export const header19 = {
+export const SmallBlackWithLogo = {
   args: {
     theme: "dark",
     size: "slim",
@@ -530,23 +460,7 @@ export const header19 = {
   },
 };
 
-export const header20 = {
-  args: {
-    theme: "white",
-    size: "slim",
-    showSearch: "true",
-    searchTheme: "white",
-    searchTextTheme: "dark",
-    headerLogo: "2",
-    headerLogoTheme: "white",
-    accountLabel: '"My Account"',
-    headerLogoDash: "true",
-    accountContainerTheme: "dark",
-    navSeparator: "false",
-  },
-};
-
-export const header21 = {
+export const SmallBlueBlack = {
   args: {
     theme: "dark",
     size: "slim",
@@ -565,7 +479,7 @@ export const header21 = {
   },
 };
 
-export const header22 = {
+export const SmallBlackWithFilledLogo = {
   args: {
     theme: "dark",
     size: "slim",
@@ -580,7 +494,7 @@ export const header22 = {
   },
 };
 
-export const header23 = {
+export const SmallBlackWithFilledLogoWithoutInspect = {
   args: {
     theme: "dark",
     size: "slim",
@@ -594,7 +508,7 @@ export const header23 = {
   },
 };
 
-export const header24 = {
+export const SmallBlueWithBlueLogo = {
   args: {
     theme: "white",
     size: "slim",

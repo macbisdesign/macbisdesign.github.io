@@ -11,41 +11,23 @@ import cn from "classnames";
 export class HeaderComponent {
   @Element() el: HTMLElement;
 
-  /** The theme of the component. */
   @Prop() theme: "white" | "blue" | "dark";
-  /** The size of the component. */
   @Prop() size: "slim" | "normal" = "normal";
-  /** The theme of the logo of the component. */
   @Prop() headerLogoTheme: "white" | "blue" | "dark";
-  /** The logo of the component. */
   @Prop() headerLogo: string;
-  /** The theme of the navigation. */
   @Prop() navTheme: "white" | "blue" | "dark";
-  /** The location of the navigation. */
   @Prop() navLocation: "below" | "inline" | "none";
-  /** The position of the navigation. */
   @Prop() navInlinePosition: "right" | "left";
-  /** The account label of the component.  */
   @Prop() accountLabel: string;
-  /** If true, the search box will get shown. */
   @Prop() showSearch: boolean;
-  /** The color appearance of the search box. */
   @Prop() searchTheme: "white" | "blue" | "dark";
-  /** The color of the search box. */
   @Prop() searchTextTheme: "white" | "blue" | "dark";
-  /** If true, the component will get separated by an element.*/
   @Prop() navSeparator: boolean = false;
-  /** If true, the right border of the logo will get shown. */
-  @Prop() headerLogoDash = false;
-  /** If true, the right border of the logo will be equal to the height of the component.  */
+  @Prop() headerLogoDash: boolean = false;
   @Prop() headerLogoStretched = false;
-  /** The color appearance of the account container. */
   @Prop() accountContainerTheme: "white" | "blue" | "dark" = "white";
-  /** The color of the right border of the logo. */
   @Prop() headerLogoDashTheme: "blue" | "white" = "white";
-  /** The color of the separator that separates the component.  */
   @Prop() navSeparatorTheme: "blue" | "white" = "white";
-  /** If true, the account container will get shown. */
   @Prop() accountContainer = true;
 
   componentDidLoad() {
@@ -61,32 +43,44 @@ export class HeaderComponent {
     return (
       <Host>
         <header
-          class={`header-component header-component--${this.size} header-component--${this.theme}`}
+          class={cn(
+            `header-component header-component--${this.size} header-component--${this.theme}`
+          )}
         >
           <div
-            class={cn(`header-logo--${this.headerLogoTheme} header-logo`, {
-              "header-logo--dash": this.headerLogoDash,
-              "header-logo--stretched": this.headerLogoStretched,
-              "header-logo--dash-blue": this.headerLogoDashTheme === "blue",
-              "header-logo--dash-white": this.headerLogoDashTheme === "white",
-            })}
+            class={cn(
+              `header-logo--${this.headerLogoTheme} header-logo`,
+              this.headerLogoDashTheme === "blue"
+                ? "header-logo--dash-blue"
+                : this.headerLogoDashTheme === "white"
+                ? "header-logo--dash-white"
+                : "",
+              {
+                "header-logo--dash": this.headerLogoDash,
+                "header-logo--stretched": this.headerLogoStretched,
+              }
+            )}
           ></div>
 
-          <div class="header-content">
-            <div class="content-left">
+          <div class={`header-content`}>
+            <div class={`content-left`}>
               {this.navLocation === "inline" &&
                 this.navInlinePosition === "left" && (
-                  <nav class="top-nav-container">
+                  <nav class={`top-nav-container`}>
                     <slot />
                   </nav>
                 )}
 
               {this.navSeparator && (
                 <h1
-                  class={cn("inspect", {
-                    "inspect--blue": this.navSeparatorTheme === "blue",
-                    "inspect--white": this.navSeparatorTheme === "white",
-                  })}
+                  class={cn(
+                    "inspect",
+                    this.navSeparatorTheme === "blue"
+                      ? "inspect--blue"
+                      : this.navSeparatorTheme === "white"
+                      ? "inspect--white"
+                      : ""
+                  )}
                 >
                   Inspect
                 </h1>

@@ -97,7 +97,7 @@ export default {
   },
 };
 
-export const BlackWithGrayDropdown = {
+export const header1 = {
   args: {
     theme: "dark",
     size: "normal",
@@ -131,7 +131,7 @@ export const BlackWithGrayDropdown = {
   },
 };
 
-export const BlueWithWhiteDropdown = {
+export const header2 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -165,7 +165,7 @@ export const BlueWithWhiteDropdown = {
   },
 };
 
-export const BlueWithBlueDropdown = {
+export const header3 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -199,7 +199,7 @@ export const BlueWithBlueDropdown = {
   },
 };
 
-export const BlueWithContainWhiteDropdown = {
+export const header4 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -229,7 +229,7 @@ export const BlueWithContainWhiteDropdown = {
   },
 };
 
-export const BlueWithContainBlueDropdown = {
+export const header5 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -259,7 +259,7 @@ export const BlueWithContainBlueDropdown = {
   },
 };
 
-export const BlackWithContainBlackDropdown = {
+export const header6 = {
   args: {
     theme: "dark",
     size: "normal",
@@ -289,7 +289,7 @@ export const BlackWithContainBlackDropdown = {
   },
 };
 
-export const SmallBlueWithSearchbar = {
+export const header7 = {
   args: {
     theme: "blue",
     size: "slim",
@@ -306,7 +306,7 @@ export const SmallBlueWithSearchbar = {
   },
 };
 
-export const SmallBlueWithInspect = {
+export const header8 = {
   args: {
     theme: "blue",
     navSeparator: "true",
@@ -322,7 +322,7 @@ export const SmallBlueWithInspect = {
   },
 };
 
-export const SmallBlue = {
+export const header9 = {
   args: {
     theme: "blue",
     size: "slim",
@@ -336,7 +336,7 @@ export const SmallBlue = {
   },
 };
 
-export const SmallBlueWithAccountContainer = {
+export const header10 = {
   args: {
     theme: "blue",
     size: "slim",
@@ -360,7 +360,32 @@ export const SmallBlueWithAccountContainer = {
   },
 };
 
-export const SmallBlueWithBigInspect = {
+export const header11 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "false",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "3",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    navLocation: "inline",
+    navInlinePosition: "right",
+    headerLogoDash: "true",
+    navSeparator: "true",
+    navSeparatorTheme: "white",
+    accountContainerTheme: "white",
+    headerLogoStretched: "false",
+    children: `
+  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+  `,
+  },
+};
+
+export const header12 = {
   args: {
     theme: "blue",
     size: "slim",
@@ -377,7 +402,52 @@ export const SmallBlueWithBigInspect = {
   },
 };
 
-export const SmallWithLogo = {
+export const header13 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "4",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    headerLogoStretched: "true",
+    navLocation: "inline",
+    navInlinePosition: "right",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    children: `
+  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+  `,
+  },
+};
+
+export const header14 = {
+  args: {
+    theme: "blue",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "blue",
+    searchTextTheme: "white",
+    headerLogo: "4",
+    headerLogoTheme: "blue",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    headerLogoStretched: "true",
+    navLocation: "inline",
+    navInlinePosition: "right",
+    navSeparator: "false",
+    accountContainerTheme: "white",
+    children: `
+  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+  <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+  `,
+  },
+};
+
+export const header15 = {
   args: {
     theme: "white",
     size: "slim",
@@ -392,7 +462,7 @@ export const SmallWithLogo = {
   },
 };
 
-export const SmallBlueWithLogo = {
+export const header16 = {
   args: {
     theme: "white",
     size: "slim",
@@ -408,7 +478,7 @@ export const SmallBlueWithLogo = {
   },
 };
 
-export const SmallWithBigInspect = {
+export const header17 = {
   args: {
     theme: "white",
     size: "slim",
@@ -426,7 +496,7 @@ export const SmallWithBigInspect = {
   },
 };
 
-export const SmallWithBlueLogo = {
+export const header18 = {
   args: {
     theme: "white",
     size: "slim",
@@ -443,7 +513,7 @@ export const SmallWithBlueLogo = {
   },
 };
 
-export const SmallBlackWithLogo = {
+export const header19 = {
   args: {
     theme: "dark",
     size: "slim",
@@ -460,7 +530,23 @@ export const SmallBlackWithLogo = {
   },
 };
 
-export const SmallBlueBlack = {
+export const header20 = {
+  args: {
+    theme: "white",
+    size: "slim",
+    showSearch: "true",
+    searchTheme: "white",
+    searchTextTheme: "dark",
+    headerLogo: "2",
+    headerLogoTheme: "white",
+    accountLabel: '"My Account"',
+    headerLogoDash: "true",
+    accountContainerTheme: "dark",
+    navSeparator: "false",
+  },
+};
+
+export const header21 = {
   args: {
     theme: "dark",
     size: "slim",
@@ -479,7 +565,7 @@ export const SmallBlueBlack = {
   },
 };
 
-export const SmallBlackWithFilledLogo = {
+export const header22 = {
   args: {
     theme: "dark",
     size: "slim",
@@ -494,7 +580,7 @@ export const SmallBlackWithFilledLogo = {
   },
 };
 
-export const SmallBlackWithFilledLogoWithoutInspect = {
+export const header23 = {
   args: {
     theme: "dark",
     size: "slim",
@@ -508,7 +594,7 @@ export const SmallBlackWithFilledLogoWithoutInspect = {
   },
 };
 
-export const SmallBlueWithBlueLogo = {
+export const header24 = {
   args: {
     theme: "white",
     size: "slim",

@@ -17,11 +17,8 @@ import cn from "classnames";
   assetsDirs: ["assets"],
 })
 export class BannerComponent {
-  /** The headline of the component. */
   @Prop() headline: string;
-  /** The action that you would like to perform. */
   @Prop() action: string;
-  /** The url for the image. */
   @Prop() img = defaultImg;
 
   @State() isNotOpen = true;
@@ -39,44 +36,46 @@ export class BannerComponent {
         <div class="bg-gray-100 px-8 py-4">
           <header class="flex gap-x-2.5">
             <img class="w-6 object-contain" src={imgSrc} alt="" />
-            <div class="flex gap-x-2.5">
+            <div>
               {this.headline}{" "}
               <p
                 onClick={this.handleClick}
                 class="inline-flex cursor-pointer items-center gap-x-1 text-blue-600 underline hover:text-blue-700"
               >
                 <span>{this.action}</span>
-                {this.isNotOpen ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4.5 15.75l7.5-7.5 7.5 7.5"
-                    />
-                  </svg>
-                )}
+                <span>
+                  {this.isNotOpen ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-4 w-4"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                      />
+                    </svg>
+                  )}
+                </span>
               </p>
             </div>
           </header>
@@ -91,6 +90,7 @@ export class BannerComponent {
               class="h-10 w-10"
               viewBox="0 0 64 64"
             >
+              <title>icon-dot-gov</title>
               <path
                 fill="#2378C3"
                 fill-rule="evenodd"
@@ -102,6 +102,7 @@ export class BannerComponent {
               class="h-10 w-10"
               viewBox="0 0 64 64"
             >
+              <title>icon-https</title>
               <path
                 fill="#719F2A"
                 fill-rule="evenodd"

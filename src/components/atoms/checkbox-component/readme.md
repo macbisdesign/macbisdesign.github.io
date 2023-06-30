@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                             | Type      | Default     |
-| ---------- | ---------- | --------------------------------------- | --------- | ----------- |
-| `checked`  | `checked`  | If true, the component will be checked  | `boolean` | `false`     |
-| `disabled` | `disabled` | If true, the component will be disabled | `boolean` | `false`     |
-| `label`    | `label`    | The label of the component.             | `string`  | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `checked`  | `checked`  |             | `boolean` | `false`     |
+| `disabled` | `disabled` |             | `boolean` | `false`     |
+| `label`    | `label`    |             | `string`  | `undefined` |
 
 
 ----------------------------------------------

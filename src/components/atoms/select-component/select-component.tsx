@@ -7,13 +7,9 @@ import cn from "classnames";
   shadow: true,
 })
 export class SelectComponent {
-  /** The label of the component */
   @Prop() label?: string;
-  /** The state of the component that it is in. */
   @Prop() state: "error" | "success" | "default" = "default";
-  /** If true, the component will be disabled. */
   @Prop() disabled = false;
-  /** The options of the component that may get selected. */
   @Prop() options: string[] = [];
 
   render() {

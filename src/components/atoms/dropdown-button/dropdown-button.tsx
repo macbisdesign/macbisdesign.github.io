@@ -9,9 +9,7 @@ import { Component, Element, Host, h, Prop } from "@stencil/core";
 export class DropdownButton {
   @Element() el: HTMLElement;
 
-  /** The label label of the component. */
   @Prop() buttonLabel: string;
-  /** The theme of the the component. */
   @Prop() theme: "blue" | "dark-blue";
 
   buttonOpen: boolean = false;

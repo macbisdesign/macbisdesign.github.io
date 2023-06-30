@@ -7,35 +7,18 @@ import cn from "classnames";
   shadow: true,
 })
 export class TextareaComponent {
-  /** The label of the component. */
   @Prop() label?: string;
-  /** The state of the component that it is in. */
   @Prop() state: "error" | "success" | "default" = "default";
-  /** If true, the component will be disabled. */
   @Prop() disabled = false;
-  /** The number of columns that you would like to have in the component. */
   @Prop() cols?: number;
-  /** The number of rows that you want to have in the component. */
   @Prop() rows?: number;
-  /** The placeholder of the component. */
   @Prop() placeholder?: string;
-  /** The error message when the component in the error state */
-  @Prop() error?: string;
 
   render() {
     return (
       <Host>
-        <label
-          class={cn("inline-flex flex-col gap-y-2.5 pl-2", {
-            "border-l-2 border-red-600": this.state === "error",
-          })}
-        >
-          {this.label && this.label}
-
-          {this.state === "error"
-            ? this.error && <span class="text-red-600">{this.error}</span>
-            : ""}
-
+        <label>
+          {this.label && <span class="mb-1.5 block">{this.label}</span>}
           <textarea
             class={cn("resize-none disabled:border-gray-500", {
               "border-blue-600 focus:border-blue-600 focus:ring-blue-600":

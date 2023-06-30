@@ -10,7 +10,6 @@ export class SectionComponent {
 
   @State() sectionOpen: boolean = false;
 
-  /** The label of the component. */
   @Prop() sectionButtonLabel: string = "Section";
 
   toggleSection() {

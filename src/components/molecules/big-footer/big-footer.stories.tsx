@@ -6,11 +6,11 @@ export default {
     <big-footer 
       top-left-color="${args.topLeftColor}"
       top-right-color="${args.topRightColor}"
-      show-icon="${args.showIcon}"
+      show-inspect="${args.showInspect}"
       top-bg="${args.topBg}"
       bottom-bg="${args.bottomBg}"
-      top-border-y="${args.topBorderY}"
-      show-sitemap="${args.showSitemap}"
+      has-borders="${args.hasBorders}"
+      sitemap="${args.sitemap}"
       bottom-color="${args.bottomColor}"
     />
     `;
@@ -30,7 +30,7 @@ export default {
       control: { type: "text" },
       options: ["white"],
     },
-    showIcon: {
+    showInspect: {
       control: { type: "boolean" },
     },
     topBg: {
@@ -45,12 +45,12 @@ export default {
       },
       options: ["blue", "gray", "light-gray", "black"],
     },
-    topBorderY: {
+    hasBorders: {
       control: {
         type: "boolean",
       },
     },
-    showSitemap: {
+    sitemap: {
       control: {
         type: "boolean",
       },
@@ -58,59 +58,59 @@ export default {
   },
 };
 
-export const Simple = {
+export const bigFooter1 = {
   args: {
-    showSitemap: "true",
-    topBorderY: "true",
-    showIcon: "false",
+    sitemap: "true",
+    hasBorders: "true",
+    showInspect: "false",
   },
 };
 
-export const Blue = {
+export const bigFooter2 = {
   args: {
     topBg: "blue",
     bottomBg: "blue",
     topLeftColor: "white",
     topRightColor: "white",
     bottomColor: "white",
-    showIcon: "false",
-    topBorderY: "false",
-    showSitemap: "false",
+    showInspect: "false",
+    hasBorders: "false",
+    sitemap: "false",
   },
 };
 
-export const Gray = {
+export const bigFooter3 = {
   args: {
     topBg: "gray",
     bottomBg: "gray",
     topLeftColor: "white",
     topRightColor: "white",
     bottomColor: "white",
-    showIcon: "false",
-    topBorderY: "false",
-    showSitemap: "false",
+    showInspect: "false",
+    hasBorders: "false",
+    sitemap: "false",
   },
 };
 
-export const LightGray = {
+export const bigFooter4 = {
   args: {
     topBg: "light-gray",
     bottomBg: "light-gray",
-    showIcon: "true",
-    topBorderY: "false",
-    showSitemap: "false",
+    showInspect: "true",
+    hasBorders: "false",
+    sitemap: "false",
   },
 };
 
-export const Black = {
+export const bigFooter5 = {
   args: {
     topBg: "black",
     topLeftColor: "white",
     topRightColor: "white",
     bottomColor: "white",
     bottomBg: "black",
-    showIcon: "false",
-    topBorderY: "false",
-    showSitemap: "false",
+    showInspect: "false",
+    hasBorders: "false",
+    sitemap: "false",
   },
 };

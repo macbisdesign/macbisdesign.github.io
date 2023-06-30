@@ -4,34 +4,41 @@ export default {
   render(args) {
     return `
     <footer-component 
-      top-border-y="${args.topBorderY}"
-      show-icon="${args.showIcon}"
+      has-borders="${args.hasBorders}"
+      filled="${args.filled}"
+      flex-col="${args.flexCol}"
+      show-inspect="${args.showInspect}"
       show-address="${args.showAddress}"
-      bottom-border-t="${args.bottomBorderT}"
+      has-border="${args.hasBorder}"
       top-left-color="${args.topLeftColor}"
       top-right-color="${args.topRightColor}"
       bottom-color="${args.bottomColor}"
       top-bg="${args.topBg}"
       bottom-bg="${args.bottomBg}"
-      show="${args.show}"
-      flex-col=${args.flexCol}
+      show-above-part="${args.showAbovePart}"
     />
     `;
   },
   argTypes: {
-    topBorderY: {
+    hasBorders: {
       control: { type: "boolean" },
     },
-    showIcon: {
+    filled: {
       control: { type: "boolean" },
     },
-    show: {
+    flexCol: {
+      control: { type: "boolean" },
+    },
+    showInspect: {
+      control: { type: "boolean" },
+    },
+    showAbovePart: {
       control: { type: "boolean" },
     },
     showAddress: {
       control: { type: "boolean" },
     },
-    bottomBorderT: {
+    hasBorder: {
       control: { type: "boolean" },
     },
     topLeftColor: {
@@ -60,147 +67,194 @@ export default {
       },
       options: ["blue", "gray", "black", "light-gray"],
     },
-    flexCol: {
-      control: {
-        type: "boolean",
-      },
-    },
   },
 };
 
-export const Small = {
+export const footer1 = {
   args: {
+    hasBorders: "true",
+    filled: "false",
     flexCol: "false",
-    show: "false",
+    showInspect: "false",
+    showAbovePart: "false",
     showAddress: "false",
-    bottomBorderT: "false",
+    hasBorder: "false",
+    topLeftColor: "blue",
   },
 };
 
-export const SmallGray = {
+export const footer2 = {
   args: {
-    flexCol: "false",
-    show: "false",
     bottomBg: "light-gray",
+    hasBorders: "false",
+    filled: "false",
+    flexCol: "false",
+    showInspect: "false",
+    showAbovePart: "false",
     showAddress: "false",
-    bottomBorderT: "false",
+    hasBorder: "false",
+    topLeftColor: "blue",
   },
 };
 
-export const LongGray = {
+export const footer3 = {
   args: {
+    flexCol: "true",
+    bottomBg: "light-gray",
+    hasBorders: "false",
+    filled: "false",
+    showInspect: "false",
+    showAbovePart: "false",
+    showAddress: "false",
+    hasBorder: "false",
+    topLeftColor: "blue",
+  },
+};
+
+export const footer4 = {
+  args: {
+    bottomBg: "light-gray",
+    showInspect: "true",
+    hasBorders: "false",
     flexCol: "false",
-    show: "false",
+    filled: "false",
+    showAbovePart: "false",
+    showAddress: "false",
+    hasBorder: "false",
+    topLeftColor: "blue",
+  },
+};
+
+export const footer5 = {
+  args: {
+    showAbovePart: "false",
     showAddress: "true",
     bottomBg: "light-gray",
-    bottomBorderT: "false",
+    showInspect: "false",
+    hasBorders: "false",
+    flexCol: "false",
+    filled: "false",
+    hasBorder: "false",
+    topLeftColor: "blue",
   },
 };
 
-export const SmallOutlined = {
+export const footer6 = {
   args: {
-    flexCol: "false",
-    show: "false",
-    bottomBorderT: "true",
+    showAbovePart: "false",
+    hasBorder: "true",
     showAddress: "false",
-    showIcon: "false",
+    showInspect: "false",
+    hasBorders: "false",
+    flexCol: "false",
+    filled: "false",
+    topLeftColor: "blue",
   },
 };
 
-export const LongOutlined = {
+export const footer7 = {
   args: {
-    flexCol: "false",
-    show: "false",
-    bottomBorderT: "true",
+    showAbovePart: "false",
+    hasBorder: "true",
     showAddress: "true",
-    showIcon: "false",
+    showInspect: "false",
+    hasBorders: "false",
+    flexCol: "false",
+    filled: "false",
+    topLeftColor: "blue",
   },
 };
 
-export const Gray = {
+export const footer8 = {
   args: {
-    flexCol: "false",
-    show: "true",
-    showIcon: "false",
-    topBorderY: "true",
-    topLeftColor: "blue",
+    hasBorders: "true",
     bottomBg: "light-gray",
+    topLeftColor: "blue",
+    filled: "false",
+    flexCol: "false",
+    showInspect: "false",
+    showAbovePart: "true",
     showAddress: "false",
-    bottomBorderT: "false",
+    hasBorder: "false",
   },
 };
 
-export const Blue = {
+export const footer9 = {
   args: {
-    flexCol: "false",
-    show: "true",
-    showIcon: "false",
-    topBorderY: "true",
-    topLeftColor: "blue",
+    hasBorders: "true",
     bottomBg: "blue",
     bottomColor: "white",
+    topLeftColor: "blue",
+    filled: "false",
+    flexCol: "false",
+    showInspect: "false",
+    showAbovePart: "true",
     showAddress: "false",
-    bottomBorderT: "false",
+    hasBorder: "false",
   },
 };
 
-export const BlueBg = {
+export const footer10 = {
   args: {
+    hasBorders: "true",
+    bottomBg: "blue",
+    bottomColor: "white",
+    filled: "false",
     flexCol: "false",
-    show: "true",
+    showInspect: "false",
+    showAbovePart: "true",
+    showAddress: "false",
+    hasBorder: "false",
     topBg: "blue",
-    showIcon: "false",
     topLeftColor: "white",
     topRightColor: "white",
-    topBorderY: "true",
-    bottomBg: "blue",
-    bottomColor: "white",
-    showAddress: "false",
-    bottomBorderT: "false",
   },
 };
 
-export const GrayBg = {
+export const footer11 = {
   args: {
-    flexCol: "false",
-    show: "true",
-    topBg: "gray",
-    showIcon: "false",
-    topRightColor: "white",
-    topLeftColor: "white",
-    topBorderY: "true",
+    hasBorders: "true",
     bottomBg: "gray",
     bottomColor: "white",
+    filled: "false",
+    flexCol: "false",
+    showInspect: "false",
+    showAbovePart: "true",
     showAddress: "false",
-    bottomBorderT: "false",
+    hasBorder: "false",
+    topBg: "gray",
+    topLeftColor: "white",
+    topRightColor: "white",
   },
 };
 
-export const LightGrayBg = {
+export const footer12 = {
   args: {
-    flexCol: "false",
-    show: "true",
-    showIcon: "true",
-    topBorderY: "false",
     topBg: "light-gray",
     bottomBg: "light-gray",
-    bottomBorderT: "false",
+    showInspect: "true",
+    hasBorders: "false",
+    filled: "false",
+    flexCol: "false",
+    showAbovePart: "true",
+    hasBorder: "false",
     showAddress: "false",
   },
 };
 
-export const BlackBg = {
+export const footer13 = {
   args: {
-    flexCol: "false",
-    show: "true",
-    showIcon: "false",
-    topBorderY: "false",
-    topBg: "black",
     topLeftColor: "white",
     topRightColor: "white",
     bottomColor: "white",
+    topBg: "black",
     bottomBg: "black",
+    hasBorders: "false",
+    filled: "false",
+    flexCol: "false",
+    showInspect: "false",
+    showAbovePart: "true",
     showAddress: "false",
-    bottomBorderT: "false",
+    hasBorder: "false",
   },
 };

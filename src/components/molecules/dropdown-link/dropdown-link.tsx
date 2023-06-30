@@ -6,15 +6,10 @@ import { Component, Host, Listen, Prop, State, h } from "@stencil/core";
   shadow: true,
 })
 export class DropdownLink {
-  /** The text that will get rendered by the component. */
   @Prop() text: string;
-  /** The number of the grid columns that the dropdown panel will have. */
   @Prop() col: number;
-  /** The visual color appearance of the component. */
   @Prop() theme: "blue" | "white" | "dark-blue" = "blue";
-  /** The layout of the dropdown panel. */
   @Prop() panelSize: "full" | "contain" = "full";
-  /** The visual color appearance of the dropdown panel. */
   @Prop() panelTheme: "white" | "blue" = "blue";
 
   // State

@@ -1,5 +1,6 @@
 export default {
   title: "Components/Radio Button",
+  component: "radio-button",
   tags: ["autodocs"],
   render: (args) => {
     return `

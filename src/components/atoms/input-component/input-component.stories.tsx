@@ -1,5 +1,6 @@
 export default {
   title: "Components/Input",
+  component: "input-component",
   tags: ["autodocs"],
   render(args) {
     return `

@@ -7,10 +7,15 @@ import cn from "classnames";
   shadow: true,
 })
 export class InputComponent {
+  /** The label of component. */
   @Prop() label: string;
+  /** The placeholder of component. */
   @Prop() placeholder: string;
+  /** The type of component. */
   @Prop() type = "text";
+  /** The state of component that it is in. */
   @Prop() state: "error" | "success" | "default" = "default";
+  /** If true, component will be disabled. */
   @Prop() disabled = false;
 
   render() {

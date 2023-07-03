@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type                                | Default     |
-| ------------- | ------------- | ----------- | ----------------------------------- | ----------- |
-| `disabled`    | `disabled`    |             | `boolean`                           | `false`     |
-| `label`       | `label`       |             | `string`                            | `undefined` |
-| `placeholder` | `placeholder` |             | `string`                            | `undefined` |
-| `state`       | `state`       |             | `"default" \| "error" \| "success"` | `"default"` |
-| `type`        | `type`        |             | `string`                            | `"text"`    |
+| Property      | Attribute     | Description                           | Type                                | Default     |
+| ------------- | ------------- | ------------------------------------- | ----------------------------------- | ----------- |
+| `disabled`    | `disabled`    | If true, component will be disabled.  | `boolean`                           | `false`     |
+| `label`       | `label`       | The label of component.               | `string`                            | `undefined` |
+| `placeholder` | `placeholder` | The placeholder of component.         | `string`                            | `undefined` |
+| `state`       | `state`       | The state of component that it is in. | `"default" \| "error" \| "success"` | `"default"` |
+| `type`        | `type`        | The type of component.                | `string`                            | `"text"`    |
 
 
 ----------------------------------------------

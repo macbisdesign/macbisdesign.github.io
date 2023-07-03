@@ -1,5 +1,6 @@
 export default {
   title: "Components/Checkbox",
+  component: "checkbox-component",
   tags: ["autodocs"],
   render(args) {
     return `

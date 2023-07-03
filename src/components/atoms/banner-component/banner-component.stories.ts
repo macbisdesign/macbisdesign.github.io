@@ -1,5 +1,6 @@
 export default {
   title: "Components/Banner",
+  component: "banner-component",
   tags: ["autodocs"],
   render(args) {
     return `

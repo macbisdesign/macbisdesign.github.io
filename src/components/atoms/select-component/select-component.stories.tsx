@@ -1,5 +1,6 @@
 export default {
   title: "Components/Select",
+  component: "select-component",
   tags: ["autodocs"],
   render(args) {
     const select = document.createElement("select-component");

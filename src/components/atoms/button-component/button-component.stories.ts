@@ -1,5 +1,6 @@
 export default {
   title: "Components/Button",
+  component: "button-component",
   tags: ["autodocs"],
   render(args) {
     return `
@@ -84,7 +85,7 @@ export const Warning = {
     rightIcon: false,
     disabled: false,
     size: "base",
-    text: "Success",
+    text: "Warning",
   },
 };
 

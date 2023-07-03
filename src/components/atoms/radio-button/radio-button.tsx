@@ -6,8 +6,11 @@ import { Component, Host, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class RadioButton {
+  /** The label of the component. */
   @Prop() label?: string;
+  /** If true, the component will be disabled. */
   @Prop() disabled = false;
+  /** If true, the component will be checked. */
   @Prop() checked = false;
 
   render() {

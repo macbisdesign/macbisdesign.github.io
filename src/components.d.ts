@@ -256,6 +256,9 @@ export namespace Components {
          */
         "theme": "white" | "blue" | "dark";
     }
+    /**
+     * It's a stencil component
+     */
     interface InputComponent {
         /**
           * If true, component will be disabled.
@@ -414,6 +417,9 @@ declare global {
         prototype: HTMLHeaderComponentElement;
         new (): HTMLHeaderComponentElement;
     };
+    /**
+     * It's a stencil component
+     */
     interface HTMLInputComponentElement extends Components.InputComponent, HTMLStencilElement {
     }
     var HTMLInputComponentElement: {
@@ -714,6 +720,9 @@ declare namespace LocalJSX {
          */
         "theme"?: "white" | "blue" | "dark";
     }
+    /**
+     * It's a stencil component
+     */
     interface InputComponent {
         /**
           * If true, component will be disabled.
@@ -838,6 +847,9 @@ declare module "@stencil/core" {
             "dropdown-panel-section": LocalJSX.DropdownPanelSection & JSXBase.HTMLAttributes<HTMLDropdownPanelSectionElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            /**
+             * It's a stencil component
+             */
             "input-component": LocalJSX.InputComponent & JSXBase.HTMLAttributes<HTMLInputComponentElement>;
             "radio-button": LocalJSX.RadioButton & JSXBase.HTMLAttributes<HTMLRadioButtonElement>;
             "section-component": LocalJSX.SectionComponent & JSXBase.HTMLAttributes<HTMLSectionComponentElement>;

@@ -28,6 +28,15 @@ export default {
       },
     },
   },
+  parameters: {
+    componentSubtitle: "When to use the radio buttons component",
+    docs: {
+      description: {
+        component:
+          "To display a single selection - when users need to select only one option from a set of mutually exclusive choices.",
+      },
+    },
+  },
 };
 
 export const Checked = {

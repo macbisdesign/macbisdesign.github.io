@@ -33,6 +33,15 @@ export default {
       },
     },
   },
+  parameters: {
+    componentSubtitle: "When to use the select component",
+    docs: {
+      description: {
+        component:
+          "Use sparingly - use the select component only when a user needs to choose from about seven to 15 possible options and you have limited space to display the options.",
+      },
+    },
+  },
 };
 
 export const Default = {

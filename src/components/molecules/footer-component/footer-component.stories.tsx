@@ -67,6 +67,14 @@ export default {
       },
     },
   },
+  parameters: {
+    componentSubtitle: "When to use the footer component",
+    docs: {
+      description: {
+        component: `Big footer - use the big footer when you want to replicate your site’s navigation scheme in the footer and offer newsletter signups. Medium footer - use the medium footer when you want to offer only a few footer links (for disclaimers, terms of service, etc.), social media icons, and contact information. Slim footer - Use the slim footer when you only want to offer a few footer links and nothing else.`,
+      },
+    },
+  },
 };
 
 export const Small = {

@@ -1,6 +1,9 @@
 import { Component, Host, h, Prop } from "@stencil/core";
 import cn from "classnames";
 
+/**
+ * It's a stencil component
+ */
 @Component({
   tag: "input-component",
   styleUrl: "input-component.css",
@@ -24,7 +27,7 @@ export class InputComponent {
         <label>
           {this.label && <span class="mb-1.5 block">{this.label}</span>}
           <input
-            class={cn("disabled:border-gray-500", {
+            class={cn("disabled:border-gray-500 rounded", {
               "border-blue-600 focus:border-blue-600 focus:ring-blue-600":
                 this.state === "default",
               "border-green-600 focus:border-green-600 focus:ring-green-600":

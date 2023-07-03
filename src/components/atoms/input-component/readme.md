@@ -5,6 +5,10 @@
 <!-- Auto Generated Below -->
 
 
+## Overview
+
+It's a stencil component
+
 ## Properties
 
 | Property      | Attribute     | Description                           | Type                                | Default     |

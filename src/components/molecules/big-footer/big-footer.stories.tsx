@@ -57,6 +57,14 @@ export default {
       },
     },
   },
+  parameters: {
+    componentSubtitle: "When to use the big footer component",
+    docs: {
+      description: {
+        component: `Big footer - use the big footer when you want to replicate your site’s navigation scheme in the footer and offer newsletter signups.`,
+      },
+    },
+  },
 };
 
 export const Simple = {

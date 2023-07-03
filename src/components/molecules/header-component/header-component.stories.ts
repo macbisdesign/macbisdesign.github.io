@@ -96,6 +96,14 @@ export default {
       control: { type: "boolean" },
     },
   },
+  parameters: {
+    componentSubtitle: "When to use the basic header",
+    docs: {
+      description: {
+        component: `Limited sections - the basic header is great if you have a modest number of sections in your main navigation. Shallow hierarchy - you may also use it if each main section listed in the horizontal navigation has six or fewer subsections that you’d like to include in a dropdown menu.`,
+      },
+    },
+  },
 };
 
 export const BlackWithGrayDropdown = {

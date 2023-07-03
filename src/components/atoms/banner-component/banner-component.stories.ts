@@ -14,6 +14,15 @@ export default {
     headline: { control: "text" },
     action: { control: "text" },
   },
+  parameters: {
+    componentSubtitle: "When to use the banner component",
+    docs: {
+      description: {
+        component:
+          "To identify as an official government site - most government sites should use the banner.",
+      },
+    },
+  },
 };
 
 export const Banner = {

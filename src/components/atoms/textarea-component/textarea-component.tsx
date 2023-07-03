@@ -37,7 +37,7 @@ export class TextareaComponent {
             : ""}
 
           <textarea
-            class={cn("resize-none disabled:border-gray-500", {
+            class={cn("resize-none rounded disabled:border-gray-500", {
               "border-blue-600 focus:border-blue-600 focus:ring-blue-600":
                 this.state === "default",
               "border-green-600 focus:border-green-600 focus:ring-green-600":

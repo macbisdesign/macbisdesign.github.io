@@ -1,4 +1,4 @@
-# banner-component
+# button-component
 
 <!-- Auto Generated Below -->
 

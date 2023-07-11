@@ -1,11 +1,18 @@
 import './button.css';
 
+export interface Button { // export button for use in Header.ts
+  size: string;
+  type: string;
+  label: string;
+  onClick: () => void;
+}
+
 export const createButton = ({
   size = 'medium',
   type,
   label,
   onClick,
-}) => {
+}: Button ) => {
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.innerText = label;

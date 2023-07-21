@@ -12,7 +12,7 @@
 }
 
 input {
-  font-family: inherit;
+  font-family: "Open Sans", sans-serif !important;
   /* 1 */
   font-size: 100%;
   /* 1 */

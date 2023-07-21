@@ -8,7 +8,7 @@
 }
 
 input {
-  font-family: inherit;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 100%;
   font-weight: inherit;
   line-height: inherit;
@@ -39,7 +39,7 @@ input {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
-  font: inherit;
+  font-family: "Open Sans", sans-serif !important;
   /* 2 */
 }
 

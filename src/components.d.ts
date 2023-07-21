@@ -344,19 +344,15 @@ export namespace Components {
         /**
           * The number of columns that you would like to have in the component.
          */
-        "cols": number;
+        "cols"?: number;
         /**
           * If true, the component will be disabled.
          */
         "disabled": boolean;
         /**
-          * The error message when the component in the error state.
+          * The error message when the component in the error state
          */
         "error"?: string;
-        /**
-          * The helpful text of the field.
-         */
-        "helpfulText"?: string;
         /**
           * The label of the component.
          */
@@ -368,7 +364,7 @@ export namespace Components {
         /**
           * The number of rows that you want to have in the component.
          */
-        "rows": number;
+        "rows"?: number;
         /**
           * The state of the component that it is in.
          */
@@ -836,13 +832,9 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
-          * The error message when the component in the error state.
+          * The error message when the component in the error state
          */
         "error"?: string;
-        /**
-          * The helpful text of the field.
-         */
-        "helpfulText"?: string;
         /**
           * The label of the component.
          */

@@ -56,6 +56,11 @@ svg {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* .font-sans{
+  font-family: "Open Sans", sans-serif !important;
+
+} */
+
 .border-t {
   border-top-width: 1px;
 }

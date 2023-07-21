@@ -81,6 +81,7 @@ p {
 
 .text-xs {
   font-size: 0.75rem;
+  font-family: "Open Sans", sans-serif !important;
   line-height: 1rem;
 }
 

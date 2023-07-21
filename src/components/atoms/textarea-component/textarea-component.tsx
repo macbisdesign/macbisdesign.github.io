@@ -14,41 +14,44 @@ export class TextareaComponent {
   /** If true, the component will be disabled. */
   @Prop() disabled = false;
   /** The number of columns that you would like to have in the component. */
-  @Prop() cols?: number;
+  @Prop() cols = 30;
   /** The number of rows that you want to have in the component. */
-  @Prop() rows?: number;
+  @Prop() rows = 20;
   /** The placeholder of the component. */
   @Prop() placeholder?: string;
-  /** The error message when the component in the error state */
+  /** The error message when the component in the error state. */
   @Prop() error?: string;
+  /** The helpful text of the field. */
+  @Prop() helpfulText?: string;
 
   render() {
     return (
       <Host>
         <label
-          class={cn("inline-flex flex-col gap-y-2.5 pl-2", {
-            "border-l-2 border-red-600": this.state === "error",
-          })}
+          class={cn(
+            "flex flex-col items-start gap-y-2",
+            this.state === "error" ? "pl-4 border-l-2 border-[#E51C3E]" : ""
+          )}
         >
-          {this.label && this.label}
-
-          {this.state === "error"
-            ? this.error && <span class="text-red-600">{this.error}</span>
-            : ""}
+          <span class="font-bold text-[#212121]">Helpful error message</span>
+          {this.error ? (
+            <span class="font-bold text-[#E51C3E]">{this.error}</span>
+          ) : this.helpfulText ? (
+            <span class="font-bold text-[#71767A]">{this.helpfulText}</span>
+          ) : null}
 
           <textarea
-            class={cn("resize-none rounded disabled:border-gray-500", {
-              "border-blue-600 focus:border-blue-600 focus:ring-blue-600":
+            class={cn("resize-none placeholder:text-[#1B1B1B]", {
+              "border-[#1B1B1B] focus:border-[#3D94D0] focus:ring-[#3D94D0]":
                 this.state === "default",
-              "border-green-600 focus:border-green-600 focus:ring-green-600":
-                this.state === "success",
-              "border-red-600 focus:border-red-600 focus:ring-red-600":
+              "border-[#E51C3E] focus:border-[#E51C3E] focus:ring-[#E51C3E]":
                 this.state === "error",
+              "border-[#2E8540] focus:border-[#2E8540] focus:ring-[#2E8540]":
+                this.state === "success",
             })}
-            placeholder={this.placeholder}
-            disabled={this.disabled}
             cols={this.cols}
             rows={this.rows}
+            placeholder={this.placeholder}
           />
         </label>
       </Host>

@@ -8,30 +8,34 @@ export default {
     select.label = args.label;
     select.state = args.state;
     select.disabled = args.disabled;
+    select.helpText = args.helpText;
+    select.required = args.required;
     return select;
   },
   argTypes: {
     label: {
-      control: {
-        type: "text",
-      },
+      control: "text",
     },
     state: {
-      control: {
-        type: "select",
-      },
-      options: ["error", "success"],
+      control: "select",
+      options: ["error", "success", "default"],
     },
     disabled: {
-      control: {
-        type: "boolean",
-      },
+      control: "boolean",
+    },
+    helpText: {
+      control: "text",
     },
     options: {
-      control: {
-        type: "array",
+      table: {
+        disable: true,
       },
     },
+  },
+  args: {
+    disabled: false,
+    helpText: "",
+    required: false,
   },
   parameters: {
     componentSubtitle: "When to use the select component",
@@ -47,16 +51,15 @@ export default {
 export const Default = {
   args: {
     label: "Default",
-    disabled: false,
     options: ["Select something", "Apple", "Mango", "Banana"],
     state: "default",
+    helpText: "Helpful text",
   },
 };
 
 export const Success = {
   args: {
     label: "Success",
-    disabled: false,
     state: "success",
     options: ["Select something", "Apple", "Mango", "Banana"],
   },
@@ -65,7 +68,6 @@ export const Success = {
 export const Error = {
   args: {
     label: "Error",
-    disabled: false,
     state: "error",
     options: ["Select something", "Apple", "Mango", "Banana"],
   },

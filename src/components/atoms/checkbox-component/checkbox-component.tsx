@@ -21,14 +21,18 @@ export class CheckboxComponent {
   render() {
     return (
       <Host>
-        <label class="flex items-center gap-x-2.5">
+        <label class="inline-flex items-center gap-x-2">
           <input
-            class="text-blue-600 focus:ring-blue-600"
-            checked={this.checked}
-            disabled={this.disabled}
+            class="peer h-6 w-6 border-2 border-[#AEB0B5] checked:text-[#0071BC] focus:ring-0 disabled:border-[#C9C9C9] disabled:bg-[#E6E6E6]"
             type="checkbox"
+            disabled={this.disabled}
+            checked={this.checked}
           />
-          {this.label && <span class="inline-block">{this.label}</span>}
+          {this.label && (
+            <span class="text-base text-[#212121] peer-disabled:text-[#C9C9C9]">
+              {this.label}
+            </span>
+          )}
         </label>
       </Host>
     );

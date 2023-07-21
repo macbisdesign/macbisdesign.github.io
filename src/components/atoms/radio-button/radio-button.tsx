@@ -16,14 +16,14 @@ export class RadioButton {
   render() {
     return (
       <Host>
-        <label class="flex items-center gap-x-2.5">
+        <label class="flex items-center gap-x-2">
           <input
-            class="text-blue-600 focus:ring-blue-600"
-            checked={this.checked}
-            disabled={this.disabled}
+            class="border-2 border-[#5B616B] checked:border-[#005EA2] checked:text-[#0071BC] focus:ring-[#005EA2] disabled:border-[#AEB0B5] disabled:text-[#D6D7D9]"
             type="radio"
+            disabled={this.disabled}
+            checked={this.checked}
           />
-          {this.label && <span class="inline-block">{this.label}</span>}
+          {this.label && <span>{this.label}</span>}
         </label>
       </Host>
     );

@@ -10,37 +10,36 @@ export default {
      state="${args.state}"
      disabled="${args.disabled}"
      label="${args.label}"
+     helpful-text="${args.helpfulText}"
      error="${args.error}"
+     placeholder="${args.placeholder}"
     />   
     `;
   },
   argTypes: {
     rows: {
-      control: {
-        type: "number",
-      },
+      control: "number",
     },
     cols: {
-      control: {
-        type: "number",
-      },
+      control: "number",
     },
     state: {
-      control: {
-        type: "select",
-      },
+      control: "select",
       options: ["error", "success"],
     },
     disabled: {
-      control: {
-        type: "boolean",
-      },
+      control: "boolean",
     },
     label: {
-      control: {
-        type: "text",
-      },
+      control: "text",
     },
+  },
+  args: {
+    disabled: false,
+    rows: 8,
+    cols: 36,
+    helpfulText: "",
+    error: "",
   },
   parameters: {
     componentSubtitle: "When to use the text input component",
@@ -55,31 +54,26 @@ export default {
 
 export const Default = {
   args: {
-    rows: 8,
-    cols: 36,
-    disabled: false,
     label: "Default",
     state: "default",
+    placeholder: "Type something",
   },
 };
 
 export const Success = {
   args: {
-    rows: 8,
-    cols: 36,
-    disabled: false,
     label: "Success",
     state: "success",
+    helpfulText: "Helpful message",
+    placeholder: "Type something",
   },
 };
 
 export const Error = {
   args: {
-    rows: 8,
-    cols: 36,
-    disabled: false,
     label: "Error",
     state: "error",
-    error: "Helpful error message",
+    error: "Error message",
+    placeholder: "Type something",
   },
 };

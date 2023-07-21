@@ -2,14 +2,11 @@
 
 Run:
 
-### yarn install
-### yarn build
+### npm install
 
-### To start storybook:
-## yarn storybook
+### StencilJS: npm start
 
-### To start StencilJS:
-## yarn start
+### Storybook: npm run storybook
 
 <!--
 **macbisdesign/macbisdesign** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

@@ -30,6 +30,8 @@ export class InputComponent {
             type={this.type}
             placeholder={this.placeholder}
             disabled={this.disabled}
+            // added interactive label
+            aria-label={this.label}
           />
         </label>
       </Host>

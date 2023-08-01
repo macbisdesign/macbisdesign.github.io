@@ -59,6 +59,10 @@ export class ButtonComponent {
                 this.variant === "ghost" && this.colorScheme === "sky",
             }
           )}
+          // added interactive label
+          aria-label="button"
+          // designates to a11y tech whether the button is currently functional
+          aria-disabled={this.disabled ? "true" : "false"}
         >
           {this.leftIcon && (
             <span class="inline-block pr-2.5">

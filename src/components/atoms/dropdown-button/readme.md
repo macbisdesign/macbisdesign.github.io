@@ -5,10 +5,10 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type                    | Default     |
-| ------------- | -------------- | ----------- | ----------------------- | ----------- |
-| `buttonLabel` | `button-label` |             | `string`                | `undefined` |
-| `theme`       | `theme`        |             | `"blue" \| "dark-blue"` | `undefined` |
+| Property      | Attribute      | Description                       | Type                    | Default     |
+| ------------- | -------------- | --------------------------------- | ----------------------- | ----------- |
+| `buttonLabel` | `button-label` | The label label of the component. | `string`                | `undefined` |
+| `theme`       | `theme`        | The theme of the the component.   | `"blue" \| "dark-blue"` | `undefined` |
 
 
 ----------------------------------------------

@@ -1,5 +1,6 @@
 export default {
   title: "Components/Textarea",
+  component: "textarea-component",
   tags: ["autodocs"],
   render(args) {
     return `
@@ -9,6 +10,7 @@ export default {
      state="${args.state}"
      disabled="${args.disabled}"
      label="${args.label}"
+     error="${args.error}"
     />   
     `;
   },
@@ -37,6 +39,15 @@ export default {
     label: {
       control: {
         type: "text",
+      },
+    },
+  },
+  parameters: {
+    componentSubtitle: "When to use the text input component",
+    docs: {
+      description: {
+        component:
+          "Unpredictable or freeform responses - if you can’t reasonably predict a user’s answer to a prompt and there might be wide variability in users’ answers. Input simplicity - when using another type of input will make answering more difficult. For example, birthdays and other known dates are easier to type in than they are to select from a date picker. Pasted content - when users want to be able to paste in a response.",
       },
     },
   },
@@ -69,5 +80,6 @@ export const Error = {
     disabled: false,
     label: "Error",
     state: "error",
+    error: "Helpful error message",
   },
 };

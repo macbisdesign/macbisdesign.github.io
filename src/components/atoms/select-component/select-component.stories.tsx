@@ -1,5 +1,6 @@
 export default {
   title: "Components/Select",
+  component: "select-component",
   tags: ["autodocs"],
   render(args) {
     const select = document.createElement("select-component");
@@ -29,6 +30,15 @@ export default {
     options: {
       control: {
         type: "array",
+      },
+    },
+  },
+  parameters: {
+    componentSubtitle: "When to use the select component",
+    docs: {
+      description: {
+        component:
+          "Use sparingly - use the select component only when a user needs to choose from about seven to 15 possible options and you have limited space to display the options.",
       },
     },
   },

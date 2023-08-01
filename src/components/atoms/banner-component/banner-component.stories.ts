@@ -1,5 +1,6 @@
 export default {
   title: "Components/Banner",
+  component: "banner-component",
   tags: ["autodocs"],
   render(args) {
     return `
@@ -12,6 +13,15 @@ export default {
   argTypes: {
     headline: { control: "text" },
     action: { control: "text" },
+  },
+  parameters: {
+    componentSubtitle: "When to use the banner component",
+    docs: {
+      description: {
+        component:
+          "To identify as an official government site - most government sites should use the banner.",
+      },
+    },
   },
 };
 

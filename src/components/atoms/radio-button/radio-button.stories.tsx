@@ -1,5 +1,6 @@
 export default {
   title: "Components/Radio Button",
+  component: "radio-button",
   tags: ["autodocs"],
   render: (args) => {
     return `
@@ -24,6 +25,15 @@ export default {
     label: {
       control: {
         type: "text",
+      },
+    },
+  },
+  parameters: {
+    componentSubtitle: "When to use the radio buttons component",
+    docs: {
+      description: {
+        component:
+          "To display a single selection - when users need to select only one option from a set of mutually exclusive choices.",
       },
     },
   },

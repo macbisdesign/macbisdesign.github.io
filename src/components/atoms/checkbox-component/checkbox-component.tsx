@@ -6,8 +6,11 @@ import { Component, Host, Listen, Prop, h } from "@stencil/core";
   shadow: true,
 })
 export class CheckboxComponent {
+  /** The label of the component. */
   @Prop() label?: string;
+  /** If true, the component will be disabled */
   @Prop() disabled = false;
+  /** If true, the component will be checked */
   @Prop() checked = false;
 
   @Listen("click")

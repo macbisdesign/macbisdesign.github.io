@@ -1,5 +1,6 @@
 export default {
   title: "Components/Button",
+  component: "button-component",
   tags: ["autodocs"],
   render(args) {
     return `
@@ -36,6 +37,15 @@ export default {
     },
     text: {
       control: { type: "text" },
+    },
+  },
+  parameters: {
+    componentSubtitle: "When to use the button component",
+    docs: {
+      description: {
+        component:
+          "Important actions - use buttons for the most important actions you want users to take on your site, such as Download, Sign up or Log out.",
+      },
     },
   },
 };
@@ -84,7 +94,7 @@ export const Warning = {
     rightIcon: false,
     disabled: false,
     size: "base",
-    text: "Success",
+    text: "Warning",
   },
 };
 

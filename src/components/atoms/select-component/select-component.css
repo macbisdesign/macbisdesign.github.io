@@ -73,6 +73,10 @@ select {
   print-color-adjust: exact;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .mb-1\.5 {
   margin-bottom: 0.375rem;
 }

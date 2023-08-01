@@ -5,9 +5,9 @@
 
 ## Properties
 
-| Property             | Attribute              | Description | Type     | Default     |
-| -------------------- | ---------------------- | ----------- | -------- | ----------- |
-| `sectionButtonLabel` | `section-button-label` |             | `string` | `"Section"` |
+| Property             | Attribute              | Description                 | Type     | Default     |
+| -------------------- | ---------------------- | --------------------------- | -------- | ----------- |
+| `sectionButtonLabel` | `section-button-label` | The label of the component. | `string` | `"Section"` |
 
 
 ----------------------------------------------

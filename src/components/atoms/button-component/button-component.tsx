@@ -68,6 +68,10 @@ export class ButtonComponent {
                 this.variant === "ghost" && this.visual === "error",
             }
           )}
+          // added interactive label
+          aria-label="button"
+          // designates to a11y tech whether the button is currently functional
+          aria-disabled={this.disabled ? "true" : "false"}
         >
           {this.leftIcon && (
             <svg

@@ -21,19 +21,22 @@ export class CheckboxComponent {
   render() {
     return (
       <Host>
-        <label class="inline-flex items-center gap-x-2">
+        <div class="flex items-center gap-x-2.5">
           <input
             class="peer h-6 w-6 border-2 border-[#AEB0B5] checked:text-[#0071BC] focus:ring-0 disabled:border-[#C9C9C9] disabled:bg-[#E6E6E6]"
             type="checkbox"
-            disabled={this.disabled}
-            checked={this.checked}
+            // added interactive label
+            aria-label={this.label}
+            // designates to a11y tech whether the checkbox is currently functional
+            aria-disabled={this.disabled ? "true" : "false"}
+            // designates to a11y tech whether the box is checked
+            aria-checked={this.checked ? "true" : "false"}
           />
-          {this.label && (
-            <span class="text-base text-[#212121] peer-disabled:text-[#C9C9C9]">
+          {this.label && 
+            <span class="inline-block">
               {this.label}
-            </span>
-          )}
-        </label>
+            </span>}
+        </div>
       </Host>
     );
   }

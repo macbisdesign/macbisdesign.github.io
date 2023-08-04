@@ -13,20 +13,17 @@ export default {
   },
   argTypes: {
     disabled: {
-      control: {
-        type: "boolean",
-      },
+      control: "boolean",
     },
     checked: {
-      control: {
-        type: "boolean",
-      },
+      control: "boolean",
     },
     label: {
-      control: {
-        type: "text",
-      },
+      control: "text",
     },
+  },
+  args: {
+    disabled: false,
   },
   parameters: {
     componentSubtitle: "When to use the radio buttons component",
@@ -41,7 +38,6 @@ export default {
 
 export const Checked = {
   args: {
-    disabled: false,
     checked: true,
     label: "Checked",
   },
@@ -49,7 +45,6 @@ export const Checked = {
 
 export const Unchecked = {
   args: {
-    disabled: false,
     checked: false,
     label: "Unchecked",
   },

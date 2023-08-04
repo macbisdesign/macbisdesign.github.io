@@ -36,13 +36,16 @@ export class FooterComponent {
         <footer class="font-sans">
           {this.show && (
             <div
-              class={cn("flex items-center justify-between p-4", {
-                ["border-b border-t border-gray-300"]: this.topBorderY,
-                ["bg-blue-700"]: this.topBg === "blue",
-                ["bg-gray-600"]: this.topBg === "gray",
-                ["bg-black"]: this.topBg === "black",
-                ["bg-gray-100"]: this.topBg === "light-gray",
-              })}
+              class={cn(
+                "flex lg:flex-row flex-col gap-3 lg:items-center justify-between p-4",
+                {
+                  ["border-b border-t border-gray-300"]: this.topBorderY,
+                  ["bg-blue-700"]: this.topBg === "blue",
+                  ["bg-gray-600"]: this.topBg === "gray",
+                  ["bg-black"]: this.topBg === "black",
+                  ["bg-gray-100"]: this.topBg === "light-gray",
+                }
+              )}
             >
               {this.showIcon ? (
                 <svg
@@ -81,8 +84,8 @@ export class FooterComponent {
 
               <div
                 class={cn(
-                  "flex gap-4",
-                  this.flexCol ? "flex-col" : "items-center",
+                  "flex gap-4 justify-between lg:justify-start",
+                  this.flexCol ? "flex-col" : "flex-col md:flex-row",
                   {
                     "text-white": this.topRightColor === "white",
                   }
@@ -274,7 +277,7 @@ export class FooterComponent {
           )}
 
           <div
-            class={cn("flex justify-between p-4", {
+            class={cn("flex flex-col gap-3 md:flex-row justify-between p-4", {
               "border-t border-gray-300": this.bottomBorderT,
               "text-white": this.bottomColor === "white",
               "bg-blue-900": this.bottomBg === "blue",

@@ -22,6 +22,9 @@ export default {
       control: "text",
     },
   },
+  args: {
+    disabled: false,
+  },
   parameters: {
     componentSubtitle: "When to use the checkbox component",
     docs: {
@@ -34,7 +37,6 @@ export default {
 
 export const Checked = {
   args: {
-    disabled: false,
     checked: true,
     label: "Agree to private policy",
   },
@@ -42,7 +44,6 @@ export const Checked = {
 
 export const Unchecked = {
   args: {
-    disabled: false,
     checked: false,
     label: "Agree to private policy",
   },

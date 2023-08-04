@@ -23,9 +23,7 @@ export class CheckboxComponent {
       <Host>
         <div class="flex items-center gap-x-2.5">
           <input
-            class="text-blue-600 focus:ring-blue-600"
-            checked={this.checked}
-            disabled={this.disabled}
+            class="peer h-6 w-6 border-2 border-[#AEB0B5] checked:text-[#0071BC] focus:ring-0 disabled:border-[#C9C9C9] disabled:bg-[#E6E6E6]"
             type="checkbox"
             // added interactive label
             aria-label={this.label}

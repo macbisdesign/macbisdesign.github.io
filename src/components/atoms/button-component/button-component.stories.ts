@@ -5,22 +5,22 @@ export default {
   render(args) {
     return `
     <button-component 
-      color-scheme="${args.colorScheme}"
+      visual="${args.visual}"
       variant="${args.variant}"
       size="${args.size}"
       disabled="${args.disabled}"
       left-icon="${args.leftIcon}"
       right-icon="${args.rightIcon}"
     >
-    ${args.text}
+     ${args.text}
     </button-component>`;
   },
   argTypes: {
-    colorScheme: {
+    visual: {
       control: {
         type: "select",
       },
-      options: ["blue", "green", "sky", "yellow", "red"],
+      options: ["primary", "success", "secondary", "warning", "error"],
     },
     leftIcon: { control: "boolean" },
     rightIcon: { control: "boolean" },
@@ -39,6 +39,13 @@ export default {
       control: { type: "text" },
     },
   },
+  args: {
+    variant: "solid",
+    size: "base",
+    leftIcon: false,
+    rightIcon: false,
+    disabled: false,
+  },
   parameters: {
     componentSubtitle: "When to use the button component",
     docs: {
@@ -52,60 +59,35 @@ export default {
 
 export const Primary = {
   args: {
-    colorScheme: "blue",
-    variant: "solid",
-    leftIcon: false,
-    rightIcon: false,
-    disabled: false,
-    size: "base",
+    visual: "primary",
     text: "Primary",
   },
 };
 
 export const Secondary = {
   args: {
-    colorScheme: "sky",
-    variant: "solid",
-    leftIcon: false,
-    rightIcon: false,
-    disabled: false,
-    size: "base",
+    visual: "secondary",
     text: "Secondary",
   },
 };
 
 export const Success = {
   args: {
-    colorScheme: "green",
-    variant: "solid",
-    leftIcon: false,
-    rightIcon: false,
-    disabled: false,
-    size: "base",
+    visual: "success",
     text: "Success",
   },
 };
 
 export const Warning = {
   args: {
-    colorScheme: "yellow",
-    variant: "solid",
-    leftIcon: false,
-    rightIcon: false,
-    disabled: false,
-    size: "base",
+    visual: "warning",
     text: "Warning",
   },
 };
 
 export const Error = {
   args: {
-    colorScheme: "red",
-    variant: "solid",
-    leftIcon: false,
-    rightIcon: false,
-    disabled: false,
-    size: "base",
+    visual: "error",
     text: "Success",
   },
 };

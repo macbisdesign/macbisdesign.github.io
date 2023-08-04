@@ -12,6 +12,10 @@ export namespace Components {
          */
         "action": string;
         /**
+          * If true, the dark mode styles get applied
+         */
+        "darkMode": boolean;
+        /**
           * The headline of the component.
          */
         "headline": string;
@@ -19,6 +23,10 @@ export namespace Components {
           * The url for the image.
          */
         "img": string;
+        /**
+          * The size of the component
+         */
+        "size": "base" | "sm";
     }
     interface BigFooter {
         /**
@@ -56,10 +64,6 @@ export namespace Components {
     }
     interface ButtonComponent {
         /**
-          * The visual color appearance of the component.
-         */
-        "colorScheme": "yellow" | "red" | "green" | "sky" | "blue";
-        /**
           * If true, the component will be disabled.
          */
         "disabled": boolean;
@@ -83,6 +87,10 @@ export namespace Components {
           * The variant of the component.
          */
         "variant": "solid" | "ghost" | "outline";
+        /**
+          * The visual color appearance of the component.
+         */
+        "visual": "warning" | "error" | "success" | "primary" | "secondary";
     }
     interface CheckboxComponent {
         /**
@@ -256,28 +264,33 @@ export namespace Components {
          */
         "theme": "white" | "blue" | "dark";
     }
-    /**
-     * It's a stencil component
-     */
     interface InputComponent {
         /**
-          * If true, component will be disabled.
+          * If true, the component will be disabled.
          */
         "disabled": boolean;
         /**
-          * The label of component.
+          * The help text of the component
+         */
+        "helpText"?: string;
+        /**
+          * The label of the component.
          */
         "label": string;
         /**
-          * The placeholder of component.
+          * The placeholder of the component.
          */
-        "placeholder": string;
+        "placeholder"?: string;
         /**
-          * The state of component that it is in.
+          * If true, the field is required
+         */
+        "required": boolean;
+        /**
+          * The state of the component that it is in.
          */
         "state": "error" | "success" | "default";
         /**
-          * The type of component.
+          * The type of the component.
          */
         "type": string;
     }
@@ -307,13 +320,21 @@ export namespace Components {
          */
         "disabled": boolean;
         /**
+          * The help text of the component.
+         */
+        "helpText"?: string;
+        /**
           * The label of the component
          */
-        "label"?: string;
+        "label": string;
         /**
           * The options of the component that may get selected.
          */
         "options": string[];
+        /**
+          * If true, the field is required
+         */
+        "required": boolean;
         /**
           * The state of the component that it is in.
          */
@@ -417,9 +438,6 @@ declare global {
         prototype: HTMLHeaderComponentElement;
         new (): HTMLHeaderComponentElement;
     };
-    /**
-     * It's a stencil component
-     */
     interface HTMLInputComponentElement extends Components.InputComponent, HTMLStencilElement {
     }
     var HTMLInputComponentElement: {
@@ -476,6 +494,10 @@ declare namespace LocalJSX {
          */
         "action"?: string;
         /**
+          * If true, the dark mode styles get applied
+         */
+        "darkMode"?: boolean;
+        /**
           * The headline of the component.
          */
         "headline"?: string;
@@ -483,6 +505,10 @@ declare namespace LocalJSX {
           * The url for the image.
          */
         "img"?: string;
+        /**
+          * The size of the component
+         */
+        "size"?: "base" | "sm";
     }
     interface BigFooter {
         /**
@@ -520,10 +546,6 @@ declare namespace LocalJSX {
     }
     interface ButtonComponent {
         /**
-          * The visual color appearance of the component.
-         */
-        "colorScheme"?: "yellow" | "red" | "green" | "sky" | "blue";
-        /**
           * If true, the component will be disabled.
          */
         "disabled"?: boolean;
@@ -547,6 +569,10 @@ declare namespace LocalJSX {
           * The variant of the component.
          */
         "variant"?: "solid" | "ghost" | "outline";
+        /**
+          * The visual color appearance of the component.
+         */
+        "visual"?: "warning" | "error" | "success" | "primary" | "secondary";
     }
     interface CheckboxComponent {
         /**
@@ -720,28 +746,33 @@ declare namespace LocalJSX {
          */
         "theme"?: "white" | "blue" | "dark";
     }
-    /**
-     * It's a stencil component
-     */
     interface InputComponent {
         /**
-          * If true, component will be disabled.
+          * If true, the component will be disabled.
          */
         "disabled"?: boolean;
         /**
-          * The label of component.
+          * The help text of the component
+         */
+        "helpText"?: string;
+        /**
+          * The label of the component.
          */
         "label"?: string;
         /**
-          * The placeholder of component.
+          * The placeholder of the component.
          */
         "placeholder"?: string;
         /**
-          * The state of component that it is in.
+          * If true, the field is required
+         */
+        "required"?: boolean;
+        /**
+          * The state of the component that it is in.
          */
         "state"?: "error" | "success" | "default";
         /**
-          * The type of component.
+          * The type of the component.
          */
         "type"?: string;
     }
@@ -771,6 +802,10 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
         /**
+          * The help text of the component.
+         */
+        "helpText"?: string;
+        /**
           * The label of the component
          */
         "label"?: string;
@@ -778,6 +813,10 @@ declare namespace LocalJSX {
           * The options of the component that may get selected.
          */
         "options"?: string[];
+        /**
+          * If true, the field is required
+         */
+        "required"?: boolean;
         /**
           * The state of the component that it is in.
          */
@@ -847,9 +886,6 @@ declare module "@stencil/core" {
             "dropdown-panel-section": LocalJSX.DropdownPanelSection & JSXBase.HTMLAttributes<HTMLDropdownPanelSectionElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
-            /**
-             * It's a stencil component
-             */
             "input-component": LocalJSX.InputComponent & JSXBase.HTMLAttributes<HTMLInputComponentElement>;
             "radio-button": LocalJSX.RadioButton & JSXBase.HTMLAttributes<HTMLRadioButtonElement>;
             "section-component": LocalJSX.SectionComponent & JSXBase.HTMLAttributes<HTMLSectionComponentElement>;

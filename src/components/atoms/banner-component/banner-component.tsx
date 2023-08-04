@@ -1,3 +1,4 @@
+import cn from "classnames";
 import {
   Component,
   Host,
@@ -7,8 +8,6 @@ import {
   State,
   Listen,
 } from "@stencil/core";
-import { defaultImg } from "../../../utils/constants";
-import cn from "classnames";
 
 @Component({
   tag: "banner-component",
@@ -22,7 +21,11 @@ export class BannerComponent {
   /** The action that you would like to perform. */
   @Prop() action: string;
   /** The url for the image. */
-  @Prop() img = defaultImg;
+  @Prop() img = "us-flag-small.png";
+  /** If true, the dark mode styles get applied */
+  @Prop() darkMode = false;
+  /** The size of the component */
+  @Prop() size: "base" | "sm" = "sm";
 
   @State() isNotOpen = true;
 
@@ -36,50 +39,56 @@ export class BannerComponent {
 
     return (
       <Host>
-        <div class="bg-gray-100 px-8 py-4">
-          <header class="flex gap-x-2.5">
-            <img class="w-6 object-contain" src={imgSrc} alt="" />
-            <div class="flex gap-x-2.5">
-              {this.headline}{" "}
-              <p
-                onClick={this.handleClick}
-                class="inline-flex cursor-pointer items-center gap-x-1 text-blue-600 underline hover:text-blue-700"
+        <div
+          class={cn(
+            "py-1 px-4",
+            this.darkMode ? "bg-[#1B1B1B]" : "bg-[#F0F0F0]",
+            {
+              "lg:px-8": this.size === "base",
+            }
+          )}
+        >
+          <div class="flex items-start gap-x-2">
+            <img class="w-4 object-contain" src={imgSrc} alt="" />
+
+            <div
+              class={cn("flex flex-col gap-2", {
+                "lg:flex-row": this.size === "base",
+              })}
+            >
+              <span
+                class={cn("text-xs", {
+                  "text-white": this.darkMode,
+                })}
               >
-                <span>{this.action}</span>
-                {this.isNotOpen ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="h-4 w-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4.5 15.75l7.5-7.5 7.5 7.5"
-                    />
-                  </svg>
+                {this.headline}
+              </span>
+
+              <div
+                class={cn(
+                  "flex cursor-pointer gap-x-2 text-xs",
+                  this.darkMode ? "text-[#73B3E7]" : "text-[#0071BC]"
                 )}
-              </p>
+                onClick={this.handleClick}
+              >
+                {this.action}
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.56 5.72668L8.5 8.78002L5.44 5.72668L4.5 6.66668L8.5 10.6667L12.5 6.66668L11.56 5.72668Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </header>
+          </div>
 
           <div
             class={cn("mt-2 flex gap-x-2.5", {
@@ -87,8 +96,8 @@ export class BannerComponent {
             })}
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="h-10 w-10"
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 64 64"
             >
               <path
@@ -97,9 +106,10 @@ export class BannerComponent {
                 d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0zm0 1.208C14.994 1.208 1.208 14.994 1.208 32S14.994 62.792 32 62.792 62.792 49.006 62.792 32 49.006 1.208 32 1.208zm10.59 38.858a.857.857 0 0 1 .882.822v1.642H18.886v-1.642a.857.857 0 0 1 .882-.822H42.59zM25.443 27.774v9.829h1.642v-9.83h3.273v9.83H32v-9.83h3.272v9.83h1.643v-9.83h3.272v9.83h.76a.857.857 0 0 1 .882.821v.821h-21.3v-.809a.857.857 0 0 1 .88-.82h.762v-9.842h3.272zm5.736-8.188l12.293 4.915v1.642h-1.63a.857.857 0 0 1-.882.822H21.41a.857.857 0 0 1-.882-.822h-1.642v-1.642l12.293-4.915z"
               ></path>
             </svg>
+
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="h-10 w-10"
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 64 64"
             >
               <path

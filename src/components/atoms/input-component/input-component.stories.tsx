@@ -10,34 +10,37 @@ export default {
      label="${args.label}"
      type="${args.type}"
      placeholder="${args.placeholder}"
+     required="${args.required}"
+     help-text="${args.helpText}"
     />
     `;
   },
   argTypes: {
     state: {
-      control: { type: "select" },
-      options: ["success", "error"],
+      control: "select",
+      options: ["success", "error", "default"],
     },
     disabled: {
-      control: {
-        type: "boolean",
-      },
+      control: "boolean",
     },
     placeholder: {
-      control: {
-        type: "text",
-      },
+      control: "text",
     },
     label: {
-      control: {
-        type: "text",
-      },
+      control: "text",
     },
     type: {
-      control: {
-        type: "text",
-      },
+      control: "select",
+      options: ["text", "password", "email", "tel"],
     },
+    required: {
+      control: "boolean",
+    },
+  },
+  args: {
+    disabled: false,
+    required: false,
+    helpText: "",
   },
   parameters: {
     componentSubtitle: "When to use the text input component",
@@ -55,7 +58,7 @@ export const Default = {
     type: "text",
     placeholder: "Default",
     label: "Default",
-    disabled: false,
+    helpText: "Helpful text",
     state: "default",
   },
 };
@@ -65,7 +68,6 @@ export const Success = {
     type: "text",
     placeholder: "Success",
     label: "Success",
-    disabled: false,
     state: "success",
   },
 };
@@ -75,7 +77,6 @@ export const Error = {
     type: "text",
     placeholder: "Error",
     label: "Error",
-    disabled: false,
     state: "error",
   },
 };

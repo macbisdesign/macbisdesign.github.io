@@ -42,9 +42,9 @@ export class BigFooter {
                 <p class="text-lg font-medium">Sitemap</p>
               </div>
             )}
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between gap-3 flex-col lg:flex-row lg:items-center">
               <div
-                class={cn("grid grid-cols-3 gap-x-8", {
+                class={cn("grid md:grid-cols-2 lg:grid-cols-3 gap-8", {
                   "text-blue-500": this.topLeftColor === "blue",
                   "text-white": this.topLeftColor === "white",
                 })}
@@ -163,9 +163,12 @@ export class BigFooter {
               </div>
 
               <div
-                class={cn("flex flex-col gap-y-4 max-w-sm", {
-                  "text-white": this.topRightColor === "white",
-                })}
+                class={cn(
+                  "flex flex-col md:flex-row lg:flex-col justify-between gap-3 lg:max-w-sm",
+                  {
+                    "text-white": this.topRightColor === "white",
+                  }
+                )}
               >
                 <div class="flex items-center gap-x-6">
                   <svg
@@ -342,7 +345,7 @@ export class BigFooter {
                   </svg>
                 </div>
 
-                <p class="text-sm">
+                <p class="text-sm md:max-w-sm lg:max-w-auto">
                   A federal government website managed and paid for by the U.S.
                   Centers for Medicare and Medicaid Services and part of the
                   MACPro suite.
@@ -352,7 +355,7 @@ export class BigFooter {
           </div>
 
           <div
-            class={cn("flex justify-between p-4", {
+            class={cn("flex flex-col md:flex-row gap-3 justify-between p-4", {
               "text-white": this.bottomColor === "white",
               "bg-black": this.bottomBg === "black",
               "bg-blue-900": this.bottomBg === "blue",

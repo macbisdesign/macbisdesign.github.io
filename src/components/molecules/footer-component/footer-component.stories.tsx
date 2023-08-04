@@ -21,50 +21,42 @@ export default {
   },
   argTypes: {
     topBorderY: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     showIcon: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     show: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     showAddress: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     bottomBorderT: {
-      control: { type: "boolean" },
+      control: "boolean",
     },
     topLeftColor: {
-      control: { type: "text" },
+      control: "select",
       options: ["blue", "white"],
     },
     topRightColor: {
-      control: { type: "text" },
+      control: "select",
       options: ["white"],
     },
     bottomColor: {
-      control: {
-        type: "text",
-      },
+      control: "select",
       options: ["white"],
     },
     topBg: {
-      control: {
-        type: "text",
-      },
+      control: "select",
       options: ["blue", "gray", "black", "light-gray"],
     },
     bottomBg: {
-      control: {
-        type: "text",
-      },
+      control: "select",
       options: ["blue", "gray", "black", "light-gray"],
     },
     flexCol: {
-      control: {
-        type: "boolean",
-      },
+      control: "boolean",
     },
   },
   parameters: {

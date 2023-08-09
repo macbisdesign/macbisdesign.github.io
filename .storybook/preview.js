@@ -1,6 +1,8 @@
 import { defineCustomElements } from '../loader';
 defineCustomElements();
 
+import '../src/global/global.css';
+
 export const parameters = {
   options: {
     storySort: {

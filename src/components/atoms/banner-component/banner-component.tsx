@@ -1,19 +1,11 @@
-import cn from "classnames";
-import {
-  Component,
-  Host,
-  h,
-  Prop,
-  getAssetPath,
-  State,
-  Listen,
-} from "@stencil/core";
+import cn from 'classnames';
+import { Component, Host, h, Prop, getAssetPath, State, Listen } from '@stencil/core';
 
 @Component({
-  tag: "banner-component",
-  styleUrl: "banner-component.css",
+  tag: 'banner-component',
+  styleUrl: 'banner-component.css',
   shadow: true,
-  assetsDirs: ["assets"],
+  assetsDirs: ['assets'],
 })
 export class BannerComponent {
   /** The headline of the component. */
@@ -21,15 +13,15 @@ export class BannerComponent {
   /** The action that you would like to perform. */
   @Prop() action: string;
   /** The url for the image. */
-  @Prop() img = "us-flag-small.png";
+  @Prop() img = 'us-flag-small.png';
   /** If true, the dark mode styles get applied */
   @Prop() darkMode = false;
   /** The size of the component */
-  @Prop() size: "base" | "sm" = "sm";
+  @Prop() size: 'base' | 'sm' = 'sm';
 
   @State() isNotOpen = true;
 
-  @Listen("click")
+  @Listen('click')
   private handleClick() {
     this.isNotOpen = !this.isNotOpen;
   }
@@ -39,46 +31,27 @@ export class BannerComponent {
 
     return (
       <Host>
-        <div
-          class={cn(
-            "py-1 px-4",
-            this.darkMode ? "bg-[#1B1B1B]" : "bg-[#F0F0F0]",
-            {
-              "lg:px-8": this.size === "base",
-            }
-          )}
-        >
+        {/* <div class={cn('py-1 px-4', this.darkMode ? 'bg-[#1B1B1B]' : 'bg-[#F0F0F0]', { 'lg:px-8': this.size === 'base', })}> */}
+        <div class={cn('py-1 px-4', this.darkMode ? 'bg-[#1B1B1B]' : 'bg-[#F0F0F0]')}>
           <div class="flex items-start gap-x-2">
             <img class="w-4 object-contain" src={imgSrc} alt="" />
 
             <div
-              class={cn("flex flex-col gap-2", {
-                "lg:flex-row": this.size === "base",
+              class={cn('flex gap-2', {
+                'lg:flex-row': this.size === 'base',
               })}
             >
               <span
-                class={cn("text-xs", {
-                  "text-white": this.darkMode,
+                class={cn('text-xs', {
+                  'text-white': this.darkMode,
                 })}
               >
                 {this.headline}
               </span>
 
-              <div
-                class={cn(
-                  "flex cursor-pointer gap-x-2 text-xs",
-                  this.darkMode ? "text-[#73B3E7]" : "text-[#0071BC]"
-                )}
-                onClick={this.handleClick}
-              >
+              <div class={cn('flex cursor-pointer gap-x-2 text-xs', this.darkMode ? 'text-[#73B3E7]' : 'text-[#0071BC]')} onClick={this.handleClick}>
                 {this.action}
-                <svg
-                  width="17"
-                  height="16"
-                  viewBox="0 0 17 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -91,15 +64,11 @@ export class BannerComponent {
           </div>
 
           <div
-            class={cn("mt-2 flex gap-x-2.5", {
+            class={cn('mt-2 flex gap-x-2.5', {
               hidden: this.isNotOpen,
             })}
           >
-            <svg
-              class="h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 64 64"
-            >
+            <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
               <path
                 fill="#2378C3"
                 fill-rule="evenodd"
@@ -107,11 +76,7 @@ export class BannerComponent {
               ></path>
             </svg>
 
-            <svg
-              class="h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 64 64"
-            >
+            <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
               <path
                 fill="#719F2A"
                 fill-rule="evenodd"

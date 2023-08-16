@@ -26,7 +26,7 @@ export namespace Components {
         /**
           * The size of the component
          */
-        "size": "base" | "sm";
+        "size": 'base' | 'sm';
     }
     interface BigFooter {
         /**
@@ -78,19 +78,19 @@ export namespace Components {
         /**
           * The size of the component.
          */
-        "size": "sm" | "base" | "md";
+        "size": 'sm' | 'base' | 'md';
         /**
           * The type of the component
          */
-        "type": "reset" | "submit" | "button";
+        "type": 'reset' | 'submit' | 'button';
         /**
           * The variant of the component.
          */
-        "variant": "solid" | "ghost" | "outline";
+        "variant": 'solid' | 'ghost' | 'outline';
         /**
           * The visual color appearance of the component.
          */
-        "visual": "warning" | "error" | "success" | "primary" | "secondary";
+        "visual": 'warning' | 'error' | 'success' | 'primary' | 'secondary';
     }
     interface CheckboxComponent {
         /**
@@ -148,7 +148,7 @@ export namespace Components {
         /**
           * The background color of the below part of the component.
          */
-        "bottomBg"?: "blue" | "gray" | "black" | "light-gray";
+        "bottomBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
         /**
           * The top border of the the below part of the component.
          */
@@ -156,7 +156,7 @@ export namespace Components {
         /**
           * The color of the below part of the component.
          */
-        "bottomColor"?: "white";
+        "bottomColor"?: 'white';
         /**
           * If true, the direction of the flexbox which is applied to the right part of the above part of the component will be column.
          */
@@ -176,7 +176,7 @@ export namespace Components {
         /**
           * The background color of the above part of the component.
          */
-        "topBg"?: "blue" | "gray" | "black" | "light-gray";
+        "topBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
         /**
           * The top and bottom borders of the above part of the component.
          */
@@ -184,11 +184,11 @@ export namespace Components {
         /**
           * The color of the left part of the above part of the component.
          */
-        "topLeftColor": "blue" | "white";
+        "topLeftColor": 'blue' | 'white';
         /**
           * The color of the right part of the above part of the component.
          */
-        "topRightColor"?: "white";
+        "topRightColor"?: 'white';
     }
     interface HeaderComponent {
         /**
@@ -508,7 +508,7 @@ declare namespace LocalJSX {
         /**
           * The size of the component
          */
-        "size"?: "base" | "sm";
+        "size"?: 'base' | 'sm';
     }
     interface BigFooter {
         /**
@@ -560,19 +560,19 @@ declare namespace LocalJSX {
         /**
           * The size of the component.
          */
-        "size"?: "sm" | "base" | "md";
+        "size"?: 'sm' | 'base' | 'md';
         /**
           * The type of the component
          */
-        "type"?: "reset" | "submit" | "button";
+        "type"?: 'reset' | 'submit' | 'button';
         /**
           * The variant of the component.
          */
-        "variant"?: "solid" | "ghost" | "outline";
+        "variant"?: 'solid' | 'ghost' | 'outline';
         /**
           * The visual color appearance of the component.
          */
-        "visual"?: "warning" | "error" | "success" | "primary" | "secondary";
+        "visual"?: 'warning' | 'error' | 'success' | 'primary' | 'secondary';
     }
     interface CheckboxComponent {
         /**
@@ -630,7 +630,7 @@ declare namespace LocalJSX {
         /**
           * The background color of the below part of the component.
          */
-        "bottomBg"?: "blue" | "gray" | "black" | "light-gray";
+        "bottomBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
         /**
           * The top border of the the below part of the component.
          */
@@ -638,7 +638,7 @@ declare namespace LocalJSX {
         /**
           * The color of the below part of the component.
          */
-        "bottomColor"?: "white";
+        "bottomColor"?: 'white';
         /**
           * If true, the direction of the flexbox which is applied to the right part of the above part of the component will be column.
          */
@@ -658,7 +658,7 @@ declare namespace LocalJSX {
         /**
           * The background color of the above part of the component.
          */
-        "topBg"?: "blue" | "gray" | "black" | "light-gray";
+        "topBg"?: 'blue' | 'gray' | 'black' | 'light-gray';
         /**
           * The top and bottom borders of the above part of the component.
          */
@@ -666,11 +666,11 @@ declare namespace LocalJSX {
         /**
           * The color of the left part of the above part of the component.
          */
-        "topLeftColor"?: "blue" | "white";
+        "topLeftColor"?: 'blue' | 'white';
         /**
           * The color of the right part of the above part of the component.
          */
-        "topRightColor"?: "white";
+        "topRightColor"?: 'white';
     }
     interface HeaderComponent {
         /**

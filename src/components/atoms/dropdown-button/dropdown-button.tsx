@@ -32,7 +32,11 @@ export class DropdownButton {
     return (
       <Host>
         <div class="dropdown-button-container">
-          <button class="dropdown-button" onClick={this.toggleButton}>
+          <button class="dropdown-button"
+            onClick={this.toggleButton}
+            // added interactive label
+            aria-label={this.buttonLabel}
+          >
             {this.buttonLabel}
             <span>
               <svg

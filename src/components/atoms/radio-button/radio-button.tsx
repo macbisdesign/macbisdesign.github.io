@@ -1,8 +1,8 @@
-import { Component, Host, Prop, h } from "@stencil/core";
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
-  tag: "radio-button",
-  styleUrl: "radio-button.css",
+  tag: 'radio-button',
+  styleUrl: 'radio-button.css',
   shadow: true,
 })
 export class RadioButton {
@@ -16,7 +16,7 @@ export class RadioButton {
   render() {
     return (
       <Host>
-        <label class="flex items-center gap-x-2">
+        <label class={`flex items-center gap-x-2 ${this.disabled ? 'radio-item-disabled' : 'radio-item'}`}>
           <input
             class="border-2 border-[#5B616B] checked:border-[#005EA2] checked:text-[#0071BC] focus:ring-[#005EA2] disabled:border-[#AEB0B5] disabled:text-[#D6D7D9]"
             type="radio"

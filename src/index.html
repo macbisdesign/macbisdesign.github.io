@@ -1,799 +1,382 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    <title>Stencil Component Starter</title>
 
-    <!-- Global stylesheet -->
-    <link rel="stylesheet" href="/build/macbisdesign.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
 
-    <!-- Javascript bundles -->
-    <script type="module" src="/build/macbisdesign.esm.js"></script>
-    <script nomodule src="/build/macbisdesign.js"></script>
-  </head>
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" href="/build/macbisdesign.css" />
 
-  <body>
-    <h2>Radio buttons</h2>
-    <div
-      style="display: flex; flex-flow: column; display: flex; row-gap: 0.5rem"
-    >
-      <radio-button checked="true" disabled="true"> Radio </radio-button>
-      <radio-button> Radio </radio-button>
-      <radio-button> Radio </radio-button>
+  <!-- Javascript bundles -->
+  <script type="module" src="/build/macbisdesign.esm.js"></script>
+  <script nomodule src="/build/macbisdesign.js"></script>
+</head>
+
+<body>
+  <h2>Radio buttons</h2>
+  <div style="display: flex; flex-flow: column; row-gap: 1rem">
+    <radio-button checked="true" disabled="true" label=" Radio "> </radio-button>
+    <radio-button label=" Radio "></radio-button>
+    <radio-button label=" Radio "></radio-button>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <h2>Checkboxes</h2>
+    <div style="display: flex; flex-flow: column; row-gap: 1rem;">
+      <checkbox-component style="justify-content: center; align-items: center;" label=" 2014 "></checkbox-component>
+      <checkbox-component label=" 2014 "></checkbox-component>
+      <checkbox-component label=" 2014 "></checkbox-component>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <h2>Footers</h2>
+
+    <div style="display: flex; flex-direction: column; row-gap: 2rem">
+      <footer-component top-border-y="true"></footer-component>
+
+      <footer-component bottom-bg="light-gray"></footer-component>
+
+      <footer-component flex-col="true" bottom-bg="light-gray"></footer-component>
+
+      <footer-component bottom-bg="light-gray" show-icon="true"></footer-component>
+
+      <footer-component show-above-part="false" show-address="true" bottom-bg="light-gray"></footer-component>
+
+      <footer-component show-above-part="false" bottom-border-t="true"></footer-component>
+
+      <footer-component show-above-part="false" bottom-border-t="true" show-address="true"></footer-component>
+
+      <footer-component top-border-y="true" bottom-bg="light-gray" top-left-color="blue"></footer-component>
+
+      <footer-component top-bg="light-gray" bottom-bg="blue" bottom-color="white"
+        top-left-color="blue"></footer-component>
+
+      <footer-component top-left-color="white" top-right-color="white" bottom-color="white" top-bg="blue"
+        bottom-bg="blue"></footer-component>
+
+      <footer-component top-left-color="white" top-right-color="white" bottom-color="white" top-bg="gray"
+        bottom-bg="gray"></footer-component>
+
+      <footer-component top-bg="light-gray" bottom-bg="light-gray" show-icon="true"></footer-component>
+
+      <footer-component top-left-color="white" top-right-color="white" bottom-color="white" top-bg="black"
+        bottom-bg="black"></footer-component>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <h1>Big footers</h1>
+
+    <div style="display: flex; flex-direction: column; row-gap: 2rem">
+      <big-footer sitemap="true" top-border-y="true"> </big-footer>
+
+      <big-footer top-bg="blue" bottom-bg="blue" top-left-color="white" top-right-color="white" bottom-color="white">
+      </big-footer>
+
+      <big-footer top-bg="gray" bottom-bg="gray" top-left-color="white" top-right-color="white" bottom-color="white">
+      </big-footer>
+
+      <big-footer top-bg="light-gray" bottom-bg="light-gray" show-icon="true">
+      </big-footer>
+
+      <big-footer top-bg="black" top-left-color="white" top-right-color="white" bottom-color="white" bottom-bg="black">
+      </big-footer>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <h2>Headers</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 2rem">
+      <header-component theme="dark" size="normal" show-search="false" header-logo="3" header-logo-theme="dark"
+        account-label="My Account" nav-location="below" nav-theme="dark" nav-separator="true" header-logo-dash="true">
+        <dropdown-component>
+          <dropdown-link theme="dark" panel-theme="dark" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+          <dropdown-link theme="dark" panel-theme="dark" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For designers </dropdown-panel-link>
+              <dropdown-panel-link> For designers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+        </dropdown-component>
+      </header-component>
+
+      <header-component theme="blue" size="normal" show-search="false" header-logo="3" header-logo-theme="blue"
+        account-label="My Account" nav-location="below" nav-theme="blue" nav-separator="true" header-logo-dash="true">
+        <dropdown-component>
+          <dropdown-link theme="white" panel-theme="white" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+          <dropdown-link theme="white" panel-theme="white" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For designers </dropdown-panel-link>
+              <dropdown-panel-link> For designers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+        </dropdown-component>
+      </header-component>
+
+      <header-component theme="blue" size="normal" show-search="false" header-logo="3" header-logo-theme="blue"
+        account-label="My Account" nav-location="below" nav-theme="blue" nav-separator="true" header-logo-dash="true">
+        <dropdown-component>
+          <dropdown-link theme="dark-blue" panel-theme="dark-blue" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+          <dropdown-link theme="dark-blue" panel-theme="dark-blue" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For designers </dropdown-panel-link>
+              <dropdown-panel-link> For designers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+        </dropdown-component>
+      </header-component>
+
+      <header-component theme="blue" size="normal" show-search="false" search-theme="blue" search-text-theme="white"
+        header-logo="3" header-logo-theme="blue" account-label="My Account" nav-location="below" nav-theme="blue"
+        nav-separator="true" header-logo-dash="true">
+        <dropdown-component>
+          <dropdown-link theme="white" panel-theme="white" panel-size="contain" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+        </dropdown-component>
+      </header-component>
+
+      <header-component theme="blue" size="normal" show-search="false" search-theme="blue" search-text-theme="white"
+        header-logo="3" header-logo-theme="blue" account-label="My Account" nav-location="below" nav-theme="blue"
+        nav-separator="true" header-logo-dash="true">
+        <dropdown-component>
+          <dropdown-link theme="dark-blue" panel-theme="dark-blue" panel-size="contain" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+        </dropdown-component>
+      </header-component>
+
+      <header-component theme="dark" size="normal" show-search="false" search-theme="blue" search-text-theme="white"
+        header-logo="3" header-logo-theme="dark" account-label="My Account" nav-location="below" nav-theme="dark"
+        nav-separator="true" header-logo-dash="true">
+        <dropdown-component>
+          <dropdown-link theme="dark" panel-theme="dark" panel-size="contain" text="Section" col="3">
+            <dropdown-panel-section>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+              <dropdown-panel-link> For developers </dropdown-panel-link>
+            </dropdown-panel-section>
+          </dropdown-link>
+        </dropdown-component>
+      </header-component>
+
+      <header-component theme="blue" size="slim" show-search="true" search-theme="blue" search-text-theme="white"
+        header-logo="3" header-logo-theme="blue" account-label="My Account" header-logo-dash="true">
+      </header-component>
+
+      <header-component theme="blue" nav-separator="true" size="slim" show-search="false" header-logo="3"
+        header-logo-theme="blue" account-label="My Account" header-logo-dash="true">
+      </header-component>
+
+      <header-component theme="blue" account-container="false" size="slim" show-search="false" header-logo="3"
+        header-logo-theme="blue">
+      </header-component>
+
+      <header-component theme="blue" size="slim" show-search="false" search-theme="blue" search-text-theme="white"
+        header-logo="3" header-logo-theme="blue" account-label="My Account" nav-location="inline"
+        nav-inline-position="left" header-logo-dash="true">
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+      </header-component>
+
+      <header-component theme="blue" size="slim" show-search="false" search-theme="blue" search-text-theme="white"
+        header-logo="3" header-logo-theme="blue" account-label="My Account" nav-location="inline"
+        nav-inline-position="right" header-logo-dash="true" nav-separator="true">
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+      </header-component>
+
+      <header-component theme="blue" size="slim" show-search="true" search-theme="blue" search-text-theme="white"
+        header-logo="4" header-logo-theme="blue" account-label="My Account" header-logo-dash="true"
+        header-logo-stretched="true">
+      </header-component>
+
+      <header-component theme="blue" size="slim" show-search="true" search-theme="blue" search-text-theme="white"
+        header-logo="4" header-logo-theme="blue" account-label="My Account" header-logo-dash="true"
+        header-logo-stretched="true" nav-location="inline" nav-inline-position="right">
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+      </header-component>
+
+      <header-component theme="blue" size="slim" show-search="true" search-theme="blue" search-text-theme="white"
+        header-logo="4" header-logo-theme="blue" account-label="My Account" header-logo-dash="true"
+        header-logo-stretched="true" nav-location="inline" nav-inline-position="right">
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+        <button-component size="large" label="Button" type="primary" state="filled"></button-component>
+      </header-component>
+
+      <header-component theme="white" size="slim" show-search="true" search-theme="white" search-text-theme="dark"
+        header-logo="2" header-logo-theme="white" account-label="My Account" account-container-theme="dark">
+      </header-component>
+
+      <header-component theme="white" size="slim" show-search="true" search-theme="white" search-text-theme="blue"
+        header-logo="0" header-logo-theme="white" account-label="My Account" header-logo-dash="true"
+        account-container-theme="blue">
+      </header-component>
+
+      <header-component theme="white" size="slim" show-search="true" search-theme="white" search-text-theme="blue"
+        header-logo="6" header-logo-theme="white" account-label="My Account" header-logo-dash="true"
+        header-logo-dash-theme="blue" header-logo-stretched="true" account-container-theme="blue">
+      </header-component>
+
+      <header-component theme="white" size="slim" show-search="true" search-theme="white" search-text-theme="blue"
+        header-logo="1" header-logo-theme="blue" account-label="My Account" header-logo-dash="true"
+        account-container-theme="blue" header-logo-stretched="true">
+      </header-component>
+
+      <header-component theme="dark" size="slim" show-search="true" search-theme="dark" search-text-theme="white"
+        header-logo="3" header-logo-theme="dark" account-label="My Account" header-logo-dash="true">
+      </header-component>
+
+      <header-component theme="white" size="slim" show-search="true" search-theme="white" search-text-theme="dark"
+        header-logo="2" header-logo-theme="white" account-label="My Account" header-logo-dash="true"
+        account-container-theme="dark">
+      </header-component>
+
+      <header-component theme="dark" size="slim" show-search="true" search-theme="dark" search-text-theme="white"
+        header-logo="5" header-logo-theme="blue" account-theme="blue" account-label="My Account"
+        account-style="detailed" header-logo-stretched="true">
+      </header-component>
+
+      <header-component theme="dark" size="slim" show-search="false" header-logo="7" header-logo-theme="dark"
+        account-label="My Account" header-logo-dash="true" account-container-theme="white">
+      </header-component>
+
+      <header-component theme="dark" size="slim" show-search="false" header-logo="7" header-logo-theme="dark"
+        account-label="My Account" account-container-theme="white">
+      </header-component>
+
+      <header-component theme="white" size="slim" show-search="false" nav-separator="true" header-logo="0"
+        header-logo-theme="white" account-label="My Account" header-logo-dash="true" account-container-theme="blue"
+        nav-separator-theme="blue" header-logo-dash-theme="blue">
+      </header-component>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <h2>Section Buttons</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <section-component></section-component>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem">
+    <h2>Text Inputs</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <input-component state="default" label="Email" placeholder="Enter email"></input-component>
+      <input-component state="success" label="Email" placeholder="Enter email"></input-component>
+      <input-component state="error" label="Email" placeholder="Enter email"
+        error="Helpful error message"></input-component>
     </div>
 
     <div style="margin-top: 2rem">
-      <h2>Checkboxes</h2>
-      <div
-        style="display: flex; flex-flow: column; display: flex; row-gap: 0.5rem"
-      >
-        <checkbox-component> 2014 </checkbox-component>
-        <checkbox-component> 2014 </checkbox-component>
-        <checkbox-component> 2014 </checkbox-component>
-      </div>
-    </div>
+      <h2>Buttons</h2>
 
-    <div style="margin-top: 2rem">
-      <h2>Footers</h2>
-
-      <div style="display: flex; flex-direction: column; row-gap: 2rem">
-        <footer-component top-border-y="true"></footer-component>
-
-        <footer-component bottom-bg="light-gray"></footer-component>
-
-        <footer-component
-          flex-col="true"
-          bottom-bg="light-gray"
-        ></footer-component>
-
-        <footer-component
-          bottom-bg="light-gray"
-          show-icon="true"
-        ></footer-component>
-
-        <footer-component
-          show-above-part="false"
-          show-address="true"
-          bottom-bg="light-gray"
-        ></footer-component>
-
-        <footer-component
-          show-above-part="false"
-          bottom-border-t="true"
-        ></footer-component>
-
-        <footer-component
-          show-above-part="false"
-          bottom-border-t="true"
-          show-address="true"
-        ></footer-component>
-
-        <footer-component
-          top-border-y="true"
-          bottom-bg="light-gray"
-          top-left-color="blue"
-        ></footer-component>
-
-        <footer-component
-          top-bg="light-gray"
-          bottom-bg="blue"
-          bottom-color="white"
-          top-left-color="blue"
-        ></footer-component>
-
-        <footer-component
-          top-left-color="white"
-          top-right-color="white"
-          bottom-color="white"
-          top-bg="blue"
-          bottom-bg="blue"
-        ></footer-component>
-
-        <footer-component
-          top-left-color="white"
-          top-right-color="white"
-          bottom-color="white"
-          top-bg="gray"
-          bottom-bg="gray"
-        ></footer-component>
-
-        <footer-component
-          top-bg="light-gray"
-          bottom-bg="light-gray"
-          show-icon="true"
-        ></footer-component>
-
-        <footer-component
-          top-left-color="white"
-          top-right-color="white"
-          bottom-color="white"
-          top-bg="black"
-          bottom-bg="black"
-        ></footer-component>
-      </div>
-    </div>
-
-    <div style="margin-top: 2rem">
-      <h1>Big footers</h1>
-
-      <div style="display: flex; flex-direction: column; row-gap: 2rem">
-        <big-footer sitemap="true" top-border-y="true"> </big-footer>
-
-        <big-footer
-          top-bg="blue"
-          bottom-bg="blue"
-          top-left-color="white"
-          top-right-color="white"
-          bottom-color="white"
-        >
-        </big-footer>
-
-        <big-footer
-          top-bg="gray"
-          bottom-bg="gray"
-          top-left-color="white"
-          top-right-color="white"
-          bottom-color="white"
-        >
-        </big-footer>
-
-        <big-footer top-bg="light-gray" bottom-bg="light-gray" show-icon="true">
-        </big-footer>
-
-        <big-footer
-          top-bg="black"
-          top-left-color="white"
-          top-right-color="white"
-          bottom-color="white"
-          bottom-bg="black"
-        >
-        </big-footer>
-      </div>
-    </div>
-
-    <div style="margin-top: 2rem">
-      <h2>Headers</h2>
-
-      <div style="display: flex; flex-direction: column; gap: 2rem">
-        <header-component
-          theme="dark"
-          size="normal"
-          show-search="false"
-          header-logo="3"
-          header-logo-theme="dark"
-          account-label="My Account"
-          nav-location="below"
-          nav-theme="dark"
-          nav-separator="true"
-          header-logo-dash="true"
-        >
-          <dropdown-component>
-            <dropdown-link
-              theme="dark"
-              panel-theme="dark"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-            <dropdown-link
-              theme="dark"
-              panel-theme="dark"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For designers </dropdown-panel-link>
-                <dropdown-panel-link> For designers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-          </dropdown-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="normal"
-          show-search="false"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          nav-location="below"
-          nav-theme="blue"
-          nav-separator="true"
-          header-logo-dash="true"
-        >
-          <dropdown-component>
-            <dropdown-link
-              theme="white"
-              panel-theme="white"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-            <dropdown-link
-              theme="white"
-              panel-theme="white"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For designers </dropdown-panel-link>
-                <dropdown-panel-link> For designers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-          </dropdown-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="normal"
-          show-search="false"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          nav-location="below"
-          nav-theme="blue"
-          nav-separator="true"
-          header-logo-dash="true"
-        >
-          <dropdown-component>
-            <dropdown-link
-              theme="dark-blue"
-              panel-theme="dark-blue"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-            <dropdown-link
-              theme="dark-blue"
-              panel-theme="dark-blue"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For designers </dropdown-panel-link>
-                <dropdown-panel-link> For designers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-          </dropdown-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="normal"
-          show-search="false"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          nav-location="below"
-          nav-theme="blue"
-          nav-separator="true"
-          header-logo-dash="true"
-        >
-          <dropdown-component>
-            <dropdown-link
-              theme="white"
-              panel-theme="white"
-              panel-size="contain"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-          </dropdown-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="normal"
-          show-search="false"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          nav-location="below"
-          nav-theme="blue"
-          nav-separator="true"
-          header-logo-dash="true"
-        >
-          <dropdown-component>
-            <dropdown-link
-              theme="dark-blue"
-              panel-theme="dark-blue"
-              panel-size="contain"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-          </dropdown-component>
-        </header-component>
-
-        <header-component
-          theme="dark"
-          size="normal"
-          show-search="false"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="dark"
-          account-label="My Account"
-          nav-location="below"
-          nav-theme="dark"
-          nav-separator="true"
-          header-logo-dash="true"
-        >
-          <dropdown-component>
-            <dropdown-link
-              theme="dark"
-              panel-theme="dark"
-              panel-size="contain"
-              text="Section"
-              col="3"
-            >
-              <dropdown-panel-section>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-                <dropdown-panel-link> For developers </dropdown-panel-link>
-              </dropdown-panel-section>
-            </dropdown-link>
-          </dropdown-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="slim"
-          show-search="true"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          header-logo-dash="true"
-        >
-        </header-component>
-
-        <header-component
-          theme="blue"
-          nav-separator="true"
-          size="slim"
-          show-search="false"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          header-logo-dash="true"
-        >
-        </header-component>
-
-        <header-component
-          theme="blue"
-          account-container="false"
-          size="slim"
-          show-search="false"
-          header-logo="3"
-          header-logo-theme="blue"
-        >
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="slim"
-          show-search="false"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          nav-location="inline"
-          nav-inline-position="left"
-          header-logo-dash="true"
-        >
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="slim"
-          show-search="false"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="blue"
-          account-label="My Account"
-          nav-location="inline"
-          nav-inline-position="right"
-          header-logo-dash="true"
-          nav-separator="true"
-        >
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="slim"
-          show-search="true"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="4"
-          header-logo-theme="blue"
-          account-label="My Account"
-          header-logo-dash="true"
-          header-logo-stretched="true"
-        >
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="slim"
-          show-search="true"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="4"
-          header-logo-theme="blue"
-          account-label="My Account"
-          header-logo-dash="true"
-          header-logo-stretched="true"
-          nav-location="inline"
-          nav-inline-position="right"
-        >
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-        </header-component>
-
-        <header-component
-          theme="blue"
-          size="slim"
-          show-search="true"
-          search-theme="blue"
-          search-text-theme="white"
-          header-logo="4"
-          header-logo-theme="blue"
-          account-label="My Account"
-          header-logo-dash="true"
-          header-logo-stretched="true"
-          nav-location="inline"
-          nav-inline-position="right"
-        >
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-          <button-component
-            size="large"
-            label="Button"
-            type="primary"
-            state="filled"
-          ></button-component>
-        </header-component>
-
-        <header-component
-          theme="white"
-          size="slim"
-          show-search="true"
-          search-theme="white"
-          search-text-theme="dark"
-          header-logo="2"
-          header-logo-theme="white"
-          account-label="My Account"
-          account-container-theme="dark"
-        >
-        </header-component>
-
-        <header-component
-          theme="white"
-          size="slim"
-          show-search="true"
-          search-theme="white"
-          search-text-theme="blue"
-          header-logo="0"
-          header-logo-theme="white"
-          account-label="My Account"
-          header-logo-dash="true"
-          account-container-theme="blue"
-        >
-        </header-component>
-
-        <header-component
-          theme="white"
-          size="slim"
-          show-search="true"
-          search-theme="white"
-          search-text-theme="blue"
-          header-logo="6"
-          header-logo-theme="white"
-          account-label="My Account"
-          header-logo-dash="true"
-          header-logo-dash-theme="blue"
-          header-logo-stretched="true"
-          account-container-theme="blue"
-        >
-        </header-component>
-
-        <header-component
-          theme="white"
-          size="slim"
-          show-search="true"
-          search-theme="white"
-          search-text-theme="blue"
-          header-logo="1"
-          header-logo-theme="blue"
-          account-label="My Account"
-          header-logo-dash="true"
-          account-container-theme="blue"
-          header-logo-stretched="true"
-        >
-        </header-component>
-
-        <header-component
-          theme="dark"
-          size="slim"
-          show-search="true"
-          search-theme="dark"
-          search-text-theme="white"
-          header-logo="3"
-          header-logo-theme="dark"
-          account-label="My Account"
-          header-logo-dash="true"
-        >
-        </header-component>
-
-        <header-component
-          theme="white"
-          size="slim"
-          show-search="true"
-          search-theme="white"
-          search-text-theme="dark"
-          header-logo="2"
-          header-logo-theme="white"
-          account-label="My Account"
-          header-logo-dash="true"
-          account-container-theme="dark"
-        >
-        </header-component>
-
-        <header-component
-          theme="dark"
-          size="slim"
-          show-search="true"
-          search-theme="dark"
-          search-text-theme="white"
-          header-logo="5"
-          header-logo-theme="blue"
-          account-theme="blue"
-          account-label="My Account"
-          account-style="detailed"
-          header-logo-stretched="true"
-        >
-        </header-component>
-
-        <header-component
-          theme="dark"
-          size="slim"
-          show-search="false"
-          header-logo="7"
-          header-logo-theme="dark"
-          account-label="My Account"
-          header-logo-dash="true"
-          account-container-theme="white"
-        >
-        </header-component>
-
-        <header-component
-          theme="dark"
-          size="slim"
-          show-search="false"
-          header-logo="7"
-          header-logo-theme="dark"
-          account-label="My Account"
-          account-container-theme="white"
-        >
-        </header-component>
-
-        <header-component
-          theme="white"
-          size="slim"
-          show-search="false"
-          nav-separator="true"
-          header-logo="0"
-          header-logo-theme="white"
-          account-label="My Account"
-          header-logo-dash="true"
-          account-container-theme="blue"
-          nav-separator-theme="blue"
-          header-logo-dash-theme="blue"
-        >
-        </header-component>
-      </div>
-    </div>
-
-    <div style="margin-top: 2rem">
-      <h2>Section Buttons</h2>
-      <div style="display: flex; flex-direction: column; gap: 1rem">
-        <section-component></section-component>
-      </div>
-    </div>
-
-    <div style="margin-top: 2rem">
-      <h2>Text Inputs</h2>
-      <div style="display: flex; flex-direction: column; gap: 1rem">
-        <input-component
-          state="default"
-          label="Email"
-          placeholder="Enter email"
-        ></input-component>
-        <input-component
-          state="success"
-          label="Email"
-          placeholder="Enter email"
-        ></input-component>
-        <input-component
-          state="error"
-          label="Email"
-          placeholder="Enter email"
-          error="Helpful error message"
-        ></input-component>
-      </div>
-
-      <div style="margin-top: 2rem">
-        <h2>Buttons</h2>
-
-        <div style="display: flex; gap: 2rem; flex-direction: column">
-          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <button-component variant="solid" visual="primary">
-              Primary
-            </button-component>
-            <button-component variant="solid" visual="secondary">
-              Secondary
-            </button-component>
-            <button-component variant="solid" visual="success">
-              Success
-            </button-component>
-            <button-component variant="solid" visual="warning">
-              Warning
-            </button-component>
-            <button-component variant="solid" visual="error">
-              Error
-            </button-component>
-          </div>
-          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <button-component variant="outline" visual="primary">
-              Primary
-            </button-component>
-            <button-component variant="outline" visual="secondary">
-              Secondary
-            </button-component>
-            <button-component variant="outline" visual="success">
-              Success
-            </button-component>
-            <button-component variant="outline" visual="warning">
-              Warning
-            </button-component>
-            <button-component variant="outline" visual="error">
-              Error
-            </button-component>
-          </div>
-          <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-            <button-component variant="ghost" visual="primary">
-              Primary
-            </button-component>
-            <button-component variant="ghost" visual="secondary">
-              Secondary
-            </button-component>
-            <button-component variant="ghost" visual="success">
-              Success
-            </button-component>
-            <button-component variant="ghost" visual="warning">
-              Warning
-            </button-component>
-            <button-component variant="ghost" visual="error">
-              Error
-            </button-component>
-          </div>
+      <div style="display: flex; gap: 2rem; flex-direction: column">
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+          <button-component variant="solid" visual="primary">
+            Primary
+          </button-component>
+          <button-component variant="solid" visual="secondary">
+            Secondary
+          </button-component>
+          <button-component variant="solid" visual="success">
+            Success
+          </button-component>
+          <button-component variant="solid" visual="warning">
+            Warning
+          </button-component>
+          <button-component variant="solid" visual="error">
+            Error
+          </button-component>
+        </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+          <button-component variant="outline" visual="primary">
+            Primary
+          </button-component>
+          <button-component variant="outline" visual="secondary">
+            Secondary
+          </button-component>
+          <button-component variant="outline" visual="success">
+            Success
+          </button-component>
+          <button-component variant="outline" visual="warning">
+            Warning
+          </button-component>
+          <button-component variant="outline" visual="error">
+            Error
+          </button-component>
+        </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+          <button-component variant="ghost" visual="primary">
+            Primary
+          </button-component>
+          <button-component variant="ghost" visual="secondary">
+            Secondary
+          </button-component>
+          <button-component variant="ghost" visual="success">
+            Success
+          </button-component>
+          <button-component variant="ghost" visual="warning">
+            Warning
+          </button-component>
+          <button-component variant="ghost" visual="error">
+            Error
+          </button-component>
         </div>
       </div>
     </div>
+  </div>
 
-    <div style="margin-top: 2rem">
-      <h2>Banners</h2>
-      <div
-        style="
+  <div style="margin-top: 2rem">
+    <h2>Banners</h2>
+    <div style="
           display: flex;
           flex-direction: column;
           gap: 1rem;
           margin-bottom: 2rem;
-        "
-      >
-        <banner-component
-          headline="An official website of the United States government"
-          action="Here's how you know"
-          size="base"
-        >
-        </banner-component>
+        ">
+      <banner-component headline="An official website of the United States government" action="Here's how you know"
+        size="base">
+      </banner-component>
 
-        <banner-component
-          headline="An official website of the United States government"
-          action="Here's how you know"
-        >
-        </banner-component>
+      <banner-component headline="An official website of the United States government" action="Here's how you know">
+      </banner-component>
 
-        <banner-component
-          headline="Un sitio oficial del Gobierno de Estados Unidos"
-          action="Así es como usted puede verificarlo"
-          size="base"
-          dark-mode="true"
-        >
-        </banner-component>
+      <banner-component headline="Un sitio oficial del Gobierno de Estados Unidos"
+        action="Así es como usted puede verificarlo" size="base" dark-mode="true">
+      </banner-component>
 
-        <banner-component
-          headline="Un sitio oficial del Gobierno de Estados Unidos"
-          action="Así es como usted puede verificarlo"
-          dark-mode="true"
-        >
-        </banner-component>
-      </div>
+      <banner-component headline="Un sitio oficial del Gobierno de Estados Unidos"
+        action="Así es como usted puede verificarlo" dark-mode="true">
+      </banner-component>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -18,7 +18,7 @@
 | `showIcon`      | `show-icon`       | If true, the icon will be shown that is in the above part of the component.                                                 | `boolean`                                     | `false`     |
 | `topBg`         | `top-bg`          | The background color of the above part of the component.                                                                    | `"black" \| "blue" \| "gray" \| "light-gray"` | `undefined` |
 | `topBorderY`    | `top-border-y`    | The top and bottom borders of the above part of the component.                                                              | `boolean`                                     | `false`     |
-| `topLeftColor`  | `top-left-color`  | The color of the left part of the above part of the component.                                                              | `"blue" \| "white"`                           | `"blue"`    |
+| `topLeftColor`  | `top-left-color`  | The color of the left part of the above part of the component.                                                              | `"blue" \| "white"`                           | `'blue'`    |
 | `topRightColor` | `top-right-color` | The color of the right part of the above part of the component.                                                             | `"white"`                                     | `undefined` |
 
 

@@ -1,9 +1,9 @@
-import { Component, Host, Prop, h } from "@stencil/core";
-import cn from "classnames";
+import { Component, Host, Prop, h } from '@stencil/core';
+import cn from 'classnames';
 
 @Component({
-  tag: "footer-component",
-  styleUrl: "footer-component.css",
+  tag: 'footer-component',
+  styleUrl: 'footer-component.css',
   shadow: true,
 })
 export class FooterComponent {
@@ -18,15 +18,15 @@ export class FooterComponent {
   /** The top border of the the below part of the component. */
   @Prop() bottomBorderT = false;
   /** The color of the left part of the above part of the component. */
-  @Prop() topLeftColor: "blue" | "white" = "blue";
+  @Prop() topLeftColor: 'blue' | 'white' = 'blue';
   /** The color of the right part of the above part of the component. */
-  @Prop() topRightColor?: "white";
+  @Prop() topRightColor?: 'white';
   /** The color of the below part of the component. */
-  @Prop() bottomColor?: "white";
+  @Prop() bottomColor?: 'white';
   /** The background color of the above part of the component. */
-  @Prop() topBg?: "blue" | "gray" | "black" | "light-gray";
+  @Prop() topBg?: 'blue' | 'gray' | 'black' | 'light-gray';
   /** The background color of the below part of the component. */
-  @Prop() bottomBg?: "blue" | "gray" | "black" | "light-gray";
+  @Prop() bottomBg?: 'blue' | 'gray' | 'black' | 'light-gray';
   /** If true, the direction of the flexbox which is applied to the right part of the above part of the component will be column.  */
   @Prop() flexCol = false;
 
@@ -36,25 +36,16 @@ export class FooterComponent {
         <footer class="font-sans">
           {this.show && (
             <div
-              class={cn(
-                "flex lg:flex-row flex-col gap-3 lg:items-center justify-between p-4",
-                {
-                  ["border-b border-t border-gray-300"]: this.topBorderY,
-                  ["bg-blue-700"]: this.topBg === "blue",
-                  ["bg-gray-600"]: this.topBg === "gray",
-                  ["bg-black"]: this.topBg === "black",
-                  ["bg-gray-100"]: this.topBg === "light-gray",
-                }
-              )}
+              class={cn('flex lg:flex-row flex-col gap-3 lg:items-center justify-between p-4', {
+                ['border-b border-t border-gray-300']: this.topBorderY,
+                ['bg-blue-700']: this.topBg === 'blue',
+                ['bg-gray-600']: this.topBg === 'gray',
+                ['bg-black']: this.topBg === 'black',
+                ['bg-gray-100']: this.topBg === 'light-gray',
+              })}
             >
               {this.showIcon ? (
-                <svg
-                  width="132"
-                  height="41"
-                  viewBox="0 0 132 41"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="132" height="41" viewBox="0 0 132 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="20" cy="20.5" r="20" fill="#49B848" />
                   <path
                     d="M33.3791 11.1084C34.1903 11.8573 34.1903 13.1677 33.3791 13.9165L17.4041 29.8916C16.6552 30.7028 15.3448 30.7028 14.5959 29.8916L6.60842 21.9041C5.79719 21.1552 5.79719 19.8448 6.60842 19.0959C7.35725 18.2847 8.66771 18.2847 9.41654 19.0959L15.9688 25.6482L30.571 11.1084C31.3198 10.2972 32.6303 10.2972 33.3791 11.1084Z"
@@ -71,9 +62,9 @@ export class FooterComponent {
                 </svg>
               ) : (
                 <div
-                  class={cn("flex gap-x-6", {
-                    "text-blue-500": this.topLeftColor === "blue",
-                    "text-white": this.topLeftColor === "white",
+                  class={cn('flex gap-x-6', {
+                    'text-blue-500': this.topLeftColor === 'blue',
+                    'text-white': this.topLeftColor === 'white',
                   })}
                 >
                   <a href="#">Reports</a>
@@ -83,22 +74,12 @@ export class FooterComponent {
               )}
 
               <div
-                class={cn(
-                  "flex gap-4 justify-between lg:justify-start",
-                  this.flexCol ? "flex-col" : "flex-col md:flex-row",
-                  {
-                    "text-white": this.topRightColor === "white",
-                  }
-                )}
+                class={cn('flex gap-4 justify-between lg:justify-start', this.flexCol ? 'flex-col' : 'flex-col md:flex-row', {
+                  'text-white': this.topRightColor === 'white',
+                })}
               >
                 <div class="flex gap-x-6 items-center">
-                  <svg
-                    width="154"
-                    height="31"
-                    viewBox="0 0 154 31"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width="154" height="31" viewBox="0 0 154 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.433105 28.9463V22.0385H1.29765V25.467L4.53971 22.0385H5.71166L2.97392 24.8524L5.85575 28.9615H4.69341L2.36873 25.467L1.29765 26.5692V28.9615L0.433105 28.9463Z" />
                     <path
                       fill-rule="evenodd"
@@ -115,11 +96,7 @@ export class FooterComponent {
                       clip-rule="evenodd"
                       d="M17.4756 23.6832V30.5L18.3823 30.48V28.0793C18.5417 28.2711 18.7434 28.4297 18.9741 28.5445C19.2256 28.6642 19.5055 28.7244 19.7885 28.7195C20.2081 28.719 20.6188 28.608 20.9721 28.3994C21.3531 28.1781 21.6522 27.8554 21.8299 27.4742C22.0312 27.045 22.1311 26.5813 22.1231 26.1138C22.1284 25.6701 22.038 25.2298 21.8571 24.8185C21.6979 24.4474 21.4218 24.1287 21.0644 23.9032C20.706 23.6841 20.2837 23.5707 19.8537 23.5782C19.545 23.5671 19.2385 23.6291 18.9632 23.7582C18.6992 23.8984 18.4728 24.0916 18.3009 24.3234V23.6832H17.4756ZM18.7136 27.5792C18.4001 27.1702 18.2521 26.6729 18.2955 26.1739C18.2605 25.6625 18.4177 25.1556 18.7407 24.7385C18.9788 24.4329 19.3586 24.2477 19.7669 24.2383C20.1631 24.2415 20.5349 24.4155 20.7713 24.7085C21.0831 25.1201 21.2308 25.6184 21.1894 26.1188C21.235 26.6368 21.0833 27.1531 20.7604 27.5792C20.5094 27.8701 20.1268 28.038 19.7234 28.0343C19.3287 28.034 18.9561 27.8661 18.7136 27.5792Z"
                     />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M22.8986 22.0385V23.0158H23.6732V22.0385H22.8986ZM22.8984 23.9474V28.9615H23.6731V23.9474H22.8984Z"
-                    />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8986 22.0385V23.0158H23.6732V22.0385H22.8986ZM22.8984 23.9474V28.9615H23.6731V23.9474H22.8984Z" />
                     <path d="M25.2222 28.9615V23.6917H25.9477V24.4407C26.2802 23.8734 26.8608 23.5451 27.4713 23.5793C27.7435 23.5756 28.0136 23.6339 28.2645 23.7505C28.4791 23.8423 28.6666 23.9978 28.8063 24.2C28.9306 24.3975 29.0163 24.6217 29.0578 24.858C29.0909 25.1436 29.1022 25.4317 29.0916 25.7194V28.9615H28.2839V25.7515C28.2961 25.4748 28.265 25.1979 28.192 24.9329C28.1284 24.7508 28.0107 24.598 27.8582 24.4996C27.6882 24.3897 27.494 24.3341 27.2972 24.3391C26.9698 24.3331 26.6524 24.4629 26.4072 24.7029C26.1083 25.0822 25.9678 25.5833 26.0202 26.0832V28.9615H25.2222Z" />
                     <path
                       fill-rule="evenodd"
@@ -138,11 +115,7 @@ export class FooterComponent {
                       d="M56.9523 27.291L56.0663 27.1812C55.975 27.4999 55.7932 27.7837 55.5439 27.9969C55.3101 28.1685 55.0275 28.2567 54.7398 28.2479C54.3414 28.2584 53.9576 28.0948 53.6848 27.7982C53.3787 27.4366 53.2113 26.9741 53.2136 26.4961H56.9779V26.2608C57.0228 25.5406 56.7934 24.8306 56.3377 24.279C55.9119 23.8116 55.3083 23.5559 54.6835 23.5783C54.0462 23.5562 53.4304 23.8153 52.9934 24.2894C52.523 24.8579 52.2895 25.5919 52.343 26.334C52.3013 27.0461 52.5349 27.7464 52.9934 28.2845C53.8806 29.0904 55.1874 29.1869 56.1789 28.5198C56.5662 28.212 56.839 27.7785 56.9523 27.291ZM56.0663 25.7694H53.2598C53.2601 25.3612 53.4162 24.9691 53.6951 24.6765C53.9571 24.4105 54.3141 24.2651 54.6835 24.2739C55.098 24.2673 55.4911 24.4612 55.7437 24.7968C55.9443 25.0807 56.0567 25.4195 56.0663 25.7694Z"
                     />
                     <path d="M57.7578 28.9562V23.6944H58.6266V24.4904C58.7714 24.2068 58.9808 23.9554 59.2405 23.7532C59.4226 23.6371 59.6389 23.5756 59.8603 23.5769C60.2151 23.5848 60.5604 23.6848 60.8564 23.8654L60.5205 24.6934C60.308 24.5718 60.0639 24.5054 59.8139 24.5011C59.6048 24.4974 59.4005 24.5596 59.2347 24.6773C59.0623 24.8003 58.9366 24.9705 58.8756 25.1635C58.7645 25.5011 58.7098 25.8523 58.7135 26.2051V28.9615L57.7578 28.9562Z" />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M61.6313 22.0385V23.0158H62.406V22.0385H61.6313ZM61.6313 23.9474V28.9615H62.406V23.9474H61.6313Z"
-                    />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M61.6313 22.0385V23.0158H62.406V22.0385H61.6313ZM61.6313 23.9474V28.9615H62.406V23.9474H61.6313Z" />
                     <path d="M66.9415 26.9438L67.8286 27.0532C67.7618 27.5867 67.4966 28.0789 67.0821 28.4387C66.6765 28.7833 66.1515 28.9692 65.6107 28.9596C64.9489 28.9862 64.3076 28.7354 63.8526 28.272C63.3755 27.7208 63.1373 27.0139 63.1872 26.2979C63.1761 25.7996 63.2738 25.3045 63.4739 24.8447C63.6433 24.4409 63.9505 24.1048 64.3448 23.8915C64.7335 23.6836 65.1715 23.576 65.6161 23.579C66.1267 23.5572 66.6294 23.7063 67.0388 24.0009C67.4207 24.3044 67.6731 24.7328 67.7475 25.2041L66.8711 25.3343C66.814 25.0364 66.6584 24.7642 66.4275 24.5582C66.2129 24.3843 65.9398 24.2917 65.6594 24.2978C65.2444 24.2921 64.8482 24.4638 64.5775 24.7666C64.2559 25.1986 64.1045 25.7266 64.1501 26.2563C64.1037 26.787 64.2489 27.3168 64.5612 27.7564C64.8266 28.066 65.2264 28.2393 65.6431 28.2252C65.9697 28.2351 66.2876 28.1231 66.5303 27.9126C66.7789 27.6448 66.9241 27.3027 66.9415 26.9438Z" />
                     <path
                       fill-rule="evenodd"
@@ -205,13 +178,7 @@ export class FooterComponent {
                     />
                     <path d="M144.889 18.9412L139.872 5.88452H143.556L146.674 15.7832C146.896 15.2172 150.407 5.88452 150.407 5.88452H153.816L147.953 18.9614L144.889 18.9412Z" />
                   </svg>
-                  <svg
-                    class="fill-current"
-                    width="32"
-                    height="31"
-                    viewBox="0 0 32 31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg class="fill-current" width="32" height="31" viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_2_7411)">
                       <path d="M28.719 5.47215C28.7693 6.50554 27.9176 7.14368 27.2718 7.75013L20.6551 13.0966C20.0595 13.6291 19.2016 14.0681 18.8669 14.8647C18.4285 15.9207 18.2651 17.0869 18.0812 18.25C17.9744 19.0888 17.1589 19.8174 16.3999 20.1252C15.8107 20.3228 15.102 20.2293 14.4578 20.276L12.1511 20.2911C12.0569 20.3094 11.9673 20.3454 11.8878 20.3972C11.8082 20.449 11.7401 20.5155 11.6876 20.5928L11.6012 20.8071C11.3545 20.8418 11.444 20.6351 11.4016 20.4903C11.4016 20.003 11.521 19.4946 11.895 19.2064C12.0946 19.0118 12.3758 18.9651 12.6555 18.9213L16.0181 18.8745C16.1942 18.8535 16.359 18.7802 16.4895 18.6648L16.6246 18.4144C16.8933 16.8047 17.0489 15.1393 17.8817 13.7725C18.6548 12.905 19.6306 12.3076 20.4916 11.5443C22.4888 9.91799 24.5566 8.26306 26.5286 6.61265C27.0864 6.10576 27.6772 5.43745 27.8139 4.63488L27.8878 4.42065C28.1196 4.49971 28.3226 4.64148 28.4723 4.82887C28.6221 5.01625 28.7121 5.24124 28.7316 5.47667" />
                       <path d="M30.6596 7.28724C30.7586 8.29046 29.9383 8.76718 29.2847 9.38721L26.5852 11.6139L21.7864 15.5257C21.106 16.2634 21.0714 17.3074 20.897 18.2502C20.9253 18.5519 21.249 18.6832 21.1862 19.0045L20.5183 20.1586C20.5545 20.6187 21.1469 20.3517 21.3291 20.6399C21.3291 20.8058 21.2207 21.0125 21.3559 21.1498C21.4501 21.3006 21.8272 21.0954 21.634 21.3489C21.579 21.3911 21.5994 21.4998 21.6151 21.548C21.6953 21.6491 21.8445 21.6582 21.8587 21.809C21.8184 21.9106 21.8017 22.0194 21.8099 22.1278C21.818 22.2362 21.8508 22.3416 21.9058 22.4366C22.7386 23.3086 24.1716 22.2284 25.0406 23.04C25.259 23.2256 25.2527 23.5711 25.1977 23.832C24.7342 25.137 21.9907 25.232 22.9303 27.0831C23.0212 27.236 23.1504 27.3647 23.3063 27.4574C23.4622 27.5502 23.6397 27.604 23.8228 27.6141C24.1371 27.6624 24.3696 27.5372 24.6257 27.4632C24.7059 27.4632 24.7122 27.5387 24.7452 27.5809V27.6352C23.9595 28.1768 22.9303 28.9733 21.876 28.3895C21.6108 28.2123 21.4061 27.9639 21.2875 27.6753C21.169 27.3868 21.1419 27.071 21.2097 26.7678C21.5318 25.7434 22.759 25.4825 23.3718 24.6226C23.4384 24.4929 23.4701 24.3494 23.4641 24.205C23.458 24.0606 23.4144 23.9199 23.3373 23.7958C23.1409 23.4594 22.6883 23.3704 22.2908 23.301C21.6324 23.2874 20.6221 23.6872 20.3298 22.9435C20.2434 22.6614 20.5435 22.1605 20.0721 22.0956C20.0077 22.0157 19.8568 21.9448 19.9354 21.8166C19.9574 21.7411 20.0925 21.7321 20.0234 21.6355C19.9291 21.6099 19.805 21.6355 19.7295 21.5541C19.4609 21.2735 20.2009 20.9687 19.6997 20.7771C19.4467 20.7439 19.1026 20.928 18.9392 20.6459C18.8606 20.3864 19.0617 20.2008 19.1623 19.9881C19.332 19.6246 19.827 19.3847 19.6997 18.9125L19.4577 18.5233C19.5293 17.6057 19.6903 16.6966 19.9385 15.8078C20.2685 14.8317 21.249 14.2871 22.0001 13.6158L26.0258 10.3482L28.8761 7.93443C29.3695 7.49392 29.8001 6.9991 29.7844 6.3323C29.9415 6.28251 30.0358 6.45751 30.1678 6.51182C30.4035 6.77281 30.6077 6.9644 30.6659 7.28724" />
@@ -256,48 +223,37 @@ export class FooterComponent {
                     </g>
                     <defs>
                       <clipPath id="clip0_2_7411">
-                        <rect
-                          width="31.1842"
-                          height="30"
-                          fill="white"
-                          transform="translate(0.815674 0.5)"
-                        />
+                        <rect width="31.1842" height="30" fill="white" transform="translate(0.815674 0.5)" />
                       </clipPath>
                     </defs>
                   </svg>
                 </div>
 
                 <p class="text-sm max-w-sm">
-                  A federal government website managed and paid for by the U.S.
-                  Centers for Medicare and Medicaid Services and part of the
-                  MACPro suite.
+                  A federal government website managed and paid for by the U.S. Centers for Medicare and Medicaid Services and part of the MACPro suite.
                 </p>
               </div>
             </div>
           )}
 
           <div
-            class={cn("flex flex-col gap-3 md:flex-row justify-between p-4", {
-              "border-t border-gray-300": this.bottomBorderT,
-              "text-white": this.bottomColor === "white",
-              "bg-blue-900": this.bottomBg === "blue",
-              "bg-black": this.bottomBg === "black",
-              "bg-gray-800": this.bottomBg === "gray",
-              "bg-gray-100": this.bottomBg === "light-gray",
+            class={cn('flex flex-col gap-3 md:flex-row justify-between p-4', {
+              'border-t border-gray-300': this.bottomBorderT,
+              'text-white': this.bottomColor === 'white',
+              'bg-blue-900': this.bottomBg === 'blue',
+              'bg-black': this.bottomBg === 'black',
+              'bg-gray-800': this.bottomBg === 'gray',
+              'bg-gray-100': this.bottomBg === 'light-gray',
             })}
           >
             <div class="flex items-center">
-              <p class="border-r border-r-gray-300 pr-2 font-medium">
-                MACBIS INSPECT
-              </p>
+              <p class="border-r border-r-gray-300 pr-2 font-medium">MACBIS INSPECT</p>
               <p class="pl-2">7500 Security Boulevard Baltimore, MD 21244</p>
             </div>
 
             <p>Contact Us | Accessibility Statement</p>
 
-            {this.showAddress && (
-              <p>7500 Security Boulevard Baltimore, MD 21244</p>
-            )}
+            {this.showAddress && <p>7500 Security Boulevard Baltimore, MD 21244</p>}
           </div>
         </footer>
       </Host>

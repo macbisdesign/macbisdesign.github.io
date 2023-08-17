@@ -311,3 +311,28 @@ input::placeholder {
   --tw-text-opacity: 1;
   color: rgb(201 201 201 / var(--tw-text-opacity));
 }
+
+.checkbox-item {
+  color: var(--base-base-black, #212121);
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.checkbox-item-disabled {
+  color: var(--disabled-disabled, #C9C9C9);
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.checkbox-item-layout {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}

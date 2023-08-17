@@ -171,6 +171,11 @@ input::placeholder {
 
 [type="radio"] {
   border-radius: 100%;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
 }
 
 [type="checkbox"]:focus,
@@ -251,6 +256,24 @@ input::placeholder {
   align-items: center;
 }
 
+.radio-item {
+  color: var(--base-base-black, #212121);
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.radio-item-disabled {
+  color: var(--disabled-disabled, #C9C9C9);
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .gap-x-2 {
   column-gap: 0.5rem;
 }
@@ -270,6 +293,8 @@ input::placeholder {
 }
 
 .checked\:text-\[\#0071BC\]:checked {
+  width: 24px;
+  height: 24px;
   --tw-text-opacity: 1;
   color: rgb(0 113 188 / var(--tw-text-opacity));
 }

@@ -21,41 +21,52 @@ export default {
   },
   argTypes: {
     topBorderY: {
+      name: "Top boarder",
       control: "boolean",
     },
     showIcon: {
+      name: "Show icon",
       control: "boolean",
     },
     show: {
+      name: "Show top",
       control: "boolean",
     },
     showAddress: {
+      name: "Show address",
       control: "boolean",
     },
     bottomBorderT: {
+      name: "Bottom boarder",
       control: "boolean",
     },
     topLeftColor: {
+      name: "Top left color",
       control: "select",
       options: ["blue", "white"],
     },
     topRightColor: {
+      name: "Top right color",
       control: "select",
       options: ["white"],
     },
     bottomColor: {
+      name: "Bottom color",
       control: "select",
       options: ["white"],
     },
     topBg: {
+      name: "Top background",
       control: "select",
       options: ["blue", "gray", "black", "light-gray"],
     },
     bottomBg: {
+      name: "Bottom background",
       control: "select",
       options: ["blue", "gray", "black", "light-gray"],
     },
     flexCol: {
+      name: "Flex column", 
       control: "boolean",
     },
   },
@@ -71,93 +82,93 @@ export default {
 
 export const Small = {
   args: {
-    "Flex column": "false",
-    "Show top": "false",
-    "Show address": "false",
-    "Bottom boarder": "false",
+    flexCol: "false",
+    show: "false",
+    showAddress: "false",
+    bottomBorderT: "false",
   },
 };
 
 export const SmallGray = {
   args: {
-    "Flex bolumn": "false",
-    "Show top": "false",
-    "Bottom background": "light-gray",
-    "Show address": "false",
-    "Bottom boarder": "false",
+    flexCol: "false",
+    show: "false",
+    bottomBg: "light-gray",
+    showAddress: "false",
+    bottomBorderT: "false",
   },
 };
 
 export const LongGray = {
   args: {
-    "Flex bolumn": "false",
-    "Show top": "false",
-    "Show address": "true",
-    "Bottom background": "light-gray",
-    "Bottom boarder": "false",
+    flexCol: "false",
+    show: "false",
+    showAddress: "true",
+    bottomBg: "light-gray",
+    bottomBorderT: "false",
   },
 };
 
 export const SmallOutlined = {
   args: {
-    "Flex column": "false",
-    "Shop top": "false",
-    "Bottom boarder": "true",
-    "Show address": "false",
-    "Show icon": "false",
+    flexCol: "false",
+    show: "false",
+    bottomBorderT: "true",
+    showAddress: "false",
+    showIcon: "false",
   },
 };
 
 export const LongOutlined = {
   args: {
-    "Flex column": "false",
-    "Show top": "false",
-    "Bottom boarder": "true",
-    "Show address": "true",
-    "Show icon": "false",
+    flexCol: "false",
+    show: "false",
+    bottomBorderT: "true",
+    showAddress: "true",
+    showIcon: "false",
   },
 };
 
 export const Gray = {
   args: {
-    "Flex column": "false",
-    "Show top": "true",
-    "Show icon": "false",
-    "Top boarder": "true",
-    "Top left color": "blue",
-    "Bottom background": "light-gray",
-    "Show Address": "false",
-    "Bottom boarder": "false",
+    flexCol: "false",
+    show: "true",
+    showIcon: "false",
+    topBorderY: "true",
+    topLeftColor: "blue",
+    bottomBg: "light-gray",
+    showAddress: "false",
+    bottomBorderT: "false",
   },
 };
 
 export const Blue = {
   args: {
-    "Flex column": "false",
-    "Show top": "true",
-    "Show icon": "false",
-    "Show top boarder": "true",
-    "Top left color": "blue",
-    "Bottom background": "blue",
-    "Bottom color": "white",
-    'Show address': "false",
-    "Bottom boarder": "false",
+    flexCol: "false",
+    show: "true",
+    showIcon: "false",
+    topBorderY: "true",
+    topLeftColor: "blue",
+    bottomBg: "blue",
+    bottomColor: "white",
+    showAddress: "false",
+    bottomBorderT: "false",
   },
 };
 
 export const BlueBg = {
   args: {
-    "Flex column": "false",
-    "Show top": "true",
-    "Top background": "blue",
-    "Show icon": "false",
-    "Top left color": "white",
-    "Top right color": "white",
-    "Top boarder": "true",
-    "Bottom background": "blue",
-    "Bottom color": "white",
-    "Show address": "false",
-    "Bottom boarder": "false",
+    flexCol: "false",
+    show: "true",
+    topBg: "blue",
+    showIcon: "false",
+    topLeftColor: "white",
+    topRightColor: "white",
+    topBorderY: "true",
+    bottomBg: "blue",
+    bottomColor: "white",
+    showAddress: "false",
+    bottomBorderT: "false",
   },
 };
 

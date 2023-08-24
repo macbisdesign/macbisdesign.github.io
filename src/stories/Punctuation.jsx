@@ -65,11 +65,11 @@ export default function PunctuationTabs() {
           <h3>General Guidance</h3>
           <p>
           <ul>
-              <li>Capitalize first word</li>
-              <li>Keep them brief</li>
-              <li>Stick with standard bullets and avoid nesting </li>
-              <li>Only add a period at the end if the bullet is a complete sentence.</li>
-              <li>Be consistent within a list. Either make each bullet a complete sentence, or make them all not sentences. This list is not a good example of that guidance.</li>
+              <li>• Capitalize first word.</li>
+              <li>• Keep them brief.</li>
+              <li>• Stick with standard bullets and avoid nesting.</li>
+              <li>• Only add a period at the end if the bullet is a complete sentence.</li>
+              <li>• Be consistent within a list. Either make each bullet a complete sentence, or make them all not sentences. This list is not a good example of that guidance.</li>
           </ul>
 
             Use sentence case (only capitalize the first word and proper nouns and acronyms) in titles, headings, menu items, labels, and buttons.

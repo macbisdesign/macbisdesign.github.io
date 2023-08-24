@@ -13,12 +13,15 @@ export default {
   },
   argTypes: {
     disabled: {
+      name: "Disabled",
       control: "boolean",
     },
     checked: {
+      name: "Checked",
       control: "boolean",
     },
     label: {
+      name: "Label",
       control: "text",
     },
   },

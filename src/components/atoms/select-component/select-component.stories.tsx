@@ -14,19 +14,24 @@ export default {
   },
   argTypes: {
     label: {
+      name: "Label",
       control: "text",
     },
     state: {
+      name: "State",
       control: "select",
       options: ["error", "success", "default"],
     },
     disabled: {
+      name: "Disabled",
       control: "boolean",
     },
     helpText: {
+      name: "Help text",
       control: "text",
     },
     options: {
+      name: "Options",
       table: {
         disable: true,
       },

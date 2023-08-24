@@ -16,27 +16,32 @@ export default {
   },
   argTypes: {
     rows: {
+      name: "Rows",
       control: {
         type: "number",
       },
     },
     cols: {
+      name: "Columns",
       control: {
         type: "number",
       },
     },
     state: {
+      name: "State",
       control: {
         type: "select",
       },
       options: ["error", "success"],
     },
     disabled: {
+      name: "Disabled",
       control: {
         type: "boolean",
       },
     },
     label: {
+      name: "Label",
       control: {
         type: "text",
       },

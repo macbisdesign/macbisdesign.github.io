@@ -17,25 +17,30 @@ export default {
   },
   argTypes: {
     visual: {
+      name: "Visual",
       control: {
         type: "select",
       },
       options: ["primary", "success", "secondary", "warning", "error"],
     },
-    leftIcon: { control: "boolean" },
-    rightIcon: { control: "boolean" },
+    leftIcon: { name: "Left icon", control: "boolean" },
+    rightIcon: { name: "Right icon", control: "boolean" },
     variant: {
+      name: "Variant",
       control: { type: "select" },
       options: ["solid", "outline", "ghost"],
     },
     disabled: {
+      name: "Disabled",
       control: { type: "boolean" },
     },
     size: {
+      name: "Size",
       control: { type: "select" },
       options: ["sm", "base", "md"],
     },
     text: {
+      name: "Name",
       control: { type: "text" },
     },
   },

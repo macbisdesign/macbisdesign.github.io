@@ -18,40 +18,48 @@ export default {
   },
   argTypes: {
     topLeftColor: {
+      name: "Top left color",
       control: { type: "text" },
       options: ["blue", "white"],
     },
     topRightColor: {
+      name: "Top right color",
       control: {
         type: "text",
       },
       options: ["white"],
     },
     bottomColor: {
+      name: "Bottom color",
       control: { type: "text" },
       options: ["white"],
     },
     showIcon: {
+      name: "Show icon",
       control: { type: "boolean" },
     },
     topBg: {
+      name: "Name",
       control: {
         type: "text",
       },
       options: ["blue", "gray", "light-gray", "black"],
     },
     bottomBg: {
+      name: "Bottom background",
       control: {
         type: "text",
       },
       options: ["blue", "gray", "light-gray", "black"],
     },
     topBorderY: {
+      name: "Top border",
       control: {
         type: "boolean",
       },
     },
     showSitemap: {
+      name: "Show sitemap",
       control: {
         type: "boolean",
       },

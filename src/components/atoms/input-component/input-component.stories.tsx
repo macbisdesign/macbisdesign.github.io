@@ -17,23 +17,29 @@ export default {
   },
   argTypes: {
     state: {
+      name: "State",
       control: "select",
       options: ["success", "error", "default"],
     },
     disabled: {
+      name: "Disabled",
       control: "boolean",
     },
     placeholder: {
+      name: "Placeholder",
       control: "text",
     },
     label: {
+      name: "Label",
       control: "text",
     },
     type: {
+      name: "Type",
       control: "select",
       options: ["text", "password", "email", "tel"],
     },
     required: {
+      name: "Required",
       control: "boolean",
     },
   },

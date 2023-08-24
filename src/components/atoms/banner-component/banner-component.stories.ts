@@ -13,15 +13,16 @@ export default {
     `;
   },
   argTypes: {
-    headline: { control: "text" },
-    action: { control: "text" },
-    darkMode: { control: "boolean" },
+    headline: { name: "Headline", control: "text" },
+    action: { name: "Action", control: "text" },
+    darkMode: { name: "Dark mode", control: "boolean" },
     img: {
       table: {
         disable: true,
       },
     },
     size: {
+      name: "Size",
       control: "select",
       options: ["base", "sm"],
     },

@@ -118,10 +118,3 @@ export default function CapitalizationTabs() {
     </div>
   );
 }
-
-// export const parameters = {
-//   previewTabs: {
-//     canvas: { hidden: true },
-//     docs: { hidden: true },
-//   },
-// };

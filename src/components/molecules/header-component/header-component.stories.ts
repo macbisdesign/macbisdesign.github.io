@@ -30,69 +30,87 @@ export default {
   },
   argTypes: {
     theme: {
+      name: "Theme",
       control: "text",
       options: ["white", "blue", "dark"],
     },
     size: {
+      name: "Size",
       control: "text",
       options: ["slim", "normal"],
     },
     headerLogoTheme: {
+      name: "Header logo theme",
       control: { type: "text" },
       options: ["white", "blue", "dark"],
     },
     headerLogo: {
+      name: "Header logo",
       control: { type: "text" },
     },
     navTheme: {
+      name: "Nav theme",
       control: { type: "text" },
       options: ["white", "blue", "dark"],
     },
     navLocation: {
+      name: "Nav location",
       control: { type: "text" },
       options: ["below", "inline", "none"],
     },
     navInlinePosition: {
+      name: "Nav inline position",
       control: { type: "text" },
       options: ["right", "left"],
     },
     accountLabel: {
+      name: "Account label",
       control: { type: "text" },
     },
     showSearch: {
+      name: "Show search",
       control: { type: "boolean" },
       options: ["true", "false"],
     },
     searchTheme: {
+      name: "Search theme",
       control: { type: "text" },
       options: ["white", "blue", "dark"],
     },
     searchTextTheme: {
+      name: "Search text theme",
       control: { type: "text" },
       options: ["white", "blue", "dark"],
     },
     navSeparator: {
+      name: "Nav seperator",
       control: { type: "boolean" },
     },
     headerLogoDash: {
+      name: "Header logo dash",
       control: { type: "boolean" },
     },
     headerLogoStretched: {
+      name: "Header logo stretched",
       control: { type: "boolean" },
     },
     accountContainerTheme: {
+      name: "Account container theme",
       control: { type: "text" },
       options: ["white", "blue", "dark"],
     },
     headerLogoDashTheme: {
+      name: "Header logo dash theme",
       control: { type: "text" },
       options: ["blue", "white"],
     },
     navSeparatorTheme: {
+      name: "Nav seperator theme",
       control: { type: "text" },
       options: ["blue", "white"],
     },
     accountContainer: {
+      name: "Account container",
       control: { type: "boolean" },
     },
   },

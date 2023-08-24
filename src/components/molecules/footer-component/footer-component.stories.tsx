@@ -71,93 +71,93 @@ export default {
 
 export const Small = {
   args: {
-    flexCol: "false",
-    show: "false",
-    showAddress: "false",
-    bottomBorderT: "false",
+    "Flex column": "false",
+    "Show top": "false",
+    "Show address": "false",
+    "Bottom boarder": "false",
   },
 };
 
 export const SmallGray = {
   args: {
-    flexCol: "false",
-    show: "false",
-    bottomBg: "light-gray",
-    showAddress: "false",
-    bottomBorderT: "false",
+    "Flex bolumn": "false",
+    "Show top": "false",
+    "Bottom background": "light-gray",
+    "Show address": "false",
+    "Bottom boarder": "false",
   },
 };
 
 export const LongGray = {
   args: {
-    flexCol: "false",
-    show: "false",
-    showAddress: "true",
-    bottomBg: "light-gray",
-    bottomBorderT: "false",
+    "Flex bolumn": "false",
+    "Show top": "false",
+    "Show address": "true",
+    "Bottom background": "light-gray",
+    "Bottom boarder": "false",
   },
 };
 
 export const SmallOutlined = {
   args: {
-    flexCol: "false",
-    show: "false",
-    bottomBorderT: "true",
-    showAddress: "false",
-    showIcon: "false",
+    "Flex column": "false",
+    "Shop top": "false",
+    "Bottom boarder": "true",
+    "Show address": "false",
+    "Show icon": "false",
   },
 };
 
 export const LongOutlined = {
   args: {
-    flexCol: "false",
-    show: "false",
-    bottomBorderT: "true",
-    showAddress: "true",
-    showIcon: "false",
+    "Flex column": "false",
+    "Show top": "false",
+    "Bottom boarder": "true",
+    "Show address": "true",
+    "Show icon": "false",
   },
 };
 
 export const Gray = {
   args: {
-    flexCol: "false",
-    show: "true",
-    showIcon: "false",
-    topBorderY: "true",
-    topLeftColor: "blue",
-    bottomBg: "light-gray",
-    showAddress: "false",
-    bottomBorderT: "false",
+    "Flex column": "false",
+    "Show top": "true",
+    "Show icon": "false",
+    "Top boarder": "true",
+    "Top left color": "blue",
+    "Bottom background": "light-gray",
+    "Show Address": "false",
+    "Bottom boarder": "false",
   },
 };
 
 export const Blue = {
   args: {
-    flexCol: "false",
-    show: "true",
-    showIcon: "false",
-    topBorderY: "true",
-    topLeftColor: "blue",
-    bottomBg: "blue",
-    bottomColor: "white",
-    showAddress: "false",
-    bottomBorderT: "false",
+    "Flex column": "false",
+    "Show top": "true",
+    "Show icon": "false",
+    "Show top boarder": "true",
+    "Top left color": "blue",
+    "Bottom background": "blue",
+    "Bottom color": "white",
+    'Show address': "false",
+    "Bottom boarder": "false",
   },
 };
 
 export const BlueBg = {
   args: {
-    flexCol: "false",
-    show: "true",
-    topBg: "blue",
-    showIcon: "false",
-    topLeftColor: "white",
-    topRightColor: "white",
-    topBorderY: "true",
-    bottomBg: "blue",
-    bottomColor: "white",
-    showAddress: "false",
-    bottomBorderT: "false",
+    "Flex column": "false",
+    "Show top": "true",
+    "Top background": "blue",
+    "Show icon": "false",
+    "Top left color": "white",
+    "Top right color": "white",
+    "Top boarder": "true",
+    "Bottom background": "blue",
+    "Bottom color": "white",
+    "Show address": "false",
+    "Bottom boarder": "false",
   },
 };
 

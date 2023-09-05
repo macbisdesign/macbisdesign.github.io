@@ -17,7 +17,7 @@ export default {
       control: "boolean",
     },
     checked: {
-      name: "Checked",
+      name: "Selected",
       control: "boolean",
     },
     label: {
@@ -39,16 +39,16 @@ export default {
   },
 };
 
-export const Checked = {
+export const Selected = {
   args: {
     checked: true,
-    label: "Checked",
+    label: "Selected",
   },
 };
 
-export const Unchecked = {
+export const Unselected = {
   args: {
     checked: false,
-    label: "Unchecked",
+    label: "Unselected",
   },
 };

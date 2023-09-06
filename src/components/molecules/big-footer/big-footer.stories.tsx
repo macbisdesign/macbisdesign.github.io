@@ -83,7 +83,7 @@ export const Simple = {
   },
 };
 
-export const Blue = {
+export const BottomThickBorder1 = {
   args: {
     topBg: "blue",
     bottomBg: "blue",
@@ -96,7 +96,7 @@ export const Blue = {
   },
 };
 
-export const Gray = {
+export const BottomThickBorder2 = {
   args: {
     topBg: "gray",
     bottomBg: "gray",
@@ -109,7 +109,7 @@ export const Gray = {
   },
 };
 
-export const LightGray = {
+export const NoBottomBorder1 = {
   args: {
     topBg: "light-gray",
     bottomBg: "light-gray",
@@ -119,7 +119,7 @@ export const LightGray = {
   },
 };
 
-export const Black = {
+export const NoBottomBorder2 = {
   args: {
     topBg: "black",
     topLeftColor: "white",

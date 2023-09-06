@@ -89,7 +89,7 @@ export const Small = {
   },
 };
 
-export const SmallGray = {
+export const SmallOneLine = {
   args: {
     flexCol: "false",
     show: "false",
@@ -99,7 +99,7 @@ export const SmallGray = {
   },
 };
 
-export const LongGray = {
+export const SmallMultiLine = {
   args: {
     flexCol: "false",
     show: "false",
@@ -129,7 +129,7 @@ export const LongOutlined = {
   },
 };
 
-export const Gray = {
+export const LargeBottomBorder = {
   args: {
     flexCol: "false",
     show: "true",
@@ -142,7 +142,7 @@ export const Gray = {
   },
 };
 
-export const Blue = {
+export const LargeBottomBorder2 = {
   args: {
     flexCol: "false",
     show: "true",
@@ -156,7 +156,7 @@ export const Blue = {
   },
 };
 
-export const BlueBg = {
+export const LargeBottomBorderGap = {
   args: {
     flexCol: "false",
     show: "true",
@@ -172,7 +172,7 @@ export const BlueBg = {
   },
 };
 
-export const GrayBg = {
+export const LargeBottomBorderGap2 = {
   args: {
     flexCol: "false",
     show: "true",
@@ -188,7 +188,7 @@ export const GrayBg = {
   },
 };
 
-export const LightGrayBg = {
+export const LargeNoBottomBorder = {
   args: {
     flexCol: "false",
     show: "true",
@@ -201,7 +201,7 @@ export const LightGrayBg = {
   },
 };
 
-export const BlackBg = {
+export const LargeNoBottomBorder2 = {
   args: {
     flexCol: "false",
     show: "true",

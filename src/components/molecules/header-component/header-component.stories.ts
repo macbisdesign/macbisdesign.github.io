@@ -124,7 +124,7 @@ export default {
   },
 };
 
-export const BlackWithGrayDropdown = {
+export const TwoDropdownMenu = {
   args: {
     theme: "dark",
     size: "normal",
@@ -158,7 +158,7 @@ export const BlackWithGrayDropdown = {
   },
 };
 
-export const BlueWithWhiteDropdown = {
+export const TwoDropdownMen2 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -192,7 +192,7 @@ export const BlueWithWhiteDropdown = {
   },
 };
 
-export const BlueWithBlueDropdown = {
+export const TwoDropdownMenu3 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -226,7 +226,7 @@ export const BlueWithBlueDropdown = {
   },
 };
 
-export const BlueWithContainWhiteDropdown = {
+export const TwoDropdownMenu4 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -256,7 +256,7 @@ export const BlueWithContainWhiteDropdown = {
   },
 };
 
-export const BlueWithContainBlueDropdown = {
+export const OneDropdownMenu2 = {
   args: {
     theme: "blue",
     size: "normal",
@@ -286,7 +286,7 @@ export const BlueWithContainBlueDropdown = {
   },
 };
 
-export const BlackWithContainBlackDropdown = {
+export const OneDropdownMenu3 = {
   args: {
     theme: "dark",
     size: "normal",
@@ -316,7 +316,7 @@ export const BlackWithContainBlackDropdown = {
   },
 };
 
-export const SmallBlueWithSearchbar = {
+export const SmallSearchBarMenu = {
   args: {
     theme: "blue",
     size: "slim",
@@ -333,7 +333,7 @@ export const SmallBlueWithSearchbar = {
   },
 };
 
-export const SmallBlueWithInspect = {
+export const SmallSearchBarMenuInspect = {
   args: {
     theme: "blue",
     navSeparator: "true",
@@ -363,7 +363,7 @@ export const SmallBlue = {
   },
 };
 
-export const SmallBlueWithAccountContainer = {
+export const SmallMenuNoSearchBar = {
   args: {
     theme: "blue",
     size: "slim",
@@ -387,7 +387,7 @@ export const SmallBlueWithAccountContainer = {
   },
 };
 
-export const SmallBlueWithBigInspect = {
+export const SmallMenuBigInspect = {
   args: {
     theme: "blue",
     size: "slim",
@@ -419,7 +419,7 @@ export const SmallWithLogo = {
   },
 };
 
-export const SmallBlueWithLogo = {
+export const SmallWithLogo2 = {
   args: {
     theme: "white",
     size: "slim",
@@ -453,7 +453,7 @@ export const SmallWithBigInspect = {
   },
 };
 
-export const SmallWithBlueLogo = {
+export const SmallWithLogo3 = {
   args: {
     theme: "white",
     size: "slim",
@@ -470,7 +470,7 @@ export const SmallWithBlueLogo = {
   },
 };
 
-export const SmallBlackWithLogo = {
+export const SmallWithLogo4 = {
   args: {
     theme: "dark",
     size: "slim",
@@ -487,7 +487,7 @@ export const SmallBlackWithLogo = {
   },
 };
 
-export const SmallBlueBlack = {
+export const SmallSectioned = {
   args: {
     theme: "dark",
     size: "slim",
@@ -506,7 +506,7 @@ export const SmallBlueBlack = {
   },
 };
 
-export const SmallBlackWithFilledLogo = {
+export const SmallDivider = {
   args: {
     theme: "dark",
     size: "slim",
@@ -521,7 +521,7 @@ export const SmallBlackWithFilledLogo = {
   },
 };
 
-export const SmallBlackWithFilledLogoWithoutInspect = {
+export const SmallPlain = {
   args: {
     theme: "dark",
     size: "slim",
@@ -535,7 +535,7 @@ export const SmallBlackWithFilledLogoWithoutInspect = {
   },
 };
 
-export const SmallBlueWithBlueLogo = {
+export const SmallWithLogo5 = {
   args: {
     theme: "white",
     size: "slim",

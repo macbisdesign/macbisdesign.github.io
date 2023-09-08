@@ -12,6 +12,11 @@ export namespace Components {
          */
         "action": string;
         /**
+          * The url for the image.
+         */
+        "content1": string;
+        "content2": string;
+        /**
           * If true, the dark mode styles get applied
          */
         "darkMode": boolean;
@@ -19,9 +24,6 @@ export namespace Components {
           * The headline of the component.
          */
         "headline": string;
-        /**
-          * The url for the image.
-         */
         "img": string;
         /**
           * The size of the component
@@ -494,6 +496,11 @@ declare namespace LocalJSX {
          */
         "action"?: string;
         /**
+          * The url for the image.
+         */
+        "content1"?: string;
+        "content2"?: string;
+        /**
           * If true, the dark mode styles get applied
          */
         "darkMode"?: boolean;
@@ -501,9 +508,6 @@ declare namespace LocalJSX {
           * The headline of the component.
          */
         "headline"?: string;
-        /**
-          * The url for the image.
-         */
         "img"?: string;
         /**
           * The size of the component

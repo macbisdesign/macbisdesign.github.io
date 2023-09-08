@@ -113,6 +113,11 @@ p {
   cursor: pointer;
 }
 
+.lock-icon {
+  width: 1.5ex;
+    height: 1.5ex;
+}
+
 @media (min-width: 1024px) {
   .lg\:flex-row {
     flex-direction: row;

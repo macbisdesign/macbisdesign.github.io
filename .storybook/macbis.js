@@ -33,7 +33,6 @@ export default create({
 
   brandTitle: 'MACBIS Harmony Design System',
   brandUrl: 'https://macbisdesign.github.io/',
-  brandImage: 'https://res.cloudinary.com/dzxnlwzog/image/upload/v1692918416/ydlvuh3f4nwosdhd3bjh.png',
-  // brandImage: 'https://res.cloudinary.com/dmat2svkj/image/upload/v1680282008/macbis-logo_s9ncgt.png',
+  brandImage: 'https://res.cloudinary.com/dne7utix5/image/upload/v1694185824/Logo-1_zkx5gb.png',
   brandTarget: '_self',
 });

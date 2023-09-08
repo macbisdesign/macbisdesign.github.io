@@ -349,7 +349,7 @@ export const SmallSearchBarMenuInspect = {
   },
 };
 
-export const SmallPlain = {
+export const SmallPlain2 = {
   args: {
     theme: "blue",
     size: "slim",
